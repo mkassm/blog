@@ -2,8 +2,8 @@
 templateKey: article-page
 title: "Designing Data Intensive Applications Notes: Ch.3 Storage and Retrieval"
 slug: designing-data-intensive-applications-notes-ch3
-author: aboelkassem
-authorLink: https://www.aboelkassem.tech
+author: Mohamed Kassem
+authorLink: https://www.kassm.me
 date: 2023-11-02T12:43:23.692Z
 cover: /img/designing-data-intensive-apps.avif
 metaTitle: Chapter.3 Storage and Retrieval.
@@ -69,7 +69,7 @@ This two functions: Append only writes and For lookups read O(n)
 Whenever you append a new key-value pair to the file, you also update the hash map to reflect the offset of the data you just wrote
 
 <p align="center" width="100%">
-  <img src="hhttps://raw.githubusercontent.com/aboelkassem/designing-data-intensive-applications-notes/main/Chapters/Chapter%203%20-%20Storage%20and%20Retrieval/images/log-structured-storage.png" width="400" hight="400"/>
+  <img src="hhttps://raw.githubusercontent.com/mkassm/designing-data-intensive-applications-notes/main/Chapters/Chapter%203%20-%20Storage%20and%20Retrieval/images/log-structured-storage.png" width="400" hight="400"/>
 </p>
 
 Append only Data structure. The log file is sequentially written, which allows for fast write operations since it avoids random disk seeks.
@@ -77,7 +77,7 @@ Append only Data structure. The log file is sequentially written, which allows f
 What if the disk is full or out of space? we will group the logs into segments with size
 
 <p align="center" width="100%">
-  <img src="https://raw.githubusercontent.com/aboelkassem/designing-data-intensive-applications-notes/main/Chapters/Chapter%203%20-%20Storage%20and%20Retrieval/images/hash-index-compaction.png" width="400" hight="400"/>
+  <img src="https://raw.githubusercontent.com/mkassm/designing-data-intensive-applications-notes/main/Chapters/Chapter%203%20-%20Storage%20and%20Retrieval/images/hash-index-compaction.png" width="400" hight="400"/>
 </p>
 
 New records are appended to a *segment* of certain size which is being merged and compacted by a background thread. 
@@ -111,12 +111,12 @@ This work by sorting the keys, which will make the keys unique after merge proce
     - you start reading the input files side by side, look at the first key in each file, copy the lowest key (sorted) to new merged segment and repeat.
 
 <p align="center" width="100%">
-  <img src="https://raw.githubusercontent.com/aboelkassem/designing-data-intensive-applications-notes/main/Chapters/Chapter%203%20-%20Storage%20and%20Retrieval/images/sstable-compaction.png" width="400" hight="400"/>
+  <img src="https://raw.githubusercontent.com/mkassm/designing-data-intensive-applications-notes/main/Chapters/Chapter%203%20-%20Storage%20and%20Retrieval/images/sstable-compaction.png" width="400" hight="400"/>
 </p>
 
 Then, The hash map index will contains the first key of each segment instead of all keys
 <p align="center" width="100%">
-  <img src="https://raw.githubusercontent.com/aboelkassem/designing-data-intensive-applications-notes/main/Chapters/Chapter%203%20-%20Storage%20and%20Retrieval/images/sstable-compression.png" width="400" hight="400"/>
+  <img src="https://raw.githubusercontent.com/mkassm/designing-data-intensive-applications-notes/main/Chapters/Chapter%203%20-%20Storage%20and%20Retrieval/images/sstable-compression.png" width="400" hight="400"/>
 </p>
 
 - Each segment will be sorted by key
@@ -133,7 +133,7 @@ The flow to save data
 combine segment files and to discard overwritten or deleted values
 
 <p align="center" width="100%">
-  <img src="https://raw.githubusercontent.com/aboelkassem/designing-data-intensive-applications-notes/main/Chapters/Chapter%203%20-%20Storage%20and%20Retrieval/images/sstable-avl-tree.png" width="400" hight="400"/>
+  <img src="https://raw.githubusercontent.com/mkassm/designing-data-intensive-applications-notes/main/Chapters/Chapter%203%20-%20Storage%20and%20Retrieval/images/sstable-avl-tree.png" width="400" hight="400"/>
 </p>
 
 This algorithm (named also LSM Tree) used in LevelDB, RockDB, Cassandra, HBase and Lucene engine (used in Elastic Search and Solr) 
@@ -149,7 +149,7 @@ Unlike SSTable (which is stored on memory), B-Tree is in the disk
 B-Tree is balanced, so `n` keys always have depth of `O(log n)`. It also have a branching factor of several hundreds typically.
 
 <p align="center" width="100%">
-  <img src="https://raw.githubusercontent.com/aboelkassem/designing-data-intensive-applications-notes/main/Chapters/Chapter%203%20-%20Storage%20and%20Retrieval/images/B-Tree.png" width="400" hight="400"/>
+  <img src="https://raw.githubusercontent.com/mkassm/designing-data-intensive-applications-notes/main/Chapters/Chapter%203%20-%20Storage%20and%20Retrieval/images/B-Tree.png" width="400" hight="400"/>
 </p>
 
 If you want to update the value for an existing key in a B-tree, you search for the leaf page containing that key, change the value in that page, and write the page back to disk.
@@ -159,7 +159,7 @@ If you want to add a new key, you need to find the page whose range encompasses 
 - If there isn’t enough free space in the page to accommodate the new key, it is **split** into two half-full pages, and the parent page is updated to account for the new subdivision of key ranges
 
 <p align="center" width="100%">
-  <img src="https://raw.githubusercontent.com/aboelkassem/designing-data-intensive-applications-notes/main/Chapters/Chapter%203%20-%20Storage%20and%20Retrieval/images/B-Tree%20Insertion.png" width="400" hight="400"/>
+  <img src="https://raw.githubusercontent.com/mkassm/designing-data-intensive-applications-notes/main/Chapters/Chapter%203%20-%20Storage%20and%20Retrieval/images/B-Tree%20Insertion.png" width="400" hight="400"/>
 </p>
 
 > Most databases can fit into a B-tree that is **three or four levels** deep, so you don’t need to follow many page references to find the page you are looking for. (A four-level tree of 4 KB pages with a branching factor of 500 can store up to 256 TB.)
@@ -176,7 +176,7 @@ To Improve the previous way for performance,
 
 ## B-Tree vs SSTable
 <p align="center" width="100%">
-  <img src="https://raw.githubusercontent.com/aboelkassem/designing-data-intensive-applications-notes/main/Chapters/Chapter%203%20-%20Storage%20and%20Retrieval/images/B-Tree%20Insertion.png" width="400" hight="400"/>
+  <img src="https://raw.githubusercontent.com/mkassm/designing-data-intensive-applications-notes/main/Chapters/Chapter%203%20-%20Storage%20and%20Retrieval/images/B-Tree%20Insertion.png" width="400" hight="400"/>
 </p>
 
 # Other Indexes
@@ -272,7 +272,7 @@ The data warehouse contains a read-only copy of the data in all the various OLTP
 Data is extracted from OLTP databases (using either a periodic data dump or a continuous stream of updates), transformed into an analysis-friendly schema, cleaned up, and then loaded into the data warehouse. This process of getting data into the warehouse is known as ***Extract–Transform–Load (ETL).***
 
 <p align="center" width="100%">
-  <img src="https://raw.githubusercontent.com/aboelkassem/designing-data-intensive-applications-notes/main/Chapters/Chapter%203%20-%20Storage%20and%20Retrieval/images/data-warehouse-etl.png" width="400" hight="400"/>
+  <img src="https://raw.githubusercontent.com/mkassm/designing-data-intensive-applications-notes/main/Chapters/Chapter%203%20-%20Storage%20and%20Retrieval/images/data-warehouse-etl.png" width="400" hight="400"/>
 </p>
 
 ## Stars and Snowflakes: Schemas for Analytics
@@ -285,25 +285,25 @@ The main and big table called **fact table** while other tables called **Dimensi
 The fact table determined based on business, it can be Transaction table for banking, sales table .. etc
 
 <p align="center" width="100%">
-  <img src="https://raw.githubusercontent.com/aboelkassem/designing-data-intensive-applications-notes/main/Chapters/Chapter%203%20-%20Storage%20and%20Retrieval/images/data-warehouse-star-scheme-1.png" width="400" hight="400"/>
-  <img src="https://raw.githubusercontent.com/aboelkassem/designing-data-intensive-applications-notes/main/Chapters/Chapter%203%20-%20Storage%20and%20Retrieval/images/data-warehouse-star-scheme-2.png" width="400" hight="400"/>
+  <img src="https://raw.githubusercontent.com/mkassm/designing-data-intensive-applications-notes/main/Chapters/Chapter%203%20-%20Storage%20and%20Retrieval/images/data-warehouse-star-scheme-1.png" width="400" hight="400"/>
+  <img src="https://raw.githubusercontent.com/mkassm/designing-data-intensive-applications-notes/main/Chapters/Chapter%203%20-%20Storage%20and%20Retrieval/images/data-warehouse-star-scheme-2.png" width="400" hight="400"/>
 </p>
 
 Snowflakes Scheme is like Star scheme but more normalized 
 
 <p align="center" width="100%">
-  <img src="https://raw.githubusercontent.com/aboelkassem/designing-data-intensive-applications-notes/main/Chapters/Chapter%203%20-%20Storage%20and%20Retrieval/images/data-warehouse-snowflakes-scheme.png" width="400" hight="400"/>
+  <img src="https://raw.githubusercontent.com/mkassm/designing-data-intensive-applications-notes/main/Chapters/Chapter%203%20-%20Storage%20and%20Retrieval/images/data-warehouse-snowflakes-scheme.png" width="400" hight="400"/>
 </p>
 
 Example of OLAP query to know whether people are more inclined to buy fresh fruit or candy, depending on the day of the week.
 
 <p align="center" width="100%">
-  <img src="https://raw.githubusercontent.com/aboelkassem/designing-data-intensive-applications-notes/main/Chapters/Chapter%203%20-%20Storage%20and%20Retrieval/images/olap-query.png" width="400" hight="400"/>
+  <img src="https://raw.githubusercontent.com/mkassm/designing-data-intensive-applications-notes/main/Chapters/Chapter%203%20-%20Storage%20and%20Retrieval/images/olap-query.png" width="400" hight="400"/>
 </p>
 
 Comparison of OLTP vs OLAP
 <p align="center" width="100%">
-  <img src="https://raw.githubusercontent.com/aboelkassem/designing-data-intensive-applications-notes/main/Chapters/Chapter%203%20-%20Storage%20and%20Retrieval/images/olap-vs-oltp.png" width="400" hight="400"/>
+  <img src="https://raw.githubusercontent.com/mkassm/designing-data-intensive-applications-notes/main/Chapters/Chapter%203%20-%20Storage%20and%20Retrieval/images/olap-vs-oltp.png" width="400" hight="400"/>
 </p>
 
 ## Column Storage
@@ -329,7 +329,7 @@ In most of OLTP databases, the storage is row-oriented fashion (rows are stored 
 So, the column-oriented storage will be more suitable for that case. Which instead of storing all values of rows together, we will store all values of **columns** together instead.
 
 <p align="center" width="100%">
-  <img src="https://raw.githubusercontent.com/aboelkassem/designing-data-intensive-applications-notes/main/Chapters/Chapter%203%20-%20Storage%20and%20Retrieval/images/columnar-storage.png" width="500" hight="500"/>
+  <img src="https://raw.githubusercontent.com/mkassm/designing-data-intensive-applications-notes/main/Chapters/Chapter%203%20-%20Storage%20and%20Retrieval/images/columnar-storage.png" width="500" hight="500"/>
 </p>
 
 We will store each column into a file containing the value rows.
@@ -340,7 +340,7 @@ We will store each column into a file containing the value rows.
 - Compression Support with Bitmap and Run-length encoding for product_sk column example.
     
     <p align="center" width="100%">
-      <img src="https://raw.githubusercontent.com/aboelkassem/designing-data-intensive-applications-notes/main/Chapters/Chapter%203%20-%20Storage%20and%20Retrieval/images/columnar-storage-bitmap.png" width="500" hight="500"/>
+      <img src="https://raw.githubusercontent.com/mkassm/designing-data-intensive-applications-notes/main/Chapters/Chapter%203%20-%20Storage%20and%20Retrieval/images/columnar-storage-bitmap.png" width="500" hight="500"/>
     </p>
     
     Bitmap helps with reads query like WHERE IN (like *WHERE product_sk IN (30, 68, 69)*), WHERE AND (like *WHERE product_sk = 31 AND store_sk = 3*) which apply AND, OR operators to binary indexes.
@@ -348,7 +348,7 @@ We will store each column into a file containing the value rows.
 - Vectorized processing with SIMD (single instruction multiple data)
     
     <p align="center" width="100%">
-      <img src="https://raw.githubusercontent.com/aboelkassem/designing-data-intensive-applications-notes/main/Chapters/Chapter%203%20-%20Storage%20and%20Retrieval/images/columnar-storage-simd.png" width="500" hight="500"/>
+      <img src="https://raw.githubusercontent.com/mkassm/designing-data-intensive-applications-notes/main/Chapters/Chapter%203%20-%20Storage%20and%20Retrieval/images/columnar-storage-simd.png" width="500" hight="500"/>
     </p>
 
 - For Sorting, We don’t sort single column and leave the others unchanged.

@@ -12,7 +12,7 @@ const SearchPage = (props) => {
       htmlAttributes={{
         lang: `en`,
       }}
-      title='Search | Aboelkassem Blog'
+      title='Search | Mohamed Kassem Blog'
       meta={[
         {
           name: `description`,

@@ -2,13 +2,13 @@
 templateKey: article-page
 title: Awesome roadmaps for learning Computer Science and Technologies
 slug: awesome-roadmaps-for-learning-computer-science-and-technologies
-author: aboelkassem
-authorLink: https://www.aboelkassem.tech
+author: Mohamed Kassem
+authorLink: https://www.kassm.me
 date: 2020-04-10T12:57:52.462Z
 cover: /img/awesome-roadmaps.png
-metaTitle: Awesome Roadmaps | Aboelkassem Blog
+metaTitle: Awesome Roadmaps | Mohamed Kassem Blog
 metaDescription: Awesome roadmaps for learning different topics in the software
-  industry and technologies in aboelkassem blog.
+  industry and technologies in Mohamed Kassem blog.
 tags:
   - roadmap
   - back-end
@@ -106,4 +106,4 @@ There are many ways of learning suitable for everyone's experience and situation
 
 <hr>
 
-[Edit this page on Github](https://github.com/aboelkassem/awesome_roadmaps/blob/master/README.md)
+[Edit this page on Github](https://github.com/mkassm/awesome_roadmaps/blob/master/README.md)

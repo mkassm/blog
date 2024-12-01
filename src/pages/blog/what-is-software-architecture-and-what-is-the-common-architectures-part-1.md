@@ -2,11 +2,11 @@
 templateKey: article-page
 title: What is Software Architecture and What is the common architectures? - Part 1
 slug: what-is-software-architecture-and-what-is-the-common-architectures-part-1
-author: aboelkassem
-authorLink: https://www.aboelkassem.tech
+author: Mohamed Kassem
+authorLink: https://www.kassm.me
 date: 2021-02-03T16:12:18.438Z
 cover: /img/software-architecture.jpg
-metaTitle: Software Architecture | Aboelkassem Blog
+metaTitle: Software Architecture | Mohamed Kassem Blog
 metaDescription: Software Architecture is the fundamental design of the software
   system. It defines what elements are included in the system, what function
   each element has, how each element related to another. In plain text, it is
@@ -91,15 +91,15 @@ This diagram is concerned with the components of a system. Which components are 
 
 - **Ball Connector**: displays a provided interface
 
-![component-diagram-1.png](https://raw.githubusercontent.com/aboelkassem/Software-and-Service-Oriented-Architecture/main/Software%20Architecture/Images/component-diagram-1.png "ball connector")
+![component-diagram-1.png](https://raw.githubusercontent.com/mkassm/Software-and-Service-Oriented-Architecture/main/Software%20Architecture/Images/component-diagram-1.png "ball connector")
 
 - **Socket Connector**: displays a required interface (component expects a interface)
 
-![socket connector](https://raw.githubusercontent.com/aboelkassem/Software-and-Service-Oriented-Architecture/main/Software%20Architecture/Images/component-diagram-2.png "socket connector")
+![socket connector](https://raw.githubusercontent.com/mkassm/Software-and-Service-Oriented-Architecture/main/Software%20Architecture/Images/component-diagram-2.png "socket connector")
 
 - **Relationship** shows that the component provided interface matches another component's required interface
 
-![relationship](https://raw.githubusercontent.com/aboelkassem/Software-and-Service-Oriented-Architecture/main/Software%20Architecture/Images/component-diagram-3.png "relationship")
+![relationship](https://raw.githubusercontent.com/mkassm/Software-and-Service-Oriented-Architecture/main/Software%20Architecture/Images/component-diagram-3.png "relationship")
 
 **Steps to build a Component Diagram**
 
@@ -109,7 +109,7 @@ This diagram is concerned with the components of a system. Which components are 
 
 **Example of a component diagram for a video game system.**
 
-![component-diagram-4.png](https://raw.githubusercontent.com/aboelkassem/Software-and-Service-Oriented-Architecture/main/Software%20Architecture/Images/component-diagram-4.png "example of componentdiagram")
+![component-diagram-4.png](https://raw.githubusercontent.com/mkassm/Software-and-Service-Oriented-Architecture/main/Software%20Architecture/Images/component-diagram-4.png "example of componentdiagram")
 
 ### UML Package Diagram
 
@@ -121,21 +121,21 @@ Packages diagram show packages and the dependencies between them to organize you
 
 - **Tabbed folder** (if the package don't have any elements, package name writes in the center of folder)
 
-![package-diagram-1.png](https://raw.githubusercontent.com/aboelkassem/Software-and-Service-Oriented-Architecture/main/Software%20Architecture/Images/package-diagram-1.png "tabbed folder")
+![package-diagram-1.png](https://raw.githubusercontent.com/mkassm/Software-and-Service-Oriented-Architecture/main/Software%20Architecture/Images/package-diagram-1.png "tabbed folder")
 
-![example of tabbed folder](https://raw.githubusercontent.com/aboelkassem/Software-and-Service-Oriented-Architecture/main/Software%20Architecture/Images/package-diagram-2.png "example of tabbed folder")
+![example of tabbed folder](https://raw.githubusercontent.com/mkassm/Software-and-Service-Oriented-Architecture/main/Software%20Architecture/Images/package-diagram-2.png "example of tabbed folder")
 
 - **Importing** and **Merging** other packages into packages. Dependencies like `<import>` = public import, `<access>` = private import ⇒ means one package requires help from functions of another package. `<merge>` = merging two packages into a single package. `<uses>` = the package need the full implementation of another package
 
-![package-diagram-3.png](https://raw.githubusercontent.com/aboelkassem/Software-and-Service-Oriented-Architecture/main/Software%20Architecture/Images/package-diagram-3.png "package diagram")
+![package-diagram-3.png](https://raw.githubusercontent.com/mkassm/Software-and-Service-Oriented-Architecture/main/Software%20Architecture/Images/package-diagram-3.png "package diagram")
 
-![package diagram](https://raw.githubusercontent.com/aboelkassem/Software-and-Service-Oriented-Architecture/main/Software%20Architecture/Images/package-diagram-4.png "package diagram")
+![package diagram](https://raw.githubusercontent.com/mkassm/Software-and-Service-Oriented-Architecture/main/Software%20Architecture/Images/package-diagram-4.png "package diagram")
 
-![package diagram](https://raw.githubusercontent.com/aboelkassem/Software-and-Service-Oriented-Architecture/main/Software%20Architecture/Images/package-diagram-5.png "package diagram")
+![package diagram](https://raw.githubusercontent.com/mkassm/Software-and-Service-Oriented-Architecture/main/Software%20Architecture/Images/package-diagram-5.png "package diagram")
 
 **Example of UML Package diagram**
 
-![example of package diagram](https://raw.githubusercontent.com/aboelkassem/Software-and-Service-Oriented-Architecture/main/Software%20Architecture/Images/package-diagram-6.png "example of package diagram")
+![example of package diagram](https://raw.githubusercontent.com/mkassm/Software-and-Service-Oriented-Architecture/main/Software%20Architecture/Images/package-diagram-6.png "example of package diagram")
 
 ### UML Deployment Diagram
 
@@ -143,7 +143,7 @@ Software release involves separate libraries, an executable, an installer, confi
 
 UML Deployment Diagram deal with Artifacts. **Artifact** which are a physical result of the development process, For example of video game would be an executable to run the game, an installer, audio libraries and multimedia assets
 
-![deployment-diagram-2.png](https://raw.githubusercontent.com/aboelkassem/Software-and-Service-Oriented-Architecture/main/Software%20Architecture/Images/deployment-diagram-2.png "deployment diagram")
+![deployment-diagram-2.png](https://raw.githubusercontent.com/mkassm/Software-and-Service-Oriented-Architecture/main/Software%20Architecture/Images/deployment-diagram-2.png "deployment diagram")
 
 Two types of deployment diagram
 
@@ -159,21 +159,21 @@ Two types of deployment diagram
 
 - **Node**: is deployment target that contains artifacts for execution, its the hardware `<<device>>`.
 
-![deployment-diagram-2.png](https://raw.githubusercontent.com/aboelkassem/Software-and-Service-Oriented-Architecture/main/Software%20Architecture/Images/deployment-diagram-2.png "deployment diagram")
+![deployment-diagram-2.png](https://raw.githubusercontent.com/mkassm/Software-and-Service-Oriented-Architecture/main/Software%20Architecture/Images/deployment-diagram-2.png "deployment diagram")
 
 - **Relationship between deployment targets**, this relationship between nodes means that there is a communication path (software or protocol) between them.
 
-![deployment diagram](https://raw.githubusercontent.com/aboelkassem/Software-and-Service-Oriented-Architecture/main/Software%20Architecture/Images/deployment-diagram-3.png "deployment diagram")
+![deployment diagram](https://raw.githubusercontent.com/mkassm/Software-and-Service-Oriented-Architecture/main/Software%20Architecture/Images/deployment-diagram-3.png "deployment diagram")
 
-![deployment diagram](https://raw.githubusercontent.com/aboelkassem/Software-and-Service-Oriented-Architecture/main/Software%20Architecture/Images/deployment-diagram-4.png "deployment diagram")
+![deployment diagram](https://raw.githubusercontent.com/mkassm/Software-and-Service-Oriented-Architecture/main/Software%20Architecture/Images/deployment-diagram-4.png "deployment diagram")
 
 - `<<manifests>>` relationship between artifacts and which component complied and produce it. Which Player.Class is the encapsulated unit that contains all of the functionality of a player.
 
-![deployment diagram](https://raw.githubusercontent.com/aboelkassem/Software-and-Service-Oriented-Architecture/main/Software%20Architecture/Images/deployment-diagram-5.png "deployment diagram")
+![deployment diagram](https://raw.githubusercontent.com/mkassm/Software-and-Service-Oriented-Architecture/main/Software%20Architecture/Images/deployment-diagram-5.png "deployment diagram")
 
 **Example of UML Deployment diagram**
 
-![deployment diagram](https://raw.githubusercontent.com/aboelkassem/Software-and-Service-Oriented-Architecture/main/Software%20Architecture/Images/deployment-diagram-6.png "deployment diagram example")
+![deployment diagram](https://raw.githubusercontent.com/mkassm/Software-and-Service-Oriented-Architecture/main/Software%20Architecture/Images/deployment-diagram-6.png "deployment diagram example")
 
 Deployment Diagram gives a high level look at the **artifacts**, **libraries**, **main components, machines, and devices** that your application needs to run.
 
@@ -190,19 +190,19 @@ In this diagram, you represent the control flow from one activity to another in 
 
 - **Start and End** nodes must begin (initialize) and end (final) your diagram with them.
 
-![activity diagram](https://raw.githubusercontent.com/aboelkassem/Software-and-Service-Oriented-Architecture/main/Software%20Architecture/Images/activity-diagram-1.png "activity diagram")
+![activity diagram](https://raw.githubusercontent.com/mkassm/Software-and-Service-Oriented-Architecture/main/Software%20Architecture/Images/activity-diagram-1.png "activity diagram")
 
 - Intermediate activities that identify to change the application state before ends.
 
-![activity diagram](https://raw.githubusercontent.com/aboelkassem/Software-and-Service-Oriented-Architecture/main/Software%20Architecture/Images/activity-diagram-2.png "activity diagram")
+![activity diagram](https://raw.githubusercontent.com/mkassm/Software-and-Service-Oriented-Architecture/main/Software%20Architecture/Images/activity-diagram-2.png "activity diagram")
 
 - Decision node that had the condition to determine which outcomes as the next activity.
 
-![activity diagram](https://raw.githubusercontent.com/aboelkassem/Software-and-Service-Oriented-Architecture/main/Software%20Architecture/Images/activity-diagram-3.png "activity diagram")
+![activity diagram](https://raw.githubusercontent.com/mkassm/Software-and-Service-Oriented-Architecture/main/Software%20Architecture/Images/activity-diagram-3.png "activity diagram")
 
 **Example of UML Activity Diagram of video game**
 
-![activity diagram](https://raw.githubusercontent.com/aboelkassem/Software-and-Service-Oriented-Architecture/main/Software%20Architecture/Images/activity-diagram-4.png "activity diagram example")
+![activity diagram](https://raw.githubusercontent.com/mkassm/Software-and-Service-Oriented-Architecture/main/Software%20Architecture/Images/activity-diagram-4.png "activity diagram example")
 
 Also Activity diagrams allow the mapping of activities that happen in parallel and join in a single flow after ended. Like if a level ends in a video game, the soundtrack flow will end at the same time as the play flow.
 
@@ -237,7 +237,7 @@ Main Program and Subroutine Architectural Style follow from **the procedural pro
 
 the following diagram shows how this style work which means the process of calls **functions**.
 
-![main program and subroutine](https://raw.githubusercontent.com/aboelkassem/Software-and-Service-Oriented-Architecture/main/Software%20Architecture/Images/procedural-programming-1.png "main program and subroutine architecture")
+![main program and subroutine](https://raw.githubusercontent.com/mkassm/Software-and-Service-Oriented-Architecture/main/Software%20Architecture/Images/procedural-programming-1.png "main program and subroutine architecture")
 
 The main consideration of this style is the behavior of functions and how data moves through them, so procedural programming supports abstract data types. so this paradigm stored data as variables like object-oriented programming, However, **inheritance** is not supported. But this style is suitable for computation-focused systems.
 
@@ -249,7 +249,7 @@ The issue of this approach is that subroutines may change data in unexpected way
 
 **Example of spending report.**
 
-![procedural-programming-2.png](https://raw.githubusercontent.com/aboelkassem/Software-and-Service-Oriented-Architecture/main/Software%20Architecture/Images/procedural-programming-2.png "procedural programming")
+![procedural-programming-2.png](https://raw.githubusercontent.com/mkassm/Software-and-Service-Oriented-Architecture/main/Software%20Architecture/Images/procedural-programming-2.png "procedural programming")
 
 ## Repository-based Systems
 
@@ -264,7 +264,7 @@ This architecture allows you to store and share data between multiple components
 - **Central Data**: used to store and serve the information across all the components connected to it.
 - **Data Accessors**: is any component that connects to the database, they make queries and transactions in the information stored in the database. Query the database to obtain shared system information. Save the new state of the system back into the database using transactions.
 
-![data-centric-architecture.png](https://raw.githubusercontent.com/aboelkassem/Software-and-Service-Oriented-Architecture/main/Software%20Architecture/Images/data-centric-architecture.png "data centric architecture")
+![data-centric-architecture.png](https://raw.githubusercontent.com/mkassm/Software-and-Service-Oriented-Architecture/main/Software%20Architecture/Images/data-centric-architecture.png "data centric architecture")
 
 **Database**: is used to store data, it makes sure the data is accurate and consistent over its lifespan (data integrity), also makes sure the data will live on after a process has been terminated (data persistence). **Relational Databases** are a type of database that uses **tables**.
 
@@ -295,7 +295,7 @@ Relational Database uses **Structured Query Language (SQL)** to query or ask the
 
 In software applications the inner layer (bottom layer) providing services to the one outside it and vice versa. Each layer can communicate with its adjacent layers, For example the following diagram of school system. Principal layer interacts with Student layer through Teachers layer, Teach Layer interact with both layers Student and Principal, Also Student can interact with other students.
 
-![layered-system-example.png](https://raw.githubusercontent.com/aboelkassem/Software-and-Service-Oriented-Architecture/main/Software%20Architecture/Images/layered-system-example.png "layered system architecture")
+![layered-system-example.png](https://raw.githubusercontent.com/mkassm/Software-and-Service-Oriented-Architecture/main/Software%20Architecture/Images/layered-system-example.png "layered system architecture")
 
 A layer is a collection of components that work together toward a common purpose. The components in a layer only interact with components in their own layer or adjacent layers.
 
@@ -303,7 +303,7 @@ Layering allows for separation of concerns into each layer, So many layered syst
 
 The Operating System (OS) for a computer is an example of layered system:
 
-![layered-system-example-1.png](https://raw.githubusercontent.com/aboelkassem/Software-and-Service-Oriented-Architecture/main/Software%20Architecture/Images/layered-system-example-1.png "layered system example")
+![layered-system-example-1.png](https://raw.githubusercontent.com/mkassm/Software-and-Service-Oriented-Architecture/main/Software%20Architecture/Images/layered-system-example-1.png "layered system example")
 
 - **Kernal**: is the core of an OS, its main responsibilities it interfacing with the hardware and allocating resources like scheduling operations for the processor or reads the input from your mouse/keyboard.
 - **System and Application Libraries**: is used to providing high-level functions (API) that the programs need to interface the kernel like functions for saving files or drawing graphics.
@@ -327,11 +327,11 @@ The relationship between **2-Tier** is a **Client/Server** relationship. Which t
 
 **Example of 2-Tier Client/Server architecture that shows media server**
 
-![n-tier-1.png](https://raw.githubusercontent.com/aboelkassem/Software-and-Service-Oriented-Architecture/main/Software%20Architecture/Images/n-tier-1.png "n tier architecture")
+![n-tier-1.png](https://raw.githubusercontent.com/mkassm/Software-and-Service-Oriented-Architecture/main/Software%20Architecture/Images/n-tier-1.png "n tier architecture")
 
 One computer hosts the media server process, where movies and TV shows are stored and can be streamed on demand. When a client requests a movie or TV show, the media server streams it to the client. Also, you can make a media server machine in one machine Desktop to play as a media player or media server.
 
-![n-tier-2.png](https://raw.githubusercontent.com/aboelkassem/Software-and-Service-Oriented-Architecture/main/Software%20Architecture/Images/n-tier-2.png "n tier architecture sequence digram")
+![n-tier-2.png](https://raw.githubusercontent.com/mkassm/Software-and-Service-Oriented-Architecture/main/Software%20Architecture/Images/n-tier-2.png "n tier architecture sequence digram")
 
 The above Sequence Diagram illustrates the **Request-Response** Messaging relationship. This relationship between client and server can be **Synchronous** or **Asynchronous**.
 
@@ -344,11 +344,11 @@ Limiting **client/server** relationships to **request/response** messaging patte
 
 **Another example of 2-Tier Architecture**
 
-![n-tier-3.png](https://raw.githubusercontent.com/aboelkassem/Software-and-Service-Oriented-Architecture/main/Software%20Architecture/Images/n-tier-3.png "n tier architecture examples")
+![n-tier-3.png](https://raw.githubusercontent.com/mkassm/Software-and-Service-Oriented-Architecture/main/Software%20Architecture/Images/n-tier-3.png "n tier architecture examples")
 
 Problem: if the database changes, you are going to have to change the software on each and every computer. To make an improvement by inserting a tier in between data and end user to become **3-Tier Architecture**.
 
-![n tier architecture examples](https://raw.githubusercontent.com/aboelkassem/Software-and-Service-Oriented-Architecture/main/Software%20Architecture/Images/n-tier-4.png "n tier architecture examples")
+![n tier architecture examples](https://raw.githubusercontent.com/mkassm/Software-and-Service-Oriented-Architecture/main/Software%20Architecture/Images/n-tier-4.png "n tier architecture examples")
 
 **This layer** has many names like **Middle** layer, **Business** layer or **Application** layer. It's a client of the database and a server for the client application on the end users' devices. It's used to determine how and when data can be changed. So now the client software makes requests to the application tier, which makes data calls, so it's easy to maintain.
 
@@ -368,4 +368,4 @@ N-tier architecture follows on separation of concerns, for the above example, th
 
 <hr>
 
-[Edit this page in Github](https://github.com/aboelkassem/Software-and-Service-Oriented-Architecture/blob/main/Software%20Architecture/README.md)
+[Edit this page in Github](https://github.com/mkassm/Software-and-Service-Oriented-Architecture/blob/main/Software%20Architecture/README.md)

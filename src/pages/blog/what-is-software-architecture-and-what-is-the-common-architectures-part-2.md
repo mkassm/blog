@@ -2,11 +2,11 @@
 templateKey: article-page
 title: What is Software Architecture and What is the common architectures? - Part 2
 slug: what-is-software-architecture-and-what-is-the-common-architectures-part-2
-author: aboelkassem
-authorLink: https://www.aboelkassem.tech
+author: Mohamed Kassem
+authorLink: https://www.kassm.me
 date: 2021-02-24T08:57:10.742Z
 cover: /img/software-architecture-2.jpg
-metaTitle: Software Architecture | Aboelkassem Blog
+metaTitle: Software Architecture | Mohamed Kassem Blog
 metaDescription: Software Architecture is the fundamental design of the software
   system. It defines what elements are included in the system, what function
   each element has, how each element related to another. In plain text, it is
@@ -19,7 +19,7 @@ tags:
   - software-engineering
 ---
 
-In[ the previous article,](https://blog.aboelkassem.tech/blog/what-is-software-architecture-and-what-is-the-common-architectures-part-1) we had discussed what is architecture, common UML diagrams, and some architectures. Today, we will continue explaining the architectures and their qualities for building any software.
+In[ the previous article,](https://blog.kassm.me/blog/what-is-software-architecture-and-what-is-the-common-architectures-part-1) we had discussed what is architecture, common UML diagrams, and some architectures. Today, we will continue explaining the architectures and their qualities for building any software.
 
 ## Table of Content
 
@@ -60,13 +60,13 @@ A pipe and filter architecture has entities called **Filters**, which perform tr
 
 **The following diagram shows the data flow in one direction**. The changes of the data are done sequentially from filter to filter.
 
-![pipe-filter-arch-1.png](https://raw.githubusercontent.com/aboelkassem/Software-and-Service-Oriented-Architecture/main/Software%20Architecture/Images/pipe-filter-arch-1.png "pipe filter architecture")
+![pipe-filter-arch-1.png](https://raw.githubusercontent.com/mkassm/Software-and-Service-Oriented-Architecture/main/Software%20Architecture/Images/pipe-filter-arch-1.png "pipe filter architecture")
 
 The order in which filters transform data may **change the end result**, the input of one filter is the output of another, so the order is very important. Also, it used as the text-based utilities in the Unix operating system.
 
 **UML Component Diagram of Pipe and Filter Architecture.**
 
-![pipe-filter-arch-2.png](https://raw.githubusercontent.com/aboelkassem/Software-and-Service-Oriented-Architecture/main/Software%20Architecture/Images/pipe-filter-arch-2.png "pipe filter architecture")
+![pipe-filter-arch-2.png](https://raw.githubusercontent.com/mkassm/Software-and-Service-Oriented-Architecture/main/Software%20Architecture/Images/pipe-filter-arch-2.png "pipe filter architecture")
 
 **Advantages of Pipe and Filter Architecture.**
 
@@ -92,7 +92,7 @@ To implement the event bus there is one way, having a **main loop** in the syste
 
 **Example of Code Editor to understand this process in UML Component Diagram.**
 
-![event-based-arch-1.png](https://raw.githubusercontent.com/aboelkassem/Software-and-Service-Oriented-Architecture/main/Software%20Architecture/Images/event-based-arch-1.png "event based architecture")
+![event-based-arch-1.png](https://raw.githubusercontent.com/mkassm/Software-and-Service-Oriented-Architecture/main/Software%20Architecture/Images/event-based-arch-1.png "event based architecture")
 
 Notice in this example the Build Tool, Test Tool, and Editor are all event generators and consumers. The best thing in this architecture is the event consumers don't necessarily know who is generating the events they handled, This loose coupling of functions makes the system easier to scale and evolve, adding new functionality for an existing event is as simple as registering a new event function to the event bus and add new event consumer.
 
@@ -104,13 +104,13 @@ This style will be suitable for interactive applications, applications that rely
 
 “Cookie Clicker.” The goal of this game is to collect as many points as possible by clicking on an image of a cookie with your cursor. This can be done manually or by clicking on a cursor icon.
 
-![event-based-arch-2.png](https://raw.githubusercontent.com/aboelkassem/Software-and-Service-Oriented-Architecture/main/Software%20Architecture/Images/event-based-arch-2.png "event based architecture")
+![event-based-arch-2.png](https://raw.githubusercontent.com/mkassm/Software-and-Service-Oriented-Architecture/main/Software%20Architecture/Images/event-based-arch-2.png "event based architecture")
 
 When Click in the cookie manually, the total points will increase by one point, The Buy Clicker icon has a functionality, it will purchase a special automatic clicker that automatically clicks the cookie at regular time intervals with 5 cookie points, thus reducing work on the user’s part to collect points.
 
 The following Component Diagram shows the system using event-based architecture.
 
-![event-based-arch-3.png](https://raw.githubusercontent.com/aboelkassem/Software-and-Service-Oriented-Architecture/main/Software%20Architecture/Images/event-based-arch-3.png "event based architecture")
+![event-based-arch-3.png](https://raw.githubusercontent.com/mkassm/Software-and-Service-Oriented-Architecture/main/Software%20Architecture/Images/event-based-arch-3.png "event based architecture")
 
 The "timer" function is an event generator, added to the system by first "buy clicker" event, registered to the event bus, that sends a timer event every five seconds, When the "timer" function emits a timer event, the event bus detects this and trigger every "Automatic clicker" function to consume this event.
 
@@ -130,7 +130,7 @@ There are functional and non-functional requirements when designing the architec
 
 The following table shows attributes that covered when designing a system using design patterns and principles (from the developer's perspective).
 
-![quality-attributes-1.png](https://raw.githubusercontent.com/aboelkassem/Software-and-Service-Oriented-Architecture/main/Software%20Architecture/Images/quality-attributes-1.png "quality attributes")
+![quality-attributes-1.png](https://raw.githubusercontent.com/mkassm/Software-and-Service-Oriented-Architecture/main/Software%20Architecture/Images/quality-attributes-1.png "quality attributes")
 
 - **Maintainability** determines how easy systems can undergo changes like fix errors, change software elements, add new features or retire old services.
 - **Reusability** allows you to take functionality or parts of a system and use it in another one. which helps to reduce reimplementing something that has already been done.
@@ -141,7 +141,7 @@ The following table shows attributes that covered when designing a system using 
 
 In addition to qualities to account for from a **developer’s perspective**, it is also necessary to take into consideration qualities from a **user’s perspective** in the following table.
 
-![quality-attributes-2.png](https://raw.githubusercontent.com/aboelkassem/Software-and-Service-Oriented-Architecture/main/Software%20Architecture/Images/quality-attributes-2.png "quality attributes from user perspective")
+![quality-attributes-2.png](https://raw.githubusercontent.com/mkassm/Software-and-Service-Oriented-Architecture/main/Software%20Architecture/Images/quality-attributes-2.png "quality attributes from user perspective")
 
 - **Availability** is measured by its **uptime** because you want to know how well it is capable of issues like system errors, high loads, or updates, and try to prevent them.
 - **Interoperability** is the ability to understand interfaces and use them to exchange information under specific conditions with external systems, meaning how your system responds to other systems as outlined in the documentation. Modern system has a defined context in which it exchanges information including communication protocols, data formats and with whom allowed to exchange information.
@@ -193,7 +193,7 @@ Each scenario consists of:
 - **Response**: is how the artifact will behave as a result of receiving a stimulus like handling an error, recovering from a failure, updating system logs, dispatching security alerts, or changing the current environment.
 - **Response Measure:** a metric used to quantify the response so that the quality attribute can be measured, like the probability of failure, response time, repair time, and average system load.
 
-![evaluate-and-analysis-arch-1.png](https://raw.githubusercontent.com/aboelkassem/Software-and-Service-Oriented-Architecture/main/Software%20Architecture/Images/evaluate-and-analysis-arch-1.png "evaluate and analysis architecture")
+![evaluate-and-analysis-arch-1.png](https://raw.githubusercontent.com/mkassm/Software-and-Service-Oriented-Architecture/main/Software%20Architecture/Images/evaluate-and-analysis-arch-1.png "evaluate and analysis architecture")
 
 **Availability Quality Attribute Scenario Example**
 
@@ -201,13 +201,13 @@ Imagine you are addressing the availability of a system. In addition to focusing
 
 **In a general scenario**, high-level events are summarized:
 
-![evaluate-and-analysis-arch-2.png](https://raw.githubusercontent.com/aboelkassem/Software-and-Service-Oriented-Architecture/main/Software%20Architecture/Images/evaluate-and-analysis-arch-2.png "evaluate and analysis architecture")
+![evaluate-and-analysis-arch-2.png](https://raw.githubusercontent.com/mkassm/Software-and-Service-Oriented-Architecture/main/Software%20Architecture/Images/evaluate-and-analysis-arch-2.png "evaluate and analysis architecture")
 
 **In a concrete scenario** that allows you to test architecture with a specific stimulus, under specific system environments, and measure how well the system can respond. For exmaple
 
 - Availability for a web server can be measured in its ability to process requests when at resource limits or under heavy load, so you can measure a server's availability under different conditions.
 
-![evaluate-and-analysis-arch-3.png](https://raw.githubusercontent.com/aboelkassem/Software-and-Service-Oriented-Architecture/main/Software%20Architecture/Images/evaluate-and-analysis-arch-3.png "evaluate and analysis architecture")
+![evaluate-and-analysis-arch-3.png](https://raw.githubusercontent.com/mkassm/Software-and-Service-Oriented-Architecture/main/Software%20Architecture/Images/evaluate-and-analysis-arch-3.png "evaluate and analysis architecture")
 
 **Architecture Trade-off Analysis Method (ATAM)**
 
@@ -226,7 +226,7 @@ ATAM involves three different groups of participants:
 
 The following diagram shows high level flow of ATAM:
 
-![ATAM-1.png](https://raw.githubusercontent.com/aboelkassem/Software-and-Service-Oriented-Architecture/main/Software%20Architecture/Images/ATAM-1.png "Architecture Trade-off Analysis Method (ATAM)")
+![ATAM-1.png](https://raw.githubusercontent.com/mkassm/Software-and-Service-Oriented-Architecture/main/Software%20Architecture/Images/ATAM-1.png "Architecture Trade-off Analysis Method (ATAM)")
 
 In an ATAM, a software project is initiated when business drivers identify a need for a system to address some problem. Business drivers go hand in hand with the system architecture, which is created as the solution to the business issues. Together, business drivers and system architecture determine the quality attributes of the system, the architectural approach taken, and the design decisions that are made. These combine together to create quality attribute scenarios. Scenarios can then be analyzed, resulting in an evaluation of the system, which includes trade-offs, sensitivity points, non-risk scenarios, and risk scenarios. Since the risk scenarios have a negative impact on the quality of the system, each of them is analyzed and categorized into “risk themes".
 
@@ -237,7 +237,7 @@ In an ATAM, a software project is initiated when business drivers identify a nee
 - **Present the architecture**. The current and expected state of architecture is presented, constraints of the project that can affect the architecture such as time, cost, the difficulty of the problem, and quality expectations.
 - **Identify the architectural approaches**. This is the first analysis activity that involves examining the architectural patterns that have been used in the system so far. In this step, you analyze the documentation, the notes from presentations, and ask questions to get more clarity about the system.
 - **Create a quality attribute tree**. The requirements for each quality attribute are details in a utility tree. which captures all the quality-related architecturally significant requirements (**ASRs**). Which get from business drivers to utility system's quality attributes. You can insight into the system and identify the quality priorities by working with the project decision makers to refine your tree.
-  ![ATAM-2.png](https://raw.githubusercontent.com/aboelkassem/Software-and-Service-Oriented-Architecture/main/Software%20Architecture/Images/ATAM-2.png "Architecture Trade-off Analysis Method (ATAM)")
+  ![ATAM-2.png](https://raw.githubusercontent.com/mkassm/Software-and-Service-Oriented-Architecture/main/Software%20Architecture/Images/ATAM-2.png "Architecture Trade-off Analysis Method (ATAM)")
 
   ```
   To build such a tree, the overall “utility” of a system is broken down into quality attributes, which are refined into attribute refinements. **Attribute refinements** are more specific qualities of a system. Once the quality attributes have been refined, ASRs can be associated with the appropriate attribute.
@@ -249,7 +249,7 @@ In an ATAM, a software project is initiated when business drivers identify a nee
 - **Brainstorm and prioritize scenarios**. Each group of participants creates quality attribute scenarios that are important to them, and that they would expect when using the system. Scenarios that have similar quality concerns or behaviors can be merged together. Scenarios are prioritized based on importance to each stakeholder, and the evaluation team compares the list with the prioritized ASRs in the utility tree. If the priorities of the stakeholders match closely with the priorities in the utility tree, then there is **good alignment.**
 - **Re-analyze the architectural approaches**. Similar to the earlier analysis, you create a utility tree, but you will use the top five or ten scenarios prioritized in the previous step.
 - **Present the result**. Finally, the results of the evaluation are compiled and presented. These risk scenarios are grouped together, and categorized into "risk themes". Risk themes help to identify which business drivers are affected. The information presented includes all architecture documents, utility trees, risk and non-risk scenarios, sensitivity points, tradeoffs, and risk themes.
-  ![ATAM-3.png](https://raw.githubusercontent.com/aboelkassem/Software-and-Service-Oriented-Architecture/main/Software%20Architecture/Images/ATAM-3.png "Architecture Trade-off Analysis Method (ATAM)")
+  ![ATAM-3.png](https://raw.githubusercontent.com/mkassm/Software-and-Service-Oriented-Architecture/main/Software%20Architecture/Images/ATAM-3.png "Architecture Trade-off Analysis Method (ATAM)")
 
 Modern systems are becoming more and more complex as technology grows, and creating an architecture that can achieve all the requirements for quality attributes is becoming increasingly important. Being able to evaluate and analyze architectures helps successfully create high-quality systems.
 
@@ -273,7 +273,7 @@ If only one or two products are being produced, it might not be worthwhile to tr
 
 Separate the features that stay the same from the features that are different across products.
 
-![product-lines-1.png](https://raw.githubusercontent.com/aboelkassem/Software-and-Service-Oriented-Architecture/main/Software%20Architecture/Images/product-lines-1.png "product lines")
+![product-lines-1.png](https://raw.githubusercontent.com/mkassm/Software-and-Service-Oriented-Architecture/main/Software%20Architecture/Images/product-lines-1.png "product lines")
 
 \- \\*\\*Commonalities\\_\\_ like the user experience of the apple products.
 
@@ -285,7 +285,7 @@ Product line development teams are generally divided into two camps:
 - **Domain engineering**: is the development of the commonalities and variations. Essentially this is putting together the building blocks of the products or the infrastructure.
 - **Application Engineering**: is the actual development of the product. It includes using the commonalities, deciding which variations are necessary, and integrating them into the product and developing product-specific features. This is sometimes described as “instantiating” a product. There could be several application engineering teams, one for each product.
 
-![product lines](https://raw.githubusercontent.com/aboelkassem/Software-and-Service-Oriented-Architecture/main/Software%20Architecture/Images/product-lines-2.png "product lines")
+![product lines](https://raw.githubusercontent.com/mkassm/Software-and-Service-Oriented-Architecture/main/Software%20Architecture/Images/product-lines-2.png "product lines")
 
 Separating development into domain and application engineering allows for **separate development cycles**. The domain engineering team can determine the long-term needs of the product line, evolve and test components as needed, then **release that infrastructure to the application team**. Then, the application team can develop product specific features using the infrastructure and the requirements of the product. They will develop product-specific features, decide what variations to use, and test the final product. This can be done while the domain engineering team is working on the next update of the infrastructure.
 
@@ -301,11 +301,11 @@ Products in a product line likely have similar architectures, as they serve a si
 Because there will be differences in the product line, there are **three general techniques** to realize **variations** in a system:
 
 - **Adaptation technique**. In this technique, the component has only one implementation, but it supplies interfaces to change or add on to it. Components can be adapted through **settings in a configuration file**, by adding new methods or by overriding existing methods
-  ![product lines](https://raw.githubusercontent.com/aboelkassem/Software-and-Service-Oriented-Architecture/main/Software%20Architecture/Images/product-lines-3.png "product lines")
+  ![product lines](https://raw.githubusercontent.com/mkassm/Software-and-Service-Oriented-Architecture/main/Software%20Architecture/Images/product-lines-3.png "product lines")
 - **Replacement technique**. In this technique, there could be a default component that is replaced with alternatives to realize variation. There may not even be a default; instead, there is a gap in the system, and the developers must supply one of the components.
-  ![product lines](https://raw.githubusercontent.com/aboelkassem/Software-and-Service-Oriented-Architecture/main/Software%20Architecture/Images/product-lines-4.png "product lines")
+  ![product lines](https://raw.githubusercontent.com/mkassm/Software-and-Service-Oriented-Architecture/main/Software%20Architecture/Images/product-lines-4.png "product lines")
 - **Extension technique.** In this technique, a common interface is provided for all the variations of the system. These variations are often called extensions, add-ons, or plugins.
-  ![product lines](https://raw.githubusercontent.com/aboelkassem/Software-and-Service-Oriented-Architecture/main/Software%20Architecture/Images/product-lines-5.png "product lines")
+  ![product lines](https://raw.githubusercontent.com/mkassm/Software-and-Service-Oriented-Architecture/main/Software%20Architecture/Images/product-lines-5.png "product lines")
 
 Variations can be realized at different times. Different variations may even come in at different stages they can be formed early on, during the design or development process of the application engineering team, or they can be formed when the software is compiled and built. Similarly, variations can be realized at different times, like when the software is launched or after the software is launched, whenever they are needed.
 
@@ -313,4 +313,4 @@ Product lines are an efficient way to use the power of code re-use in related pr
 
 <hr>
 
-[Edit this page in Github](https://github.com/aboelkassem/Software-and-Service-Oriented-Architecture/blob/main/Software%20Architecture/README.md)
+[Edit this page in Github](https://github.com/mkassm/Software-and-Service-Oriented-Architecture/blob/main/Software%20Architecture/README.md)

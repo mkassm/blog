@@ -6,9 +6,9 @@ const Socials = (props) => {
   return (
     <div className="db dtc-ns black-70 tc tr-ns v-mid">
       <a
-        href={`https://blog.aboelkassem.tech${siteRss}`}
+        href={`https://blog.kassm.me${siteRss}`}
         className="link hover-orange dib mr3 black-70"
-        title="Aboelkassem Blog RSS Feed"
+        title="Mohamed Kassem Blog RSS Feed"
         target="_blank"
         rel="noopener nofollow noreferrer"
       >
@@ -28,7 +28,7 @@ const Socials = (props) => {
       <a
         href="https://instagram.com/maboelkassim"
         className="link hover-pink dib mr3 black-70"
-        title="Aboelkassem on Instagram"
+        title="Mohamed Kassem on Instagram"
         target="_blank"
         rel="noopener nofollow noreferrer"
       >
@@ -46,10 +46,10 @@ const Socials = (props) => {
       </a>
 
       <a
-        href="https://twitter.com/maboelkassim"
+        href="https://twitter.com/mo_kassm"
         className="link hover-light-blue dib mr3 black-70"
         target="_blank"
-        title="Aboelkassem on Twitter"
+        title="Mohamed Kassem on Twitter"
         rel="noopener nofollow noreferrer"
       >
         <svg
@@ -65,9 +65,9 @@ const Socials = (props) => {
       </a>
 
       <a
-        href="https://github.com/aboelkassem"
+        href="https://github.com/mkassm"
         className="link hover-black dib black-70"
-        title="aboelkassem on Github"
+        title="Mohamed Kassem on Github"
         target="_blank"
         rel="noopener nofollow noreferrer"
       >
@@ -85,10 +85,10 @@ const Socials = (props) => {
       </a>
 
       <a
-        href="https://www.linkedin.com/in/aboelkassem"
+        href="https://www.linkedin.com/in/mkassm"
         className="link hover-blue dib black-70 ml3"
         target="_blank"
-        title="aboelkassem on Linked In"
+        title="Mohamed Kassem on Linked In"
         rel="noopener nofollow noreferrer"
       >
         <svg

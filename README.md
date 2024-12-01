@@ -25,7 +25,7 @@ A truly complete & feature rich Gatsby Blog Starter. Powered by Gatsby and Netli
 Create your own project with Gatsby CLI:
 
 ```shell
-gatsby new <my-blog-name> https://github.com/aboelkassem/blog.git
+gatsby new <my-blog-name> https://github.com/mkassm/blog.git
 ```
 
 ## Environment Variables
@@ -93,7 +93,7 @@ const config = {
   siteTitle: `aboelkassem Blog`, // Site title.
   siteTitleAlt: `qassem blog`, // Alternative site title for SEO.
   siteLogo: `/icons/icon-512x512.png`, // Logo used for SEO and manifest.
-  siteUrl: `https://blog.aboelkassem.tech/`, // Domain of your website without pathPrefix.
+  siteUrl: `https://blog.kassm.me/`, // Domain of your website without pathPrefix.
   pathPrefix: "", // Prefixes all links. For cases when deployed to example.github.io/gatsby-starter-business/.
   siteDescription: `aboelkassem Blog is the personal blog of Mohamed Abdelrahman. A Brew of Awesomeness with a Pinch of Magic...`, // Website description used for RSS feeds/meta description tag.
   siteRss: `/rss.xml`,
@@ -112,6 +112,6 @@ const config = {
 };
 ```
 
-<a href="https://app.netlify.com/start/deploy?repository=https://github.com/aboelkassem/blog" target="_blank">
+<a href="https://app.netlify.com/start/deploy?repository=https://github.com/mkassm/blog" target="_blank">
   <img src="https://www.netlify.com/img/global/badges/netlify-dark.svg"/>
 </a>

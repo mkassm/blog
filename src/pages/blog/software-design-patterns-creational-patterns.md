@@ -2,8 +2,8 @@
 templateKey: article-page
 title: "Software Design Patterns: Creational Patterns"
 slug: design-patterns-creational-patterns
-author: aboelkassem
-authorLink: https://www.aboelkassem.tech
+author: Mohamed Kassem
+authorLink: https://www.kassm.me
 date: 2021-01-01T13:24:06.857Z
 cover: /img/creational-patterns.jpg
 metaTitle: Creational Patterns | Aboelkassem blog
@@ -22,7 +22,7 @@ tags:
 
 This lesson lays down the groundwork for understanding design patterns
 
-> Note: I will use C# and java programming languages to apply the pattern concept, in addition, the example below which we will discuss, there are other examples in [my Github source code example](https://github.com/aboelkassem/Design-Patterns/tree/main/src/DesignPattern), so feel free to take a look at theme if you don't get the example below.
+> Note: I will use C# and java programming languages to apply the pattern concept, in addition, the example below which we will discuss, there are other examples in [my Github source code example](https://github.com/mkassm/Design-Patterns/tree/main/src/DesignPattern), so feel free to take a look at theme if you don't get the example below.
 
 ## Table of Contents
 
@@ -34,9 +34,9 @@ This lesson lays down the groundwork for understanding design patterns
     - Simple Factory objects
     - Factory Method Pattern
 
-### Suggestions for [Object Oriented Design](https://blog.aboelkassem.tech/blog/what-is-object-oriented-design-and-analysis-part-1)
+### Suggestions for [Object Oriented Design](https://blog.kassm.me/blog/what-is-object-oriented-design-and-analysis-part-1)
 
-Whenever writing code in an object-orientated language, sticking to the following list of suggestions will make your code amenable to changes with the least effort. You can learn Object-Oriented Design and Analysis which we had discussed in other articles from [part1 ](https://blog.aboelkassem.tech/blog/what-is-object-oriented-design-and-analysis-part-1)and [part2](https://blog.aboelkassem.tech/blog/what-is-object-oriented-design-and-analysis-part-2), we summary them as the following:
+Whenever writing code in an object-orientated language, sticking to the following list of suggestions will make your code amenable to changes with the least effort. You can learn Object-Oriented Design and Analysis which we had discussed in other articles from [part1 ](https://blog.kassm.me/blog/what-is-object-oriented-design-and-analysis-part-1)and [part2](https://blog.kassm.me/blog/what-is-object-oriented-design-and-analysis-part-2), we summary them as the following:
 
 - <b>Separate</b> out parts of code that vary or change from those that remain the same.
 - Always code to <b>an interface</b> and not against a concrete implementation.
@@ -87,7 +87,7 @@ As the name suggests is <b>Only create one instance of a class,</b> There are se
 
 - <b>Class Diagram</b>
 
-![singleton-uml.jpg](https://raw.githubusercontent.com/aboelkassem/Design-Patterns/main/Images/singleton-uml.jpg "Singleton UML")
+![singleton-uml.jpg](https://raw.githubusercontent.com/mkassm/Design-Patterns/main/Images/singleton-uml.jpg "Singleton UML")
 
 #### Problem of using Multithreading in Singleton Pattern
 
@@ -284,9 +284,9 @@ Define an **interface** for creating an object, but let subclasses decide which 
 
 **Class Diagram**
 
-![FactoryMethodUML.png](https://raw.githubusercontent.com/aboelkassem/Design-Patterns/main/Images/FactoryMethodUML.png "Factory Method UML")
+![FactoryMethodUML.png](https://raw.githubusercontent.com/mkassm/Design-Patterns/main/Images/FactoryMethodUML.png "Factory Method UML")
 
-![FactoryMethodUML-ex.png](https://raw.githubusercontent.com/aboelkassem/Design-Patterns/main/Images/FactoryMethodUML-ex.png "Factory Method UML example")
+![FactoryMethodUML-ex.png](https://raw.githubusercontent.com/mkassm/Design-Patterns/main/Images/FactoryMethodUML-ex.png "Factory Method UML example")
 
 **For Example**
 
@@ -326,4 +326,4 @@ public BudgetKnifeStore: KnifeStore {
 
 <hr>
 
-[Edit this page on Github](https://github.com/aboelkassem/Design-Patterns#creational-patterns)
+[Edit this page on Github](https://github.com/mkassm/Design-Patterns#creational-patterns)

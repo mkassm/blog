@@ -2,8 +2,8 @@
 templateKey: article-page
 title: " The Five Basic Object-Oriented (SOLID Principles) for Designing Software"
 slug: " solid-principles-for-desiging-software"
-author: aboelkassem
-authorLink: https://www.aboelkassem.tech
+author: Mohamed Kassem
+authorLink: https://www.kassm.me
 date: 2020-07-30T11:41:53.267Z
 cover: /img/solid.png
 metaTitle: Solid Principles | Aboelkassem blog
@@ -55,33 +55,33 @@ every software has many responsiblities while you building it like
 - Validation
 - Business Logic
 
-![Voilatiing-Single-Responsibility-Principle.png](https://raw.githubusercontent.com/aboelkassem/Solid-Principles/master/Screenshots/Voilatiing-Single-Responsibility-Principle.png "Voilatiing Single Responsibility Principle")
+![Voilatiing-Single-Responsibility-Principle.png](https://raw.githubusercontent.com/mkassm/Solid-Principles/master/Screenshots/Voilatiing-Single-Responsibility-Principle.png "Voilatiing Single Responsibility Principle")
 
 ### Example 1 for <a href="https://github.com/ardalis/SolidSample/tree/SRP-START">the code here</a>:
 
 Finding Responsibilities in one class that make the code difficult and longer to test one responsibility in isolation
 
-![ex2-pro.png](https://raw.githubusercontent.com/aboelkassem/Solid-Principles/master/Screenshots/ex2-pro.png "example 1 problem")
+![ex2-pro.png](https://raw.githubusercontent.com/mkassm/Solid-Principles/master/Screenshots/ex2-pro.png "example 1 problem")
 
-![ex2-pro-2.png](https://raw.githubusercontent.com/aboelkassem/Solid-Principles/master/Screenshots/ex2-pro-2.png "example 1 problem")
+![ex2-pro-2.png](https://raw.githubusercontent.com/mkassm/Solid-Principles/master/Screenshots/ex2-pro-2.png "example 1 problem")
 
 **Solution after making them in different classes that now are easily tested**
 
-![example 1 solution with single repository](https://github.com/aboelkassem/Solid-Principles/raw/master/Screenshots/ex2-solu.png "example 1 solution with single repository")
+![example 1 solution with single repository](https://github.com/mkassm/Solid-Principles/raw/master/Screenshots/ex2-solu.png "example 1 solution with single repository")
 
-![ex2-solu-2.png](https://github.com/aboelkassem/Solid-Principles/raw/master/Screenshots/ex2-solu-2.png "example 1 solution with single repository")
+![ex2-solu-2.png](https://github.com/mkassm/Solid-Principles/raw/master/Screenshots/ex2-solu-2.png "example 1 solution with single repository")
 
-![ex2-solu-3.png](https://github.com/aboelkassem/Solid-Principles/raw/master/Screenshots/ex2-solu-3.png "example 1 solution with single repository")
+![ex2-solu-3.png](https://github.com/mkassm/Solid-Principles/raw/master/Screenshots/ex2-solu-3.png "example 1 solution with single repository")
 
 ### Example 2:
 
 **Problem:**
 
-![ex1-pro.png](https://raw.githubusercontent.com/aboelkassem/Solid-Principles/master/Screenshots/ex1-pro.png "example 2 problem")
+![ex1-pro.png](https://raw.githubusercontent.com/mkassm/Solid-Principles/master/Screenshots/ex1-pro.png "example 2 problem")
 
 **Solution**:
 
-![ex1-slou.png](https://raw.githubusercontent.com/aboelkassem/Solid-Principles/master/Screenshots/ex1-slou.png "example 2 solution")
+![ex1-slou.png](https://raw.githubusercontent.com/mkassm/Solid-Principles/master/Screenshots/ex1-slou.png "example 2 solution")
 
 ## Open/Closed Principle (OCP)
 
@@ -114,14 +114,14 @@ Finding Responsibilities in one class that make the code difficult and longer to
 - first, make the base class that contains the original method abstract class and make the method abstract method don't have an implementation,
 - Create class/classes inherit from this abstract class to do these abstract method in different functionality .... so now it's close for modifications and open for an extension new method
 
-![ocp-abstract.png](https://raw.githubusercontent.com/aboelkassem/Solid-Principles/master/Screenshots/ocp-abstract.png "ocp abstract diagram")
+![ocp-abstract.png](https://raw.githubusercontent.com/mkassm/Solid-Principles/master/Screenshots/ocp-abstract.png "ocp abstract diagram")
 
 ### 2- Interface
 
 - Create an interface that contains the common method that wants to add new functionality to it
 - Create class/classes implement this interface to do the different functionalities for this method
 
-![ocp-interface.png](https://raw.githubusercontent.com/aboelkassem/Solid-Principles/master/Screenshots/ocp-interface.png "ocp interface diagram")
+![ocp-interface.png](https://raw.githubusercontent.com/mkassm/Solid-Principles/master/Screenshots/ocp-interface.png "ocp interface diagram")
 
 ### Other Typical Approaches to OCP
 
@@ -142,23 +142,23 @@ public class DoOneThing
 ```
 
 - **Parameters**
-  ![ocp-parameter.png](https://raw.githubusercontent.com/aboelkassem/Solid-Principles/master/Screenshots/ocp-parameter.png "apply parameters approch for OCP")
+  ![ocp-parameter.png](https://raw.githubusercontent.com/mkassm/Solid-Principles/master/Screenshots/ocp-parameter.png "apply parameters approch for OCP")
 - **Inheritance**
-  ![ocp-inherit.png](https://raw.githubusercontent.com/aboelkassem/Solid-Principles/master/Screenshots/ocp-inherit.png "apply inheritance approch for OCP")
+  ![ocp-inherit.png](https://raw.githubusercontent.com/mkassm/Solid-Principles/master/Screenshots/ocp-inherit.png "apply inheritance approch for OCP")
 - **Composition/ Injection**
-  ![ocp-inject.png](https://raw.githubusercontent.com/aboelkassem/Solid-Principles/master/Screenshots/ocp-inject.png "apply composition approch for OCP")
+  ![ocp-inject.png](https://raw.githubusercontent.com/mkassm/Solid-Principles/master/Screenshots/ocp-inject.png "apply composition approch for OCP")
 
 ### Example OCP in Packages and Libraries in NuGet or NPM
 
 using extension methods in C# like [this example](https://github.com/ardalis/guardclauses)
 
-![ocp-packages.png](https://raw.githubusercontent.com/aboelkassem/Solid-Principles/master/Screenshots/ocp-packages.png "example for ocp princiles")
+![ocp-packages.png](https://raw.githubusercontent.com/mkassm/Solid-Principles/master/Screenshots/ocp-packages.png "example for ocp princiles")
 
 ## Liskov Substitution Principle (LSP)
 
 - if you have class **B** inherit from class **A** then class **A** should be replaceable by class **B** without any changes/ problems
 - LSP Is a Subset of Polymorphism
-  ![lsp.png](https://raw.githubusercontent.com/aboelkassem/Solid-Principles/master/Screenshots/lsp.png "LSP principle")
+  ![lsp.png](https://raw.githubusercontent.com/mkassm/Solid-Principles/master/Screenshots/lsp.png "LSP principle")
 
 ### How to Apply LSP
 
@@ -250,7 +250,7 @@ foreach(var employee in employees)
 
 > The Interface Segregation Principle states that any classes that implement an interface, should not have "dummy" implementations. Instead you should split large interfaces into smaller generalizations.
 
-![isp.png](https://raw.githubusercontent.com/aboelkassem/Solid-Principles/master/Screenshots/isp.png "ISP principle problem")
+![isp.png](https://raw.githubusercontent.com/mkassm/Solid-Principles/master/Screenshots/isp.png "ISP principle problem")
 
 ### Detecting ISP Violations in your code
 
@@ -264,15 +264,15 @@ foreach(var employee in employees)
 
 ### Example 1
 
-![isp-ex1.png](https://raw.githubusercontent.com/aboelkassem/Solid-Principles/master/Screenshots/isp-ex1.png "ISP Principle Example 1")
+![isp-ex1.png](https://raw.githubusercontent.com/mkassm/Solid-Principles/master/Screenshots/isp-ex1.png "ISP Principle Example 1")
 
 ### Example 2
 
-![isp-ex2.png](https://raw.githubusercontent.com/aboelkassem/Solid-Principles/master/Screenshots/isp-ex2.png "ISP Principle Example 2 - 1")
+![isp-ex2.png](https://raw.githubusercontent.com/mkassm/Solid-Principles/master/Screenshots/isp-ex2.png "ISP Principle Example 2 - 1")
 
-![isp-ex2-1.png](https://raw.githubusercontent.com/aboelkassem/Solid-Principles/master/Screenshots/isp-ex2-1.png "ISP Principle Example 2 - 2")
+![isp-ex2-1.png](https://raw.githubusercontent.com/mkassm/Solid-Principles/master/Screenshots/isp-ex2-1.png "ISP Principle Example 2 - 2")
 
-![isp-ex2-2.png](https://raw.githubusercontent.com/aboelkassem/Solid-Principles/master/Screenshots/isp-ex2-2.png "ISP Principle Example 2 - 3")
+![isp-ex2-2.png](https://raw.githubusercontent.com/mkassm/Solid-Principles/master/Screenshots/isp-ex2-2.png "ISP Principle Example 2 - 3")
 
 ## Dependency Inversion Principle (DIP)
 
@@ -282,7 +282,7 @@ The principle states that high-level modules should depend on high-level general
 
   - abstractions should not depend on details
   - details should depend on abstractions
-    ![dpi.png](https://raw.githubusercontent.com/aboelkassem/Solid-Principles/master/Screenshots/dpi.png "DIP principle")
+    ![dpi.png](https://raw.githubusercontent.com/mkassm/Solid-Principles/master/Screenshots/dpi.png "DIP principle")
 
 - Applying this principle would make your code loosely coupling and highly cohesive (don't depend on low-level classes)
 - **High-level Module** is the module that has business rules, more abstract, process-oriented, further from (I/O) while **Low-Level Module** is closer to (I/O) and interacts with specific external systems and hardware (keep plumbing code separate from high-level business logic)
@@ -295,16 +295,16 @@ The principle states that high-level modules should depend on high-level general
   - Method Constructor
 
 - Like this design/problem that causes pain like tight coupling, low cohesive, difficult to isolate and unit test and duplicate the code
-  ![dpi-ex1.png](https://raw.githubusercontent.com/aboelkassem/Solid-Principles/master/Screenshots/dpi-ex1.png "DIP exmaple 1 problem")
+  ![dpi-ex1.png](https://raw.githubusercontent.com/mkassm/Solid-Principles/master/Screenshots/dpi-ex1.png "DIP exmaple 1 problem")
 - but the solution would be :
-  ![dpi-ex1-sol.png](https://raw.githubusercontent.com/aboelkassem/Solid-Principles/master/Screenshots/dpi-ex1-sol.png "DIP exmaple 1 solution")
-  ![dpi-dep.png](https://raw.githubusercontent.com/aboelkassem/Solid-Principles/master/Screenshots/dpi-dep.png "DIP dependencies")
+  ![dpi-ex1-sol.png](https://raw.githubusercontent.com/mkassm/Solid-Principles/master/Screenshots/dpi-ex1-sol.png "DIP exmaple 1 solution")
+  ![dpi-dep.png](https://raw.githubusercontent.com/mkassm/Solid-Principles/master/Screenshots/dpi-dep.png "DIP dependencies")
 
 So instead of the following diagram that implement low level concrete class/details which it consume a lot of work if there are any changes.
-![DIP-1.png](https://raw.githubusercontent.com/aboelkassem/Solid-Principles/master/Screenshots/DIP-1.png "System Without Abstractions")
+![DIP-1.png](https://raw.githubusercontent.com/mkassm/Solid-Principles/master/Screenshots/DIP-1.png "System Without Abstractions")
 
 Applying DIP to depend on High-Level Generalization will become like this
-![DIP-2.png](https://raw.githubusercontent.com/aboelkassem/Solid-Principles/master/Screenshots/DIP-2.png "System with Abstractions")
+![DIP-2.png](https://raw.githubusercontent.com/mkassm/Solid-Principles/master/Screenshots/DIP-2.png "System with Abstractions")
 
 This means that the Client is dependent on expected behaviors (high level), not on a specific implementation (low level).
 
@@ -342,4 +342,4 @@ cause following all these principles would need too many files that focus on mor
 
 <hr>
 
-[Edit this page in Github](https://github.com/aboelkassem/Solid-Principles)
+[Edit this page in Github](https://github.com/mkassm/Solid-Principles)

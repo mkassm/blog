@@ -2,11 +2,11 @@
 templateKey: article-page
 title: Introduction to Service-Oriented Architecture and Web Services - Part 1
 slug: introduction-to-service-oriented-architecture-and-web-services-part-1
-author: aboelkassem
-authorLink: https://www.aboelkassem.tech
+author: Mohamed Kassem
+authorLink: https://www.kassm.me
 date: 2021-03-01T09:53:43.142Z
 cover: /img/make-a-web-service.jpg
-metaTitle: SOA and Web Services | Aboelkassem Blog
+metaTitle: SOA and Web Services | Mohamed Kassem Blog
 metaDescription: Service-oriented Architecture is all about how to build, use,
   and combine services. Instead of building large software suites that do
   everything, service-oriented architecture is all about achieving your software
@@ -25,7 +25,7 @@ In this article, we will discuss the architectures for web applications, then ex
 
 ## Important Note
 
-> Before starting reading this, you can see [Software Architecture](https://blog.aboelkassem.tech/blog/what-is-software-architecture-and-what-is-the-common-architectures-part-1) article, in which we will introduce the most common architectures, their qualities, and tradeoffs. We talked about how architectures are evaluated, what makes a good architecture, and an architecture can be improved. We'll also talk about how the architecture touches on the process of software development.
+> Before starting reading this, you can see [Software Architecture](https://blog.kassm.me/blog/what-is-software-architecture-and-what-is-the-common-architectures-part-1) article, in which we will introduce the most common architectures, their qualities, and tradeoffs. We talked about how architectures are evaluated, what makes a good architecture, and an architecture can be improved. We'll also talk about how the architecture touches on the process of software development.
 
 ## Table of Content
 
@@ -102,7 +102,7 @@ In 1990s, the introduction of HTML and web browsers greatly increased the popula
 
 Websites are made up of web pages. To view a web page, the web browser makes a request to the web server that hosts the web page, then the web server handles the request by returning the HTML document that corresponds to the requested web page, and then the browser renders this HTML document to the user. The relationship between web browser and web service is a client-server relationship. Both the request and the response are messages conveyed in **HTTP**, a communication protocol that both the web browser and web server understand.
 
-![history-of-web-1.png](https://raw.githubusercontent.com/aboelkassem/Software-and-Service-Oriented-Architecture/main/Images/history-of-web-1.png "history of web")
+![history-of-web-1.png](https://raw.githubusercontent.com/mkassm/Software-and-Service-Oriented-Architecture/main/Images/history-of-web-1.png "history of web")
 
 **Static Web Pages**
 
@@ -149,7 +149,7 @@ Services provide a user **interface** that can be embedded in a web page or appl
 
 For example, you were developing a personal landing page, it may have its own content like a blog or a writing portfolio, it also uses external services, like showing your latest post from a Microblog service provider, or an external Photo-storage service provider. you may get information from your calendar and your travel itinerary, integrated into applet to tell people when you have free time to meet and where you will be. Each of these services produces content for the landing page. So the request is **asynchronous.**
 
-![history-of-web-2.png](https://raw.githubusercontent.com/aboelkassem/Software-and-Service-Oriented-Architecture/main/Images/history-of-web-2.png "web services")
+![history-of-web-2.png](https://raw.githubusercontent.com/mkassm/Software-and-Service-Oriented-Architecture/main/Images/history-of-web-2.png "web services")
 
 ### Layers of Web Architecture
 
@@ -159,7 +159,7 @@ Complex systems require more layers to help logically separate the components. H
 
 Layered systems are organized into **Presentation**, **Application**, and **Data tiers**. In web systems, presentation tier is divided into two layers, **web browser** and **web server**.
 
-![layers-web-app-1.png](https://raw.githubusercontent.com/aboelkassem/Software-and-Service-Oriented-Architecture/main/Images/layers-web-app-1.png "layers of web application")
+![layers-web-app-1.png](https://raw.githubusercontent.com/mkassm/Software-and-Service-Oriented-Architecture/main/Images/layers-web-app-1.png "layers of web application")
 
 - **The Web Browser Layer** is the top layer, it displays the information to the user.
 - **The Web Server Layer** is below the web browser layer, it receives a request from the web browser, **obtains the request content** and **returns it to the browser**.
@@ -170,13 +170,13 @@ Not all systems require this four layers, and not all systems use these layers t
 
 **Layers for Static Web Content**
 
-![layers-web-app-2.png](https://raw.githubusercontent.com/aboelkassem/Software-and-Service-Oriented-Architecture/main/Images/layers-web-app-2.png "layers web app")
+![layers-web-app-2.png](https://raw.githubusercontent.com/mkassm/Software-and-Service-Oriented-Architecture/main/Images/layers-web-app-2.png "layers web app")
 
 The web server layer receives the request from the web browser and grabs the appropriate HTML documents stored in data layer. After it has accessed, it returns the request content to the browser. There is no application layer in a static web content system, as the HTML documents served by the web server are the exact as stored in the file system. No processing has been applied
 
 **Layers for Dynamic Web Content and Web Applications**
 
-![layers-web-app-1.png](https://raw.githubusercontent.com/aboelkassem/Software-and-Service-Oriented-Architecture/main/Images/layers-web-app-1.png "layers web app")
+![layers-web-app-1.png](https://raw.githubusercontent.com/mkassm/Software-and-Service-Oriented-Architecture/main/Images/layers-web-app-1.png "layers web app")
 
 Web browser and web server perform the same way as above with static content, the web server passes on the request to an application server in the application layer for processing, The application layer may consist of one or more programs that process the request to generate the resulting content. Also, The application layer may also call upon other **web services**, and read and write data to a database via the data layer
 
@@ -184,7 +184,7 @@ Web browser and web server perform the same way as above with static content, th
 
 Think of web as a collection of services. For example, a database provides data services, and the application server is a service requester to the database. The application server runs programs that may access a variety of web services provided outside the system.
 
-![layers-web-app-3.png](https://raw.githubusercontent.com/aboelkassem/Software-and-Service-Oriented-Architecture/main/Images/layers-web-app-3.png "layers web app")
+![layers-web-app-3.png](https://raw.githubusercontent.com/mkassm/Software-and-Service-Oriented-Architecture/main/Images/layers-web-app-3.png "layers web app")
 
 Layered architecture and use of outside web services reinforce the basic design principles of separation of concerns and code reuse. Layers have specific responsibilities, while outside services provide functionality that the system does not have to implement. The scope of using web services is huge, so it raises the challenge of identifying the right ones to use.
 
@@ -302,7 +302,7 @@ We will focus on **HTTP 1.1**, although several protocol versions exist.
 
 - **URLs** tell the protocol how to locate and access the resource, which provide the protocol, the domain name, or IP address, of the machine that resource stored on and the location of the resource on the machine. So All URLs are URIs, but not all URIs are URLs.
 
-![uri-url.png](https://raw.githubusercontent.com/aboelkassem/Software-and-Service-Oriented-Architecture/main/Images/uri-url.png "URI and URL")
+![uri-url.png](https://raw.githubusercontent.com/mkassm/Software-and-Service-Oriented-Architecture/main/Images/uri-url.png "URI and URL")
 
 So as example of URI ⇒ <http://example.com/user/favoriteitems/widebrimsunhat/sunhat.png>
 
@@ -365,7 +365,7 @@ Now as we said, an HTTP request must indicate a request method in it request lin
 
 **Here is the GET Request and Response.**
 
-![GET-Method.png](https://raw.githubusercontent.com/aboelkassem/Software-and-Service-Oriented-Architecture/main/Images/GET-Method.png "HTTP GET Method Example")
+![GET-Method.png](https://raw.githubusercontent.com/mkassm/Software-and-Service-Oriented-Architecture/main/Images/GET-Method.png "HTTP GET Method Example")
 
 **POST Method**
 
@@ -375,7 +375,7 @@ is used to add or modify the resource/information according to the message body 
 
 **Here is the POST Request and Response.**
 
-![POST-Method.png](https://raw.githubusercontent.com/aboelkassem/Software-and-Service-Oriented-Architecture/main/Images/POST-Method.png "HTTP POST Method Example")
+![POST-Method.png](https://raw.githubusercontent.com/mkassm/Software-and-Service-Oriented-Architecture/main/Images/POST-Method.png "HTTP POST Method Example")
 
 **PUT Method**
 
@@ -385,9 +385,9 @@ It takes the information provided in the body of the request, and creates or upd
 
 **Here is the PUT Request and Response.**
 
-![PUT-Method-1.png](https://raw.githubusercontent.com/aboelkassem/Software-and-Service-Oriented-Architecture/main/Images/PUT-Method-1.png "HTTP PUT Method Example")
+![PUT-Method-1.png](https://raw.githubusercontent.com/mkassm/Software-and-Service-Oriented-Architecture/main/Images/PUT-Method-1.png "HTTP PUT Method Example")
 
-![HTTP PUT Method Example](https://raw.githubusercontent.com/aboelkassem/Software-and-Service-Oriented-Architecture/main/Images/PUT-Method-2.png "HTTP PUT Method Example")
+![HTTP PUT Method Example](https://raw.githubusercontent.com/mkassm/Software-and-Service-Oriented-Architecture/main/Images/PUT-Method-2.png "HTTP PUT Method Example")
 
 **HTTP Stateless**
 
@@ -407,11 +407,11 @@ JavaScript is an interpreted language where the web browser interprets the JavaS
 
 It is possible for web pages to provide some interaction to users **without JavaScript**, through the use of HTML **forms** that submit **POST or GET** requests like the following diagram. The web server responds to the request by providing the web browser with a new HTML document. The result of the interaction will be visible only after the browser has received and loaded the new HTML document.
 
-![js-1.png](https://raw.githubusercontent.com/aboelkassem/Software-and-Service-Oriented-Architecture/main/Images/js-1.png "Tradational Web Pages Without Javascript")
+![js-1.png](https://raw.githubusercontent.com/mkassm/Software-and-Service-Oriented-Architecture/main/Images/js-1.png "Tradational Web Pages Without Javascript")
 
 However, interactions provided to users on a web page embedded **with JavaScript** tend to be more efficient and more usable. With JavaScript, a form can be partly checked and processed on the **client-side**. This means that the browser does not have to wait for the web server to provide a new page, instead, the JavaScript on the page can **dynamically** change the HTML web page that is already loaded in the browser as it runs the client-side in the browser. This offloads some of the processing required to operate this application so that not everything needs to be processed server-side. Some interactions with a web page, even with JavaScript embedded within, will still require contact with a web server, but it is not always necessary.
 
-![Tradational Web Pages With Javascript](https://raw.githubusercontent.com/aboelkassem/Software-and-Service-Oriented-Architecture/main/Images/js-2.png "Tradational Web Pages With Javascript")
+![Tradational Web Pages With Javascript](https://raw.githubusercontent.com/mkassm/Software-and-Service-Oriented-Architecture/main/Images/js-2.png "Tradational Web Pages With Javascript")
 
 JavaScript is able to modify elements on a web page by making use of the **HTML Document Object Model (DOM)**. When a page is loaded in a web browser, the HTML document becomes a document object. This object can be used by JavaScript to obtain and modify the elements and content on the web page. As a result of processing the document **object**, the **content**, **structure**, and **style** of an HTML document can be modified.
 
@@ -421,7 +421,7 @@ It is not necessary to know JavaScript well in order to use it. **Pre-made scrip
 
 **For example,** you can use comment management services like **Disqus** to allow users to comment on your web page and allow you to moderate these comments. It just copying and pasting some JavaScript into the HTML document Like I used in this blog.
 
-![js-3.png](https://raw.githubusercontent.com/aboelkassem/Software-and-Service-Oriented-Architecture/main/Images/js-3.png "example of adding js file")
+![js-3.png](https://raw.githubusercontent.com/mkassm/Software-and-Service-Oriented-Architecture/main/Images/js-3.png "example of adding js file")
 
 ### Distributed Systems Basics
 
@@ -441,9 +441,9 @@ New software systems are designed to be able to **communicate with other systems
 
 Middleware facilitates communication on a large scale by providing a common interface between entire distributed systems. This architecture resembles the mediator design pattern.
 
-![middleware-1.png](https://raw.githubusercontent.com/aboelkassem/Software-and-Service-Oriented-Architecture/main/Images/middleware-1.png "Middleware")
+![middleware-1.png](https://raw.githubusercontent.com/mkassm/Software-and-Service-Oriented-Architecture/main/Images/middleware-1.png "Middleware")
 
-![Middleware](https://raw.githubusercontent.com/aboelkassem/Software-and-Service-Oriented-Architecture/main/Images/middleware-2.png "Middleware")
+![Middleware](https://raw.githubusercontent.com/mkassm/Software-and-Service-Oriented-Architecture/main/Images/middleware-2.png "Middleware")
 
 Middleware allows developers to access functionalities of a system, without having to implement an entire tier of subsystems in their architecture.
 
@@ -483,7 +483,7 @@ RPCs are currently used in many different configurations – they can be stored 
 
 **Basics of RPC and How does it work?**
 
-![rpc.png](https://raw.githubusercontent.com/aboelkassem/Software-and-Service-Oriented-Architecture/main/Images/rpc.png "Remote Procedure Call (RPC)")
+![rpc.png](https://raw.githubusercontent.com/mkassm/Software-and-Service-Oriented-Architecture/main/Images/rpc.png "Remote Procedure Call (RPC)")
 
 **The IDL** is the specification for remote procedure calls. It tells the client what remote services are available, how they are accessed, and what the server will respond with.
 
@@ -535,4 +535,4 @@ Asynchronous behavior adds more complexity to a system, because how the system a
 
 <hr>
 
-[Edit this page in Github](https://github.com/aboelkassem/Software-and-Service-Oriented-Architecture/blob/main/README.md)
+[Edit this page in Github](https://github.com/mkassm/Software-and-Service-Oriented-Architecture/blob/main/README.md)

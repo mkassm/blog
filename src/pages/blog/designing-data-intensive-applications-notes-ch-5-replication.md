@@ -2,8 +2,8 @@
 templateKey: article-page
 title: "Designing Data Intensive Applications Notes: Ch.5 Replication"
 slug: designing-data-intensive-applications-notes-ch5
-author: aboelkassem
-authorLink: https://www.aboelkassem.tech
+author: Mohamed Kassem
+authorLink: https://www.kassm.me
 date: 2023-11-02T13:58:33.106Z
 cover: /img/designing-data-intensive-apps.avif
 metaTitle: Chapter.5 Replication.
@@ -62,7 +62,7 @@ When a client wants to read from the database, it can query either the leader or
 This mode is a built-in feature in relational databases such as PostgreSQL, MySQL, Oracle, and SQL Server. Also, for non-relational databases such as MongoDB, RethinkDB, Espresso. Also in message brokers such as Kafka, RabbitMQ.
 
 <p align="center" width="100%">
-  <img src="https://raw.githubusercontent.com/aboelkassem/designing-data-intensive-applications-notes/main/Chapters/Chapter%205%20-%20Replication/images/leader-based-replicaiton.png" width="700" hight="500"/>
+  <img src="https://raw.githubusercontent.com/mkassm/designing-data-intensive-applications-notes/main/Chapters/Chapter%205%20-%20Replication/images/leader-based-replicaiton.png" width="700" hight="500"/>
 </p>
 
 ## Synchronous vs Asynchronous Replication
@@ -74,7 +74,7 @@ Asynchronous replication mean that we will response immediately to the user, and
 The following example shows Leader-based replication with one synchronous and one asynchronous follower.
 
 <p align="center" width="100%">
-  <img src="https://raw.githubusercontent.com/aboelkassem/designing-data-intensive-applications-notes/main/Chapters/Chapter%205%20-%20Replication/images/sync-vs-async-replication.png" width="700" hight="500"/>
+  <img src="https://raw.githubusercontent.com/mkassm/designing-data-intensive-applications-notes/main/Chapters/Chapter%205%20-%20Replication/images/sync-vs-async-replication.png" width="700" hight="500"/>
 </p>
 
 Follower 1 is **synchronous**: the leader waits until follower 1 has confirmed that it received the write before reporting success to the user.
@@ -180,7 +180,7 @@ How to implement it?
 **The problem**: Occur when reading from asynchronous followers is that it’s possible for a user to see things **moving backward in time**. Like the following diagram shows when two replica (one with little lag and other with greater lag) who read the same query from replica and when refresh didn’t read it. This scenario happens when a user refreshes a web page, it routed to random followers.
 
 <p align="center" width="100%">
-  <img src="https://raw.githubusercontent.com/aboelkassem/designing-data-intensive-applications-notes/main/Chapters/Chapter%205%20-%20Replication/images/monotonic-reads.png" width="700" hight="500"/>
+  <img src="https://raw.githubusercontent.com/mkassm/designing-data-intensive-applications-notes/main/Chapters/Chapter%205%20-%20Replication/images/monotonic-reads.png" width="700" hight="500"/>
 </p>
 
 Monotonic reads guarantee that doesn’t happen by making all user queries to the same replica (to make that we hash userId with replica). if that replica fails, the user’s queries will need to be rerouted to another replica.
@@ -202,7 +202,7 @@ And third follower see that in disorder
 - Mr. Poons: How far into the future can you see, Mrs. Cake?
 
 <p align="center" width="100%">
-  <img src="https://raw.githubusercontent.com/aboelkassem/designing-data-intensive-applications-notes/main/Chapters/Chapter%205%20-%20Replication/images/consistent-prefix-reads.png" width="700" hight="500"/>
+  <img src="https://raw.githubusercontent.com/mkassm/designing-data-intensive-applications-notes/main/Chapters/Chapter%205%20-%20Replication/images/consistent-prefix-reads.png" width="700" hight="500"/>
 </p>
 
 To solve this problem, make sure that casually **related writes** are written to the same partition, and are written in the same order.
@@ -220,7 +220,7 @@ Instead of one leader to handle all writes, there is another approach for multi-
     The big issue in this approach is the same data may be concurrently modified in two different datacenters, and those write conflicts must be resolved.
   
 <p align="center" width="100%">
-  <img src="https://raw.githubusercontent.com/aboelkassem/designing-data-intensive-applications-notes/main/Chapters/Chapter%205%20-%20Replication/images/multi-leader-based.png" width="700" hight="500"/>
+  <img src="https://raw.githubusercontent.com/mkassm/designing-data-intensive-applications-notes/main/Chapters/Chapter%205%20-%20Replication/images/multi-leader-based.png" width="700" hight="500"/>
 </p>
 
 - **Clients with offline operation**: every device has a local database that acts as a leader (it accepts write requests), and there is an asynchronous multi-leader replication process (sync) between the replicas of your calendar on all of your devices. The replication lag may be hours or even days, depending on when you have internet access available.
@@ -232,7 +232,7 @@ Instead of one leader to handle all writes, there is another approach for multi-
 Example: User 1 changes the title of the page from A to B, and user 2 changes the title from A to C at the same time. Each user’s change is successfully applied to their local leader. However, when the changes are asynchronously replicated, a conflict is detected.
   
 <p align="center" width="100%">
-  <img src="https://raw.githubusercontent.com/aboelkassem/designing-data-intensive-applications-notes/main/Chapters/Chapter%205%20-%20Replication/images/multi-leader-based-conflicts.png" width="700" hight="500"/>
+  <img src="https://raw.githubusercontent.com/mkassm/designing-data-intensive-applications-notes/main/Chapters/Chapter%205%20-%20Replication/images/multi-leader-based-conflicts.png" width="700" hight="500"/>
 </p>
 
 ### Avoid Conflict
@@ -255,7 +255,7 @@ Most multi-leader replication tools let you write conflict resolution logic usin
 This describes the communication paths between the leaders writes. If you have two leaders, leader 1 must send all of its writes to leader 2, and vice versa.
 
 <p align="center" width="100%">
-  <img src="https://raw.githubusercontent.com/aboelkassem/designing-data-intensive-applications-notes/main/Chapters/Chapter%205%20-%20Replication/images/multi-leader-topologies.png" width="700" hight="500"/>
+  <img src="https://raw.githubusercontent.com/mkassm/designing-data-intensive-applications-notes/main/Chapters/Chapter%205%20-%20Replication/images/multi-leader-topologies.png" width="700" hight="500"/>
 </p>
 
 - **Circular topology**: each node receives writes from one node and forwards those writes (plus any writes of its own) to one other node.
@@ -273,7 +273,7 @@ In some leaderless implementations, the client directly sends its writes to seve
 When a Node Is Down, the client depend on received number of ok responses to determine if write successfully or not. When read, the client sends several nodes in parallel (you may get different responses) so it depends on most updated value attached with version number.
 
 <p align="center" width="100%">
-  <img src="https://raw.githubusercontent.com/aboelkassem/designing-data-intensive-applications-notes/main/Chapters/Chapter%205%20-%20Replication/images/leaderless-based.png" width="700" hight="500"/>
+  <img src="https://raw.githubusercontent.com/mkassm/designing-data-intensive-applications-notes/main/Chapters/Chapter%205%20-%20Replication/images/leaderless-based.png" width="700" hight="500"/>
 </p>
 
 When the offline node comes back it uses **Read repair and anti-entropy** processes to catch up the updated values.
@@ -289,7 +289,7 @@ If there are n replicas, every write must be confirmed by w nodes to be consider
 The numbers of replicas to read from (r), and to write to (w) should be configured to follow the quorums formula: w + r > n, where (n) is the number of replicas. Smaller values of w or r results in more stale read values, but provides lower latency and higher availability.
 
 <p align="center" width="100%">
-  <img src="https://raw.githubusercontent.com/aboelkassem/designing-data-intensive-applications-notes/main/Chapters/Chapter%205%20-%20Replication/images/quorum.png" width="700" hight="500"/>
+  <img src="https://raw.githubusercontent.com/mkassm/designing-data-intensive-applications-notes/main/Chapters/Chapter%205%20-%20Replication/images/quorum.png" width="700" hight="500"/>
 </p>
 
 If w + r > n, at least one of the r replicas you read from must have seen the most recent successful write.

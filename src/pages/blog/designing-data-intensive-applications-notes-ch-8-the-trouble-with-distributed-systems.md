@@ -3,8 +3,8 @@ templateKey: article-page
 title: "Designing Data Intensive Applications Notes: Ch.8 The Trouble with
   Distributed Systems"
 slug: designing-data-intensive-applications-notes-ch8
-author: aboelkassem
-authorLink: https://www.aboelkassem.tech
+author: Mohamed Kassem
+authorLink: https://www.kassm.me
 date: 2023-11-04T07:34:06.494Z
 cover: /img/designing-data-intensive-apps.avif
 metaTitle: Chapter 8 The Trouble with Distributed Systems
@@ -44,7 +44,7 @@ If we want to make distributed systems work, we must accept the possibility of p
 The internet and most internal networks in datacenters (often Ethernet) are **asynchronous** packet networks. In this kind of network, one node can send a message (a packet) to another node, but the network gives no guarantees as to when it will arrive, or whether it will arrive at all. If you send a request and expect a response, many things could go wrong.
 
 <p align="center" width="100%">
-  <img src="https://raw.githubusercontent.com/aboelkassem/designing-data-intensive-applications-notes/main/Chapters/Chapter%208%20-%20The%20Trouble%20with%20Distributed%20Systems/images/unrelaible-network.png" width="700" hight="500"/>
+  <img src="https://raw.githubusercontent.com/mkassm/designing-data-intensive-applications-notes/main/Chapters/Chapter%208%20-%20The%20Trouble%20with%20Distributed%20Systems/images/unrelaible-network.png" width="700" hight="500"/>
 </p>
 
 Many systems need to automatically detect faulty nodes, such as load balancers to stop sending requests to a dead node, or a when a leader fails in a single-leader replication. We might be able to get some feedback from the network protocols such as RST or FIN packets, or configure the machine's operating system to start a script when the process crashes, but these approaches doesn't gives strong guarantees as compared to **receiving feedback from the application itself**.

@@ -2,8 +2,8 @@
 templateKey: article-page
 title: Introduction to Docker and Containerization
 slug: introduction-to-docker
-author: aboelkassem
-authorLink: https://www.aboelkassem.tech
+author: Mohamed Kassem
+authorLink: https://www.kassm.me
 date: 2021-01-01T09:14:05.830Z
 cover: /img/introduction-to-docker-2017-1-638.jpg
 metaTitle: Learn Docker | Aboelkassem blog
@@ -71,19 +71,19 @@ Docker relies on "**images**" and "**containers**"
 
 - **Accelerate developer onboarding** means Docker helps to set up a development environment very quickly when working with team on the same containers with different machines
 
-![docker-benifit-1](https://raw.githubusercontent.com/aboelkassem/Learn-Docker/main/images/docker-benefit-1.png "docker benifit accelerate developer")
+![docker-benifit-1](https://raw.githubusercontent.com/mkassm/Learn-Docker/main/images/docker-benefit-1.png "docker benifit accelerate developer")
 
 - **Eliminate App Conflicts** like having versions of frameworks which docker offer **isolated** containers and each container that contains its version
 
-![docker-benefit-2.png](https://raw.githubusercontent.com/aboelkassem/Learn-Docker/main/images/docker-benefit-2.png "docker eliminate app conflicts")
+![docker-benefit-2.png](https://raw.githubusercontent.com/mkassm/Learn-Docker/main/images/docker-benefit-2.png "docker eliminate app conflicts")
 
 - **Environment Consistency** like moving your code and development environment by just moving images between different environments like from development to staging or production
 
-![docker-benefit-3.png](https://raw.githubusercontent.com/aboelkassem/Learn-Docker/main/images/docker-benefit-3.png "docker benefit of environment consistency")
+![docker-benefit-3.png](https://raw.githubusercontent.com/mkassm/Learn-Docker/main/images/docker-benefit-3.png "docker benefit of environment consistency")
 
 - **Ship Software Faster** which makes it high productivity, quality, consistency and predictability
 
-![docker-benefit-4.png](https://raw.githubusercontent.com/aboelkassem/Learn-Docker/main/images/docker-benefit-4.png "ship software faster")
+![docker-benefit-4.png](https://raw.githubusercontent.com/mkassm/Learn-Docker/main/images/docker-benefit-4.png "ship software faster")
 
 - **Docker Hub**: Ever imagined sharing your machine like you share the code using **GitHub**? Docker’s Docker Hub provides access to **thousands of images** that are configured with the environment so that when your code works in your machine, you can build images and share it all over the internet.
 - **Continuous integration support:** Docker supports CI tools like **[Travis](https://travis-ci.com/plans)** and **[Jenkins](https://www.jenkins.io)**. Docker images can be built and tagged with specific versions and deployed anywhere
@@ -103,7 +103,7 @@ Docker relies on "**images**" and "**containers**"
 
 ### Docker Architecture
 
-![docker-arch-1.png](https://raw.githubusercontent.com/aboelkassem/Learn-Docker/main/images/docker-arch-1.png "docker architecture")
+![docker-arch-1.png](https://raw.githubusercontent.com/mkassm/Learn-Docker/main/images/docker-arch-1.png "docker architecture")
 
 **Docker ecosystems**
 
@@ -112,7 +112,7 @@ Docker relies on "**images**" and "**containers**"
 - **Docker Client:** The CLI tool used to interact with the Docker server
 - **Docker Daemon:** The Docker server process/engine responsible for pulling, pushing, and building the images. It is also used for running the container
 
-![docker-arch-2.png](https://raw.githubusercontent.com/aboelkassem/Learn-Docker/main/images/docker-arch-2.png "docker architetcure")
+![docker-arch-2.png](https://raw.githubusercontent.com/mkassm/Learn-Docker/main/images/docker-arch-2.png "docker architetcure")
 
 ### Setting Up Your Docker Environment
 
@@ -126,7 +126,7 @@ Docker relies on "**images**" and "**containers**"
 
 **Docker Kitematic Tool (usually not used much)**
 
-![docker-kitematic.png](https://raw.githubusercontent.com/aboelkassem/Learn-Docker/main/images/docker-kitematic.png "docker kitematic")
+![docker-kitematic.png](https://raw.githubusercontent.com/mkassm/Learn-Docker/main/images/docker-kitematic.png "docker kitematic")
 
 ### Basic Key Commands
 
@@ -166,9 +166,9 @@ Digest: sha256:aeded0f2a861747f43a01cf1018cf9efe2bdd02afd57d2b11fcc7fcadc16ccd
 
 As every image is built on top of Linux kernel, it has some common **dependencies** that can be **reused** by other images. Docker bundles these dependencies in one stack and these stacks are called **layers** which Docker caches these intermediate layers to speed up the image building process.
 
-![docker-layerd-1.png](https://raw.githubusercontent.com/aboelkassem/Learn-Docker/main/images/docker-layerd-1.png "docker layerd")
+![docker-layerd-1.png](https://raw.githubusercontent.com/mkassm/Learn-Docker/main/images/docker-layerd-1.png "docker layerd")
 
-![docker-layerd-2.png](https://raw.githubusercontent.com/aboelkassem/Learn-Docker/main/images/docker-layerd-2.png "docker-layerd-2")
+![docker-layerd-2.png](https://raw.githubusercontent.com/mkassm/Learn-Docker/main/images/docker-layerd-2.png "docker-layerd-2")
 
 ### Docker Volumes
 
@@ -177,9 +177,9 @@ As every image is built on top of Linux kernel, it has some common **dependencie
 - When **updating** an Image this **won't affect** to the data volume which stayed separate
 - Data volumes are **persisted** even after the container is **deleted**
 
-![docker-volumes-1.png](https://raw.githubusercontent.com/aboelkassem/Learn-Docker/main/images/docker-volumes-1.png "docker volumes")
+![docker-volumes-1.png](https://raw.githubusercontent.com/mkassm/Learn-Docker/main/images/docker-volumes-1.png "docker volumes")
 
-![docker-volumes-2.png](https://raw.githubusercontent.com/aboelkassem/Learn-Docker/main/images/docker-volumes-2.png "docker volumes")
+![docker-volumes-2.png](https://raw.githubusercontent.com/mkassm/Learn-Docker/main/images/docker-volumes-2.png "docker volumes")
 
 To know what benefits of volumes Suppose you run a **MySQL** database with no volume, So any data stored in that database will be lost when the container is stopped or restarted. In order to avoid data loss, you can use a **volume mount**.
 
@@ -203,7 +203,7 @@ $ docker inspect [containerId]             # get the info of the container
 
 **For Customizing Volumes** to writes your **own** folder path on the host which can be your source code, log files or database files, This path can be in **your machine** and the volume **read and write** to that specific area
 
-![docker-volumes.png](https://raw.githubusercontent.com/aboelkassem/Learn-Docker/main/images/docker-volumes.png "docker volumes")
+![docker-volumes.png](https://raw.githubusercontent.com/mkassm/Learn-Docker/main/images/docker-volumes.png "docker volumes")
 
 [**sourceCode_path**]: make this folder as the host mount or to put $(pwd) to make current directory is that the volume points to
 
@@ -238,7 +238,7 @@ $ docker run -it -p 80:80 -v "$(pwd):/app" -w "/app" mcr.microsoft.com/dotnet/sd
 
 Dockerfile is a text file that has **instructions** within it, This instructions build in with docker documentation to work with environment variables or **copy source code** into the image and more, **"docker build"** command compile these instructions which create file system layered and then the docker image.
 
-![dockerfile.png](https://raw.githubusercontent.com/aboelkassem/Learn-Docker/main/images/dockerfile.png "dockerfile")
+![dockerfile.png](https://raw.githubusercontent.com/mkassm/Learn-Docker/main/images/dockerfile.png "dockerfile")
 
 Because the image can be cached to speed up future builds, If you make any changes in these instructions you need to rebuild the image
 
@@ -258,7 +258,7 @@ For example of custom dockerfile for **node.js**
 
 ```dockerfile
 FROM node
-MAINTAINER aboelkassem
+MAINTAINER mkassm
 
 ENV NODE_ENV=production
 ENV PORT=3000
@@ -277,7 +277,7 @@ For example of dockerfile for [asp.net](http://asp.net) core **development** ver
 ```dockerfile
 FROM mcr.microsoft.com/dotnet/sdk:3.1
 
-LABEL author="aboelkassem"
+LABEL author="Mohamed Kassem"
 
 ENV DOTNET_USE_POLLING_FILE_WATCHER=1 # setup dotnet watch (mean if change in the code it restart the kestrel server)
 ENV ASPNETCORE_URLS=http://*:5000
@@ -300,7 +300,7 @@ RUN dotnet publish --output ./out
 
 # build to production
 FROM mcr.microsoft.com/dotnet/aspnet:3.1
-LABEL author="aboelkassem"
+LABEL author="Mohamed Kassem"
 WORKDIR /app
 COPY --from=publish /publish/out .
 ENV ASPNETCORE_URLS=http://*:5000
@@ -312,10 +312,10 @@ You can convert this **Dockerfile** into an image by using **"docker build"** co
 ```shell
 $ docker build -t <your-Username>/<imageName> .
 
-$ docker build -t aboelkassem/foods:1.0-dev . # this will create the image from default filename: Dockerfile
-$ docker build -t aboelkassem/foods:1.0-prod -f prod.Dockerfile . # this create image from different dockerfile name --filename TheNewDockerFileNmae
+$ docker build -t mkassm/foods:1.0-dev . # this will create the image from default filename: Dockerfile
+$ docker build -t mkassm/foods:1.0-prod -f prod.Dockerfile . # this create image from different dockerfile name --filename TheNewDockerFileNmae
 
-$ docker run -d -p 80:5000 -v "$(pwd):/app" aboelkassem/foods:1.0-dev # this will run the image
+$ docker run -d -p 80:5000 -v "$(pwd):/app" mkassm/foods:1.0-dev # this will run the image
 ```
 
 - **\-t** : the tag of image
@@ -336,7 +336,7 @@ $ docker push <your-username>/<imageName>
 
 When trying to use images and containers, you also need to communicate between containers for example communicate with the database server, caching server
 
-![containers-linking.png](https://raw.githubusercontent.com/aboelkassem/Learn-Docker/main/images/containers-linking.png "containers linking")
+![containers-linking.png](https://raw.githubusercontent.com/mkassm/Learn-Docker/main/images/containers-linking.png "containers linking")
 
 **To talk to other containers there are two ways:**
 
@@ -360,7 +360,7 @@ $ docker run -d --name my-postgres postgres
 
 ```shell
 $ docker run -d -p <ex-port>:<in-port> --link <containerNameToLinkWith>:<containerAlais> <yourUsername>/<ImageName> # containerAlais is the alais to used internal for example database connection string
-$ docker run -d -p 5000:5000 --link my-postgres:postgres aboelkassem/listify
+$ docker run -d -p 5000:5000 --link my-postgres:postgres mkassm/listify
 ```
 
 3- **Repeat For Additional Containers**
@@ -370,16 +370,16 @@ $ docker run -d -p 5000:5000 --link my-postgres:postgres aboelkassem/listify
 For example for linking ASP.NET Core project container with SQL Server database container
 
 ```shell
-$ docker build -t aboelkassem/listify:1.0-dev .
+$ docker build -t mkassm/listify:1.0-dev .
 $ docker run -d --name my-sqlserver -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=yourStrong(!)Password' -p 1433:1433 mcr.microsoft.com/mssql/server:2017-latest
-$ docker run -d -p 5000:5000 --link my-sqlserver:SQLServerDB aboelkassem/listify # SQLServerDB alais will be the hostname/server to be used in ConnectionString
+$ docker run -d -p 5000:5000 --link my-sqlserver:SQLServerDB mkassm/listify # SQLServerDB alais will be the hostname/server to be used in ConnectionString
 ```
 
 ### Container/Bridge Networks
 
 Think of linking a whole bunch of containers in a cloud or production environment, that couldn't be by naming them, because any container can talk to others by just name, so the best choice for staging or production environment is to **isolate** these running containers in the same group called **Network or bridge network,** the containers inside this isolated network can automatically communicate with each other by the **name**
 
-![network.png](https://raw.githubusercontent.com/aboelkassem/Learn-Docker/main/images/network.png "docker network")
+![network.png](https://raw.githubusercontent.com/mkassm/Learn-Docker/main/images/network.png "docker network")
 
 **Steps to link containers**
 
@@ -397,7 +397,7 @@ $ docker network ls # list all the networks you have, By default, Docker creates
 ```shell
 $ docker run -d --net=<networkName> --name <customContainerNameToConnectBy> <imageName>
 $ docker run -d --net=iolsated_network --name mongodb mongo
-$ docker run -d --net=iolsated_network --name nodeapp -p 3000:3000 aboelkassem/node
+$ docker run -d --net=iolsated_network --name nodeapp -p 3000:3000 mkassm/node
 ```
 
 ## Docker Compose
@@ -409,11 +409,11 @@ It very helpful in the development environment To manage different containers in
 - Start, stop and rebuild services(running containers)
 - View status of running services and see the log output of running services
 
-![docker-compose-1.png](https://raw.githubusercontent.com/aboelkassem/Learn-Docker/main/images/docker-compose-1.png "docker compose")
+![docker-compose-1.png](https://raw.githubusercontent.com/mkassm/Learn-Docker/main/images/docker-compose-1.png "docker compose")
 
 Also you can run **Microservices** like the following diagrams **running 6 services** with docker-compose in any environment production or development, each of them has it's docker configuration. And just build and run this file one time to run all these services at one command
 
-![docker-compose-2.png](https://raw.githubusercontent.com/aboelkassem/Learn-Docker/main/images/docker-compose-2.png "example of docker compose")
+![docker-compose-2.png](https://raw.githubusercontent.com/mkassm/Learn-Docker/main/images/docker-compose-2.png "example of docker compose")
 
 **Docker Compose Workflow**
 
@@ -429,15 +429,15 @@ this file defines all our services like the running web servers, frameworks, dat
 
 **Like Dockerfile build process,** Also docker-compose.yml file set the services configuration and then **build** these services to generate **images** that then we can use to create containers
 
-![docker-compose-yml.png](https://raw.githubusercontent.com/aboelkassem/Learn-Docker/main/images/docker-compose-yml.png "docker compose yml")
+![docker-compose-yml.png](https://raw.githubusercontent.com/mkassm/Learn-Docker/main/images/docker-compose-yml.png "docker compose yml")
 
 It very good and easy in development environment to just give a **.yml** file just have a few basic commands, you can actually have all the images ready and convert those into running containers
 
 **docker-compose.yml file contains:**
 
-![docker-compose-yml-1.png](https://raw.githubusercontent.com/aboelkassem/Learn-Docker/main/images/docker-compose-yml-1.png "docker-compose-yml-example")
+![docker-compose-yml-1.png](https://raw.githubusercontent.com/mkassm/Learn-Docker/main/images/docker-compose-yml-1.png "docker-compose-yml-example")
 
-![docker-compose-yml-2.png](https://raw.githubusercontent.com/aboelkassem/Learn-Docker/main/images/docker-compose-yml-2.png "docker compose yml example")
+![docker-compose-yml-2.png](https://raw.githubusercontent.com/mkassm/Learn-Docker/main/images/docker-compose-yml-2.png "docker compose yml example")
 
 **In Services you can define:**
 
@@ -527,7 +527,7 @@ It provides a way to define a cluster's state using manifest files (yaml)
 - Manage workloads
 - Self-healing
 
-![cluster](https://raw.githubusercontent.com/aboelkassem/Learn-Docker/main/images/cluster.png "kubernetes cluster")
+![cluster](https://raw.githubusercontent.com/mkassm/Learn-Docker/main/images/cluster.png "kubernetes cluster")
 
 The above diagram shows what **Cluster** means, it the process of nodes management to run containerized applications.
 
@@ -551,7 +551,7 @@ The above diagram shows what **Cluster** means, it the process of nodes manageme
 
   - Load balances between pods
 
-![service.png](https://raw.githubusercontent.com/aboelkassem/Learn-Docker/main/images/service.png "service")
+![service.png](https://raw.githubusercontent.com/mkassm/Learn-Docker/main/images/service.png "service")
 
 ### Converting Docker-compose to Kubernetes
 
@@ -575,4 +575,4 @@ $ kubectl port-forward <nameOfPod> 8080:80        # expose pod port into local m
 
 <hr>
 
-[Edit this page in Github](https://github.com/aboelkassem/Learn-Docker/blob/main/README.md)
+[Edit this page in Github](https://github.com/mkassm/Learn-Docker/blob/main/README.md)

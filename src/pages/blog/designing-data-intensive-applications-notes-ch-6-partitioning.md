@@ -2,8 +2,8 @@
 templateKey: article-page
 title: "Designing Data Intensive Applications Notes: Ch.6 Partitioning"
 slug: designing-data-intensive-applications-notes-ch6
-author: aboelkassem
-authorLink: https://www.aboelkassem.tech
+author: Mohamed Kassem
+authorLink: https://www.kassm.me
 date: 2023-11-04T07:20:47.413Z
 cover: /img/designing-data-intensive-apps.avif
 metaTitle: Chapter.6 Partitioning.
@@ -32,7 +32,7 @@ Each partition is a small database of its own, however we need to support operat
 Usually we combine replication and partitioning: each node acts as leader for some partitions and follower for other partitions.
 
 <p align="center" width="100%">
-  <img src="https://raw.githubusercontent.com/aboelkassem/designing-data-intensive-applications-notes/main/Chapters/Chapter%206%20-%20Partitioning/images/partitioning-with-replicaiton.png" width="700" hight="500"/>
+  <img src="https://raw.githubusercontent.com/mkassm/designing-data-intensive-applications-notes/main/Chapters/Chapter%206%20-%20Partitioning/images/partitioning-with-replicaiton.png" width="700" hight="500"/>
 </p>
 
 For 10 replicas theoretically speaking, we expect to get
@@ -52,13 +52,13 @@ There are two main ways of partitioning keys:
 By sorting the keys we have and assigning a continuous range of keys (Like encyclopedia, partition is from A to B, other from D to F)
 
 <p align="center" width="100%">
-  <img src="https://raw.githubusercontent.com/aboelkassem/designing-data-intensive-applications-notes/main/Chapters/Chapter%206%20-%20Partitioning/images/partitioning-by-key-value.png" width="700" hight="500"/>
+  <img src="https://raw.githubusercontent.com/mkassm/designing-data-intensive-applications-notes/main/Chapters/Chapter%206%20-%20Partitioning/images/partitioning-by-key-value.png" width="700" hight="500"/>
 </p>
 
 The problem with this approach is the partitioning is not always fair and this lead that some partitions will have much bigger data than others (this called partition boundaries). This approach is used in HBase and RethinkDB, and MongoDB before version 2.4.
 
 <p align="center" width="100%">
-  <img src="https://raw.githubusercontent.com/aboelkassem/designing-data-intensive-applications-notes/main/Chapters/Chapter%206%20-%20Partitioning/images/partitioning-skewed.png" width="700" hight="500"/>
+  <img src="https://raw.githubusercontent.com/mkassm/designing-data-intensive-applications-notes/main/Chapters/Chapter%206%20-%20Partitioning/images/partitioning-skewed.png" width="700" hight="500"/>
 </p>
 
 **Partitioning by Hash of Key**
@@ -66,7 +66,7 @@ The problem with this approach is the partitioning is not always fair and this l
 To fix the issue of skewed data and makes it uniformly distributed. Thtats by using a non-cryptographic hash function (eg. MD5 used in Cassandra and MongoDB and Voldemort uses the Fowler-Noll-Vo hash function).
 
 <p align="center" width="100%">
-  <img src="https://raw.githubusercontent.com/aboelkassem/designing-data-intensive-applications-notes/main/Chapters/Chapter%206%20-%20Partitioning/images/partitioning-by-hash-key.png" width="700" hight="500"/>
+  <img src="https://raw.githubusercontent.com/mkassm/designing-data-intensive-applications-notes/main/Chapters/Chapter%206%20-%20Partitioning/images/partitioning-by-hash-key.png" width="700" hight="500"/>
 </p>
 
 The issue with this approach is cannot do **range query (from - to)** from the same partition.
@@ -98,7 +98,7 @@ This usually left for the application to handle this skew, typically by assignin
 In this indexing approach, each partition maintains its own secondary indexes (stores locally with the partition), covering only the documents in that partition.
 
 <p align="center" width="100%">
-  <img src="https://raw.githubusercontent.com/aboelkassem/designing-data-intensive-applications-notes/main/Chapters/Chapter%206%20-%20Partitioning/images/partitioning-secondary-index-by-document.png" width="700" hight="500"/>
+  <img src="https://raw.githubusercontent.com/mkassm/designing-data-intensive-applications-notes/main/Chapters/Chapter%206%20-%20Partitioning/images/partitioning-secondary-index-by-document.png" width="700" hight="500"/>
 </p>
 
 Whenever you need to write to the database (to add, remove, or update a document) you only need to deal with the partition that contains the document ID that you are writing. (**Good on write performance).**
@@ -114,7 +114,7 @@ Another option is to have a global secondary index which can also be partitioned
 This makes reads more efficient, rather than doing scatter/gather in all partitions, but writes are slower and complicated.  However, in practice updates to global secondary indexes are **asynchronous** and very fast.
 
 <p align="center" width="100%">
-  <img src="https://raw.githubusercontent.com/aboelkassem/designing-data-intensive-applications-notes/main/Chapters/Chapter%206%20-%20Partitioning/images/partitioning-secondary-index-by-term.png" width="700" hight="500"/>
+  <img src="https://raw.githubusercontent.com/mkassm/designing-data-intensive-applications-notes/main/Chapters/Chapter%206%20-%20Partitioning/images/partitioning-secondary-index-by-term.png" width="700" hight="500"/>
 </p>
 
 ### Rebalancing Partitions
@@ -142,7 +142,7 @@ For example, a database running on a cluster of **10 nodes** may be split into *
 So, if we add new node, a few partitions are steal, so each node will handle 1000/11 = 90 partitions
 
 <p align="center" width="100%">
-  <img src="https://raw.githubusercontent.com/aboelkassem/designing-data-intensive-applications-notes/main/Chapters/Chapter%206%20-%20Partitioning/images/partitioning-rebalancing-fixed-number.png" width="700" hight="500"/>
+  <img src="https://raw.githubusercontent.com/mkassm/designing-data-intensive-applications-notes/main/Chapters/Chapter%206%20-%20Partitioning/images/partitioning-rebalancing-fixed-number.png" width="700" hight="500"/>
 </p>
 
 This approach to rebalancing is used in Riak, Elasticsearch, Couchbase, and Voldemor.
@@ -179,7 +179,7 @@ there are a few different approaches to this problem
 - Require that clients be aware of the partitioning and the assignment of partitions to nodes
 
 <p align="center" width="100%">
-  <img src="https://raw.githubusercontent.com/aboelkassem/designing-data-intensive-applications-notes/main/Chapters/Chapter%206%20-%20Partitioning/images/partitioning-request-routing.png" width="700" hight="500"/>
+  <img src="https://raw.githubusercontent.com/mkassm/designing-data-intensive-applications-notes/main/Chapters/Chapter%206%20-%20Partitioning/images/partitioning-request-routing.png" width="700" hight="500"/>
 </p>
 
 Apache ZooKeeper is handle this routing and coordination to keep track of this cluster metadata.
@@ -187,7 +187,7 @@ Apache ZooKeeper is handle this routing and coordination to keep track of this c
 ZooKeeper maintains the authoritative mapping of partitions to nodes. Other actors, such as the routing tier or the partitioning-aware client, can subscribe to this information in ZooKeeper. Whenever a partition changes ownership, or a node is added or removed, ZooKeeper notifies the routing tier so that it can keep its routing information up to date.
 
 <p align="center" width="100%">
-  <img src="https://raw.githubusercontent.com/aboelkassem/designing-data-intensive-applications-notes/main/Chapters/Chapter%206%20-%20Partitioning/images/partitioning-zookeeper.png" width="700" hight="500"/>
+  <img src="https://raw.githubusercontent.com/mkassm/designing-data-intensive-applications-notes/main/Chapters/Chapter%206%20-%20Partitioning/images/partitioning-zookeeper.png" width="700" hight="500"/>
 </p>
 
 LinkedIn’s Espresso, HBase, SolrCloud, and Kafka also use **ZooKeeper** to track partition assignment. MongoDB has a similar architecture, but it relies on its own config server implementation and **mongos** daemons as the routing tier.

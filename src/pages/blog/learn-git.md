@@ -2,12 +2,12 @@
 templateKey: article-page
 title: Learn Git
 slug: learn-git
-author: aboelkassem
-authorLink: https://www.aboelkassem.tech
+author: Mohamed Kassem
+authorLink: https://www.kassm.me
 date: 2020-04-27T13:12:13.627Z
 cover: /img/git.jpg
-metaTitle: Learn Git | Aboelkassem Blog
-metaDescription: learn basics of a version control system, git, and Github in aboelkassem blog
+metaTitle: Learn Git | Mohamed Kassem Blog
+metaDescription: learn basics of a version control system, git, and Github in Mohamed Kassem blog
 tags:
   - git
   - github
@@ -46,7 +46,7 @@ there are three-stage of any file in the source control systems
 
 ## Three States of a git project
 
-![stages-of-git-project](https://raw.githubusercontent.com/aboelkassem/Git/master/images/Three%20States%20of%20git%20project.png "Three stages of git project")
+![stages-of-git-project](https://raw.githubusercontent.com/mkassm/Git/master/images/Three%20States%20of%20git%20project.png "Three stages of git project")
 
 ## Command Line
 
@@ -91,9 +91,9 @@ this commend answer the following two questions
 >
 > 2- What changes have I made but not yet staged?
 
-![git-diff](https://raw.githubusercontent.com/aboelkassem/Git/master/images/git%20diff.png "git-diff command")
+![git-diff](https://raw.githubusercontent.com/mkassm/Git/master/images/git%20diff.png "git-diff command")
 
-![push-committed](https://raw.githubusercontent.com/aboelkassem/Git/master/images/push%20committed.png "push committed changes to origin master")
+![push-committed](https://raw.githubusercontent.com/mkassm/Git/master/images/push%20committed.png "push committed changes to origin master")
 
 ### Push committed changes to Origin Master branch
 
@@ -152,13 +152,13 @@ $ git branch -d <branch-name> # delete a branch
 $ git branch -D <branch-name> # Force delete a branch if this branch have commits do not merged yet
 ```
 
-![git-branches](https://raw.githubusercontent.com/aboelkassem/Git/master/images/branches.png "git branches")
+![git-branches](https://raw.githubusercontent.com/mkassm/Git/master/images/branches.png "git branches")
 
 ### Merge
 
 merge command it to merge branches with all its commits and working files to the master branch. if you are a contributor you can make branches and working at them and merge them as a pull request to your master branch and send it to the origin master branch as also pull request to be merged
 
-![merge-command](https://raw.githubusercontent.com/aboelkassem/Git/master/images/merge.png "merge command")
+![merge-command](https://raw.githubusercontent.com/mkassm/Git/master/images/merge.png "merge command")
 
 ### Git stash
 
@@ -174,7 +174,7 @@ $ git stash pop # get the chages/files from stash to dropped back into his worki
 
 git reset allow us to move commits from history back into our working or staging area
 
-![git-reset](https://raw.githubusercontent.com/aboelkassem/Git/master/images/git%20reset.png "git-reset command")
+![git-reset](https://raw.githubusercontent.com/mkassm/Git/master/images/git%20reset.png "git-reset command")
 
 ```shell
 $ git reset --soft <head-of-commit>
@@ -184,4 +184,4 @@ $ git reset --hard <head-of-commit>
 
 <hr>
 
-[Edit this page in Github](https://github.com/aboelkassem/Git/blob/master/README.md)
+[Edit this page in Github](https://github.com/mkassm/Git/blob/master/README.md)

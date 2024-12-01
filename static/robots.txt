@@ -6,4 +6,4 @@ Disallow: */subscribed/
 Disallow: */unsubscribe/
 Disallow: */unsubscribed/
 
-sitemap: https://blog.aboelkassem.tech/sitemap.xml
+sitemap: https://blog.kassm.me/sitemap.xml
