@@ -2,8 +2,8 @@
 templateKey: article-page
 title: "Designing Data Intensive Applications Notes: Ch.10 Batch Processing"
 slug: designing-data-intensive-applications-notes-ch10
-author: aboelkassem
-authorLink: https://www.aboelkassem.tech
+author: Mohamed Kassem
+authorLink: https://www.kassm.me
 date: 2023-11-04T07:41:26.096Z
 cover: /img/designing-data-intensive-apps.avif
 metaTitle: Chapter 10 Batch Processing
@@ -41,7 +41,7 @@ All systems can fit into three main categories:
 - **Stream Processing Systems (near-real-time)**, Stream processing is somewhere between online and offline/batch processing, where is consumes *unbounded* input/events shortly after its available, processes it, and produces output.  It build upon batch processing and have lower latency.
 
 <p align="center" width="100%">
-  <img src="https://raw.githubusercontent.com/aboelkassem/designing-data-intensive-applications-notes/main/Chapters/Chapter%2010%20-%20Batch%20Processing/images/types-of-systems.png" width="700" hight="500"/>
+  <img src="https://raw.githubusercontent.com/mkassm/designing-data-intensive-applications-notes/main/Chapters/Chapter%2010%20-%20Batch%20Processing/images/types-of-systems.png" width="700" hight="500"/>
 </p>
 
 In this chapter, we will look at MapReduce and several other batch processing algorithms and frameworks.
@@ -135,7 +135,7 @@ MapReduce can parallelize a computation across many machines. The mapper and red
 The following diagram shows the dataflow in Hadoop MapReduce job. The input is a directory in HDFS and each file is separate **partition** that can be processed by a separate map task (m1, m2, m3)
 
 <p align="center" width="100%">
-  <img src="https://raw.githubusercontent.com/aboelkassem/designing-data-intensive-applications-notes/main/Chapters/Chapter%2010%20-%20Batch%20Processing/images/map-reduce.png" width="700" hight="500"/>
+  <img src="https://raw.githubusercontent.com/mkassm/designing-data-intensive-applications-notes/main/Chapters/Chapter%2010%20-%20Batch%20Processing/images/map-reduce.png" width="700" hight="500"/>
 </p>
 
 Application code (e.g., JAR files if java application) is run in the map task and the MapReduce framework first copy this code to the appropriate machines, then starts the map task and begins reading the input file, passing one record at a time to the mapper callback. The output of the mapper consists of key-value pairs. 
@@ -153,7 +153,7 @@ Joins are necessary whenever we need to access records on both sides of an assoc
 For example: analysis of user activity events, On the left is a log of events and on the right is a database of users.
 
 <p align="center" width="100%">
-  <img src="https://raw.githubusercontent.com/aboelkassem/designing-data-intensive-applications-notes/main/Chapters/Chapter%2010%20-%20Batch%20Processing/images/batch-processing-example.png" width="700" hight="500"/>
+  <img src="https://raw.githubusercontent.com/mkassm/designing-data-intensive-applications-notes/main/Chapters/Chapter%2010%20-%20Batch%20Processing/images/batch-processing-example.png" width="700" hight="500"/>
 </p>
 
 To do joins is to query the file needed for join over the network (go over the activity events one by  one and query the user database (on a remote server) for every user ID), however such an approach is most likely to suffer from poor performance, and also can lead to inconsistency if the data changes over the time of round-trip for remote database. So, a better approach would be to clone the other database into the distributed system (using ETL (Extract, Transform, Load) process).
@@ -163,7 +163,7 @@ To do joins is to query the file needed for join over the network (go over the a
 Now, we have in the distributed filesystem user database and user activity records. The mapper will extract a key-value pair for each input from activity events (key = userID, value= activity event) and from user database (key = userId, value = user’s data like birth of data)
 
 <p align="center" width="100%">
-  <img src="https://raw.githubusercontent.com/aboelkassem/designing-data-intensive-applications-notes/main/Chapters/Chapter%2010%20-%20Batch%20Processing/images/batch-processing-map-reduce.png" width="700" hight="500"/>
+  <img src="https://raw.githubusercontent.com/mkassm/designing-data-intensive-applications-notes/main/Chapters/Chapter%2010%20-%20Batch%20Processing/images/batch-processing-map-reduce.png" width="700" hight="500"/>
 </p>
 
 MapReduce partitions the mapper output by key and then sorts it to become adjacent to each other in the reducer input. The reducer can then perform the actual join logic easily: the reducer function is called once for every user ID. The first value is expected to be the date-of-birth record from the user database and now can get viewers-age-in-years for viewed-url. Reduce jobs could then calculate the distribution of viewer ages for each URL, and cluster by age group.

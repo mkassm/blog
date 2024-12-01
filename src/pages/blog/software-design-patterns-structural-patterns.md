@@ -2,8 +2,8 @@
 templateKey: article-page
 title: "Software Design Patterns: Structural Patterns"
 slug: design-patterns-structural-patterns
-author: aboelkassem
-authorLink: https://www.aboelkassem.tech
+author: Mohamed Kassem
+authorLink: https://www.kassm.me
 date: 2021-01-05T14:36:47.351Z
 cover: /img/structural-patterns.jpg
 metaTitle: Structural Patterns | Aboelkassem blog
@@ -20,7 +20,7 @@ tags:
   - c#
 ---
 
-In the [previous article](https://blog.aboelkassem.tech/blog/design-patterns-creational-patterns), we had discussed what is design patterns and creational design patterns, Today, we will continue to explain the design patterns and we will discuss the structural design patterns.
+In the [previous article](https://blog.kassm.me/blog/design-patterns-creational-patterns), we had discussed what is design patterns and creational design patterns, Today, we will continue to explain the design patterns and we will discuss the structural design patterns.
 
 ## Table of Contents
 
@@ -57,11 +57,11 @@ This pattern provide a single simplified **interface** for client classes to int
 
 > The following diagram shows the classes for simple banking system without facade, Customer class would contains instances of Chequing, Saving and Investment classes, This means Customer must instantiating each of these classes and know all their different attributes and methods
 
-![facade-1.png](https://raw.githubusercontent.com/aboelkassem/Design-Patterns/main/Images/facade-1.png "facade design pattern")
+![facade-1.png](https://raw.githubusercontent.com/mkassm/Design-Patterns/main/Images/facade-1.png "facade design pattern")
 
 To Solve this problem we introduce the **BankService** Class to act as a **facade class** for chequing, saving and investment classes to deal with any other complexities of financial management instead the customer himself, A facade class can be used to wrap all the **interfaces and classes** for a subsystem not only on interface
 
-![facade-2.png](https://raw.githubusercontent.com/aboelkassem/Design-Patterns/main/Images/facade-2.png "facade design pattern implementation")
+![facade-2.png](https://raw.githubusercontent.com/mkassm/Design-Patterns/main/Images/facade-2.png "facade design pattern implementation")
 
 **Steps to apply Facade Design Pattern**
 
@@ -175,12 +175,12 @@ As the name suggests, an adapter is a device that is used to connect pieces of e
 - **Adaptee**: the class in the third-party library or external system to be used
 - **Adapter**: the class sites between client and the adaptee, it implement a target interface to conforms what the client is expecting to see.
 - **Target Interface**: the interface which the client will use.
-  ![adapter-diagram-1.png](https://raw.githubusercontent.com/aboelkassem/Design-Patterns/main/Images/adapter-diagram-1.png "adapter design pattern")
-  ![adapter-diagram-2.png](https://raw.githubusercontent.com/aboelkassem/Design-Patterns/main/Images/adapter-diagram-2.png "adapter pattern diagram")
+  ![adapter-diagram-1.png](https://raw.githubusercontent.com/mkassm/Design-Patterns/main/Images/adapter-diagram-1.png "adapter design pattern")
+  ![adapter-diagram-2.png](https://raw.githubusercontent.com/mkassm/Design-Patterns/main/Images/adapter-diagram-2.png "adapter pattern diagram")
 
 The above diagram shows that the **client** sends a request to the **adapter** using the **target interface**, The adapter will then translate the request into a message that the **adaptee** will understand.
 
-![adapter-diagram-3.png](https://raw.githubusercontent.com/aboelkassem/Design-Patterns/main/Images/adapter-diagram-3.png "adapter diagram")
+![adapter-diagram-3.png](https://raw.githubusercontent.com/mkassm/Design-Patterns/main/Images/adapter-diagram-3.png "adapter diagram")
 
 **The Steps to implement the adapter pattern with example of talking WebClient to WebService**
 
@@ -277,9 +277,9 @@ A **composite design pattern** is meant to achieve two goals:
 
 **Class Diagram**
 
-![composite-diagram-1.png](https://raw.githubusercontent.com/aboelkassem/Design-Patterns/main/Images/composite-diagram-1.png "composite diagram")
+![composite-diagram-1.png](https://raw.githubusercontent.com/mkassm/Design-Patterns/main/Images/composite-diagram-1.png "composite diagram")
 
-![composite-diagram-3.png](https://raw.githubusercontent.com/aboelkassem/Design-Patterns/main/Images/composite-diagram-3.png "composite pattern diagram")
+![composite-diagram-3.png](https://raw.githubusercontent.com/mkassm/Design-Patterns/main/Images/composite-diagram-3.png "composite pattern diagram")
 
 In this design, a component interface serves as the supertype for a set of classes. Using **polymorphism**, all implementing classes conform to the same interface, allowing them to be dealt with uniformly.
 
@@ -291,7 +291,7 @@ You may have other composite or leaf classes in practice not just two, but there
 
 It is easier to think of composite design patterns as **trees**:
 
-![composite-diagram-4.png](https://raw.githubusercontent.com/aboelkassem/Design-Patterns/main/Images/composite-diagram-4.png "composite pattern diagram")
+![composite-diagram-4.png](https://raw.githubusercontent.com/mkassm/Design-Patterns/main/Images/composite-diagram-4.png "composite pattern diagram")
 
 The Composite design pattern is used to address two issues:
 
@@ -307,7 +307,7 @@ Solve this by enforcing **polymorphism** across each class through implementing 
 
 **Class Diagram of the example**
 
-![composite-diagram-5.png](https://raw.githubusercontent.com/aboelkassem/Design-Patterns/main/Images/composite-diagram-5.png "composite diagram")
+![composite-diagram-5.png](https://raw.githubusercontent.com/mkassm/Design-Patterns/main/Images/composite-diagram-5.png "composite diagram")
 
 **IStructure**: is the **component interface** to describe building like a house, a floor or a room
 
@@ -457,15 +457,15 @@ So the client will interact with the proxy class instead of real "subject" class
 
 **Class Diagram**
 
-![proxy-diagram-1.png](https://raw.githubusercontent.com/aboelkassem/Design-Patterns/main/Images/proxy-diagram-1.png "proxy design pattern")
+![proxy-diagram-1.png](https://raw.githubusercontent.com/mkassm/Design-Patterns/main/Images/proxy-diagram-1.png "proxy design pattern")
 
-![proxy-diagram-2.png](https://github.com/aboelkassem/Design-Patterns/blob/main/Images/proxy-diagram-2.png "proxy diagram")
+![proxy-diagram-2.png](https://github.com/mkassm/Design-Patterns/blob/main/Images/proxy-diagram-2.png "proxy diagram")
 
 **Example**
 
 > Below is an example of a UML diagram for an online retail store with global distribution and warehousing. In this scenario, you need to determine which warehouse to send orders to. A system will prevent your warehouses from receiving orders that they cannot fulfill. A proxy may protect your real subject, the warehouses, from receiving orders if the warehouses do not have enough stock to fulfill an order.
 
-![proxy-diagram-3.png](https://raw.githubusercontent.com/aboelkassem/Design-Patterns/main/Images/proxy-diagram-3.png "proxy uml class diagram")
+![proxy-diagram-3.png](https://raw.githubusercontent.com/mkassm/Design-Patterns/main/Images/proxy-diagram-3.png "proxy uml class diagram")
 
 **Steps to Implement Proxy Pattern**
 
@@ -556,7 +556,7 @@ Decorator Pattern allows additional behaviors or responsibilities to be dynamica
 - Whip Coffee = Black Coffee + Milk + Whip
 - Vanilla Coffee = Black Coffee + Milk + Whip + Vanilla
 
-![decorator-adding-functionality.png](https://raw.githubusercontent.com/aboelkassem/Design-Patterns/main/Images/decorator-adding-functionality.png "decorator adding functionality")
+![decorator-adding-functionality.png](https://raw.githubusercontent.com/mkassm/Design-Patterns/main/Images/decorator-adding-functionality.png "decorator adding functionality")
 
 **Real World Example**
 
@@ -564,9 +564,9 @@ Decorator Pattern allows additional behaviors or responsibilities to be dynamica
 
 **Class Diagram**
 
-![decorator-diagram-1.png](https://raw.githubusercontent.com/aboelkassem/Design-Patterns/main/Images/decorator-diagram-1.png "decorator diagram")
+![decorator-diagram-1.png](https://raw.githubusercontent.com/mkassm/Design-Patterns/main/Images/decorator-diagram-1.png "decorator diagram")
 
-![decorator-diagram-2.png](https://raw.githubusercontent.com/aboelkassem/Design-Patterns/main/Images/decorator-diagram-2.png "decorator uml class diagram")
+![decorator-diagram-2.png](https://raw.githubusercontent.com/mkassm/Design-Patterns/main/Images/decorator-diagram-2.png "decorator uml class diagram")
 
 **Decorator** is an **abstract class** that implements the component interface to aggregates other types of component which allow users to "stack" components on top of each other.
 
@@ -578,7 +578,7 @@ We build the stack of components starting with an instance of `ConcreteComponent
 
 > You have a SMS service that provide sending SMS messages, you need to add more functionality when the SMS message has been sent, you will notify the customer at his email.
 
-![decorator-diagram-3.png](https://raw.githubusercontent.com/aboelkassem/Design-Patterns/main/Images/decorator-diagram-3.png "decorator diagram")
+![decorator-diagram-3.png](https://raw.githubusercontent.com/mkassm/Design-Patterns/main/Images/decorator-diagram-3.png "decorator diagram")
 
 you can define any number of additional behaviors you want to `ConcereteSMSService` like `NotificationEmailDecorator`, that's better, unlike if you use inheritance of ConcereteSMSService, you will need to create a class for every combination of these behaviors
 
@@ -677,4 +677,4 @@ class Program
 
 <hr>
 
-[Edit this page in Githuib](https://github.com/aboelkassem/Design-Patterns/blob/main/README.md)
+[Edit this page in Githuib](https://github.com/mkassm/Design-Patterns/blob/main/README.md)

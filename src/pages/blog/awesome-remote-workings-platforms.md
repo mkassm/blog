@@ -2,11 +2,11 @@
 templateKey: article-page
 title: Awesome Remote Working's Platforms
 slug: awesome-remote-working
-author: aboelkassem
-authorLink: https://www.aboelkassem.tech
+author: Mohamed Kassem
+authorLink: https://www.kassm.me
 date: 2020-11-01T09:01:39.935Z
 cover: /img/remote-meeting-man-working-from-home-during-coronavirus-covid-19-quarantine-remote-office-concept-min.jpg
-metaTitle: Awesome Remote Working | Aboelkassem Blog
+metaTitle: Awesome Remote Working | Mohamed Kassem Blog
 metaDescription: A curated list of awesome websites and companies for remote
   working, internships, and hackathons in the world and the middle east.
 tags:
@@ -92,4 +92,4 @@ A curated list of awesome websites and companies for remote working, internships
 
 <hr>
 
-[Edit this page in Github](https://github.com/aboelkassem/awesome-remote-working/blob/main/README.md)
+[Edit this page in Github](https://github.com/mkassm/awesome-remote-working/blob/main/README.md)

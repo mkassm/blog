@@ -9,7 +9,7 @@ const UnsubscribedPage = () => (
       htmlAttributes={{
         lang: `en`,
       }}
-      title='Unsubscribed | Aboelkassem Blog'
+      title='Unsubscribed | Mohamed Kassem Blog'
       meta={[
         {
           name: `description`,

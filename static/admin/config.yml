@@ -8,9 +8,9 @@ backend:
     - author
     - guest
 
-site_url: https://blog.aboelkassem.tech
-display_url: https://blog.aboelkassem.tech
-logo_url: https://blog.aboelkassem.tech/icons/icon-512x512.png
+site_url: https://blog.kassm.me
+display_url: https://blog.kassm.me
+logo_url: https://blog.kassm.me/icons/icon-512x512.png
 publish_mode: editorial_workflow
 media_folder: static/img
 public_folder: /img
@@ -40,7 +40,7 @@ collections:
           label: "Author Link",
           name: "authorLink",
           widget: "string",
-          default: "https://www.aboelkassem.tech",
+          default: "https://www.kassm.me",
         }
       - { label: "Publish Date", name: "date", widget: "datetime" }
       - { label: "Cover", name: "cover", widget: "image" }

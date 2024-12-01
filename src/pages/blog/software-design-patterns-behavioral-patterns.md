@@ -2,8 +2,8 @@
 templateKey: article-page
 title: "Software Design Patterns: Behavioral Patterns"
 slug: design-patterns-behavioral-patterns
-author: aboelkassem
-authorLink: https://www.aboelkassem.tech
+author: Mohamed Kassem
+authorLink: https://www.kassm.me
 date: 2021-01-28T14:58:08.848Z
 cover: /img/behavioral-patterns.jpg
 metaTitle: Behavioral Patterns | Aboelkassem blog
@@ -19,7 +19,7 @@ tags:
   - c#
 ---
 
-In the [previous article](https://blog.aboelkassem.tech/blog/design-patterns-structural-patterns), we had discussed structural design patterns, Today, we will continue to explain the design patterns and we will discuss the Behavioral design patterns.
+In the [previous article](https://blog.kassm.me/blog/design-patterns-structural-patterns), we had discussed structural design patterns, Today, we will continue to explain the design patterns and we will discuss the Behavioral design patterns.
 
 ## Table of Contents
 
@@ -71,7 +71,7 @@ Think of it as another technique to use when you notice you have two separate cl
 
 **Class Diagram**
 
-![template-method-pattern-1.png](https://raw.githubusercontent.com/aboelkassem/Design-Patterns/main/Images/template-method-pattern-1.png "template method pattern")
+![template-method-pattern-1.png](https://raw.githubusercontent.com/mkassm/Design-Patterns/main/Images/template-method-pattern-1.png "template method pattern")
 
 **Example**
 
@@ -79,7 +79,7 @@ Think of it as another technique to use when you notice you have two separate cl
 
 **UML Diagram**
 
-![template-method-pattern-2.png](https://raw.githubusercontent.com/aboelkassem/Design-Patterns/main/Images/template-method-pattern-2.png "template method uml class diagram")
+![template-method-pattern-2.png](https://raw.githubusercontent.com/mkassm/Design-Patterns/main/Images/template-method-pattern-2.png "template method uml class diagram")
 
 **Steps to implement it**
 
@@ -200,13 +200,13 @@ As the name suggests, **A chain of objects that are responsible for handling req
 
 When a client object sends a request, the first handler in the chain will try to process it. If the handler can process the request, then the request ends with this handler. However, if the handler cannot handle the request, then the request is sent to the next handler in the chain. This process will continue until a handler can process the request. If the last handler cannot process then the request is not satisfied.
 
-![chainOfResponsibility-1.png](https://raw.githubusercontent.com/aboelkassem/Design-Patterns/main/Images/chainOfResponsibility-1.png "chain of responsiblity diagram")
+![chainOfResponsibility-1.png](https://raw.githubusercontent.com/mkassm/Design-Patterns/main/Images/chainOfResponsibility-1.png "chain of responsiblity diagram")
 
 **How to work?** so like trying everything until something works. Each object tries to handle the request until one is able to successfully handle it like **Exception handling in programming languages**
 
 **Where to use?** examples like setting up a lot of ways to filter the emails from spam, social media, Promotions. or Validating something
 
-![chainOfResponsibility-2.png](https://raw.githubusercontent.com/aboelkassem/Design-Patterns/main/Images/chainOfResponsibility-2.png "chain of responsiblity")
+![chainOfResponsibility-2.png](https://raw.githubusercontent.com/mkassm/Design-Patterns/main/Images/chainOfResponsibility-2.png "chain of responsiblity")
 
 **Real world example**
 
@@ -214,9 +214,9 @@ When a client object sends a request, the first handler in the chain will try to
 
 **Class Diagram**
 
-![chainOfResponsibility-3.png](https://raw.githubusercontent.com/aboelkassem/Design-Patterns/main/Images/chainOfResponsibility-3.png "chainOfResponsibility class diagram")
+![chainOfResponsibility-3.png](https://raw.githubusercontent.com/mkassm/Design-Patterns/main/Images/chainOfResponsibility-3.png "chainOfResponsibility class diagram")
 
-![chainOfResponsibility-4.png](https://raw.githubusercontent.com/aboelkassem/Design-Patterns/main/Images/chainOfResponsibility-4.png "chain of responsibility uml class diagram")
+![chainOfResponsibility-4.png](https://raw.githubusercontent.com/mkassm/Design-Patterns/main/Images/chainOfResponsibility-4.png "chain of responsibility uml class diagram")
 
 **Algorithm to solve problem if it's rules doesn't match and forgets to pass the request into the next filter, We will use `Template Method Pattern` to make sure follow this algorithm.**
 
@@ -234,8 +234,8 @@ What the benefits?
 
 **Example**
 
-> See the [example 1](https://github.com/aboelkassem/Design-Patterns/tree/main/src/DesignPattern/DesignPattern/Behavioral/ChainOfResponsibilityPattern/NoSeparationExample) of Payment Processing system in C# with no separation
-> See the [example 2](https://github.com/aboelkassem/Design-Patterns/tree/main/src/DesignPattern/DesignPattern/Behavioral/ChainOfResponsibilityPattern/SeparationExample) of Payment Processing system in C# with improvement separation
+> See the [example 1](https://github.com/mkassm/Design-Patterns/tree/main/src/DesignPattern/DesignPattern/Behavioral/ChainOfResponsibilityPattern/NoSeparationExample) of Payment Processing system in C# with no separation
+> See the [example 2](https://github.com/mkassm/Design-Patterns/tree/main/src/DesignPattern/DesignPattern/Behavioral/ChainOfResponsibilityPattern/SeparationExample) of Payment Processing system in C# with improvement separation
 
 ### State Pattern
 
@@ -247,7 +247,7 @@ you can also you the pattern to simplify methods with long conditionals that dep
 
 **UML Class Diagram**
 
-![state-pattern-1.png](https://raw.githubusercontent.com/aboelkassem/Design-Patterns/main/Images/state-pattern-1.png "state pattern uml diagram")
+![state-pattern-1.png](https://raw.githubusercontent.com/mkassm/Design-Patterns/main/Images/state-pattern-1.png "state pattern uml diagram")
 
 **Real World Example**
 
@@ -259,11 +259,11 @@ A vending machine has several states, and specific actions based on those states
 
 **State Diagram of the example**
 
-![state-pattern-2.png](https://raw.githubusercontent.com/aboelkassem/Design-Patterns/main/Images/state-pattern-2.png "state diagram")
+![state-pattern-2.png](https://raw.githubusercontent.com/mkassm/Design-Patterns/main/Images/state-pattern-2.png "state diagram")
 
 **Class Diagram of the example**
 
-![state-pattern-3.png](https://raw.githubusercontent.com/aboelkassem/Design-Patterns/main/Images/state-pattern-3.png "state pattern uml class diagram")
+![state-pattern-3.png](https://raw.githubusercontent.com/mkassm/Design-Patterns/main/Images/state-pattern-3.png "state pattern uml class diagram")
 
 **Steps to apply State Pattern**
 
@@ -402,7 +402,7 @@ public class VendingMachine
 
 The usual way is Sender object call method in Receiver object to run this method. The command pattern creates a command object in between the sender and receiver. Command Pattern means creates command objects instead of normal methods
 
-![command-pattern-1.png](https://raw.githubusercontent.com/aboelkassem/Design-Patterns/main/Images/command-pattern-1.png "command pattern")
+![command-pattern-1.png](https://raw.githubusercontent.com/mkassm/Design-Patterns/main/Images/command-pattern-1.png "command pattern")
 
 The **Sender** creates a **command object**, **Invoker** invokes the command object do what it’s supposed to do. The invoker keeps track of the commands, manipulates them and invokes them.
 
@@ -414,9 +414,9 @@ Creating these requests as objects allows you to create very useful functionalit
 
 - **Store and schedule different requests.** When you use an method of another object, you can store this command objects into lists, manipulate them before they are completed, put them onto a queue.
 - Allowing commands to be undone or redone like **undo or redo** edits in a document or any type in applications
-  ![command-pattern-2.png](https://raw.githubusercontent.com/aboelkassem/Design-Patterns/main/Images/command-pattern-2.png "command pattern diagram")
-  ![command-pattern-3.png](https://raw.githubusercontent.com/aboelkassem/Design-Patterns/main/Images/command-pattern-3.png "command pattern diagram")
-  ![command-pattern-4.png](https://raw.githubusercontent.com/aboelkassem/Design-Patterns/main/Images/command-pattern-4.png "command pattern example")
+  ![command-pattern-2.png](https://raw.githubusercontent.com/mkassm/Design-Patterns/main/Images/command-pattern-2.png "command pattern diagram")
+  ![command-pattern-3.png](https://raw.githubusercontent.com/mkassm/Design-Patterns/main/Images/command-pattern-3.png "command pattern diagram")
+  ![command-pattern-4.png](https://raw.githubusercontent.com/mkassm/Design-Patterns/main/Images/command-pattern-4.png "command pattern example")
 
 **Real World Example**
 
@@ -424,7 +424,7 @@ Creating these requests as objects allows you to create very useful functionalit
 
 **UML Class Diagram**
 
-![command-pattern-5.png](https://raw.githubusercontent.com/aboelkassem/Design-Patterns/main/Images/command-pattern-5.png "command pattern uml class diagram")
+![command-pattern-5.png](https://raw.githubusercontent.com/mkassm/Design-Patterns/main/Images/command-pattern-5.png "command pattern uml class diagram")
 
 - **execute():** do the work that the command is supposed to do
 - **unexecute():** do the undoing the command
@@ -436,7 +436,7 @@ Creating these requests as objects allows you to create very useful functionalit
 - **Manipulate the commands as objects not methods calls**, which enable them add more functionalities like putting commands into queues, adding an undo/redo function.
 - **Decouples the objects of your software**
 
-> For Example see [the source code](https://github.com/aboelkassem/Design-Patterns/tree/main/src/DesignPattern/DesignPattern/Behavioral/CommandPattern)
+> For Example see [the source code](https://github.com/mkassm/Design-Patterns/tree/main/src/DesignPattern/DesignPattern/Behavioral/CommandPattern)
 
 ### Mediator Pattern
 
@@ -444,13 +444,13 @@ Mediator pattern adds a **third party object** (called _`mediator`_) to control 
 
 Imagine that you want the house of the future. You want your house to change its own temperature once you have left, to brew your coffee when the alarm on your phone goes off, and to load the latest Globe and Mail news issue onto your tablet if you're home and it's Saturday morning, you keep adding more rules and more devices. Eventually you realize interactions between two objects is becoming complicated and difficult to maintain like this:
 
-![mediator-pattern-1.png](https://raw.githubusercontent.com/aboelkassem/Design-Patterns/main/Images/mediator-pattern-1.png "mediator pattern")
+![mediator-pattern-1.png](https://raw.githubusercontent.com/mkassm/Design-Patterns/main/Images/mediator-pattern-1.png "mediator pattern")
 
 To solve this problem and simply use mediator pattern, **In the Mediator pattern**, you will add an object that will talk to all of these other objects and coordinate their activities. Now, they all interact through the mediator. The communication between an object and the mediator is **two-way:** the object informs the mediator when something happens. Then The mediator can perform logic on these events.
 
-![mediator-pattern-2.png](https://raw.githubusercontent.com/aboelkassem/Design-Patterns/main/Images/mediator-pattern-2.png "mediator pattern")
+![mediator-pattern-2.png](https://raw.githubusercontent.com/mkassm/Design-Patterns/main/Images/mediator-pattern-2.png "mediator pattern")
 
-![mediator-pattern-3.png](https://raw.githubusercontent.com/aboelkassem/Design-Patterns/main/Images/mediator-pattern-3.png "mediator pattern")
+![mediator-pattern-3.png](https://raw.githubusercontent.com/mkassm/Design-Patterns/main/Images/mediator-pattern-3.png "mediator pattern")
 
 **Real World Example**
 
@@ -458,13 +458,13 @@ To solve this problem and simply use mediator pattern, **In the Mediator pattern
 
 **UML Class Diagram**
 
-![mediator uml class diagram](https://raw.githubusercontent.com/aboelkassem/Design-Patterns/main/Images/mediator-pattern-4.png "mediator uml class diagram")
+![mediator uml class diagram](https://raw.githubusercontent.com/mkassm/Design-Patterns/main/Images/mediator-pattern-4.png "mediator uml class diagram")
 
 **Example**
 
 The example will be the `chatroom` between team member `developer` and `tester`
 
-![mediator-pattern-5.png](https://raw.githubusercontent.com/aboelkassem/Design-Patterns/main/Images/mediator-pattern-5.png "mediator pattern example")
+![mediator-pattern-5.png](https://raw.githubusercontent.com/mkassm/Design-Patterns/main/Images/mediator-pattern-5.png "mediator pattern example")
 
 - Define the mediator abstract class
 
@@ -633,11 +633,11 @@ So **Observer interface** which has methods that an observer can be notified to 
 
 **Sequence Diagram of the example**
 
-![observer pattern](https://raw.githubusercontent.com/aboelkassem/Design-Patterns/main/Images/observe-pattern-1.png "observer pattern sequence diagram")
+![observer pattern](https://raw.githubusercontent.com/mkassm/Design-Patterns/main/Images/observe-pattern-1.png "observer pattern sequence diagram")
 
 **Class Diagram**
 
-![observe-pattern-2.png](https://raw.githubusercontent.com/aboelkassem/Design-Patterns/main/Images/observe-pattern-2.png "observer pattern uml class diagram")
+![observe-pattern-2.png](https://raw.githubusercontent.com/mkassm/Design-Patterns/main/Images/observe-pattern-2.png "observer pattern uml class diagram")
 
 - `Observer` interface
 
@@ -709,7 +709,7 @@ This pattern uses the **Separation of Concerns** design principle which allows y
 
 **UML Class Diagram**
 
-![MVC.png](https://raw.githubusercontent.com/aboelkassem/Design-Patterns/main/Images/MVC.png "Model, View, Controller (MVC)")
+![MVC.png](https://raw.githubusercontent.com/mkassm/Design-Patterns/main/Images/MVC.png "Model, View, Controller (MVC)")
 
 - **The Model:** contains the data and logic that users want to manipulate.⇒ like **Backend**
 - **The View:** give a user a way to see the data of model or parts of it ⇒ like **Frontend**
@@ -829,4 +829,4 @@ In general, **Model** corresponds to the entity objects, **View** corresponds to
 
 <hr>
 
-[Edit this page in Github](https://github.com/aboelkassem/Design-Patterns/blob/main/README.md)
+[Edit this page in Github](https://github.com/mkassm/Design-Patterns/blob/main/README.md)

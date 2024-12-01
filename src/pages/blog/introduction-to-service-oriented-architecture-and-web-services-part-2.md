@@ -2,11 +2,11 @@
 templateKey: article-page
 title: Introduction to Service-Oriented Architecture and Web Services - Part 2
 slug: introduction-to-service-oriented-architecture-and-web-services-part-2
-author: aboelkassem
-authorLink: https://www.aboelkassem.tech
+author: Mohamed Kassem
+authorLink: https://www.kassm.me
 date: 2021-03-24T10:27:46.928Z
 cover: /img/web-services.jpg
-metaTitle: SOA and Web Services | Aboelkassem Blog
+metaTitle: SOA and Web Services | Mohamed Kassem Blog
 metaDescription: Service-oriented Architecture is all about how to build, use,
   and combine services. Instead of building large software suites that do
   everything, service-oriented architecture is all about achieving your software
@@ -21,7 +21,7 @@ tags:
   - REST
 ---
 
-In [the previous article](https://blog.aboelkassem.tech/blog/introduction-to-service-oriented-architecture-and-web-services-part-1), we discussed what is web services and service-oriented architecture, Also, we learn about web architecture and standards. Today, we will dive deep into web services and learn how it work, in addition to RESTful service.
+In [the previous article](https://blog.kassm.me/blog/introduction-to-service-oriented-architecture-and-web-services-part-1), we discussed what is web services and service-oriented architecture, Also, we learn about web architecture and standards. Today, we will dive deep into web services and learn how it work, in addition to RESTful service.
 
 ## Table of Content
 
@@ -46,11 +46,11 @@ What is a service? A service is some functionality that is 'exposed' for use by 
 
 Before using web services, building integrated systems was a difficult task, like the following, which makes them work-intensive to implement and difficult to maintain and extend.
 
-![web-service-1.png](https://raw.githubusercontent.com/aboelkassem/Software-and-Service-Oriented-Architecture/main/Images/web-service-1.png "web service")
+![web-service-1.png](https://raw.githubusercontent.com/mkassm/Software-and-Service-Oriented-Architecture/main/Images/web-service-1.png "web service")
 
 But now, Enterprise Application Integration (EAI) is an enterprise-level solution for this integration problem, it uses a form of **middleware**, which is software that is located between other software and facilitates communication between them.
 
-![web service](https://raw.githubusercontent.com/aboelkassem/Software-and-Service-Oriented-Architecture/main/Images/web-service-2.png "web service")
+![web service](https://raw.githubusercontent.com/mkassm/Software-and-Service-Oriented-Architecture/main/Images/web-service-2.png "web service")
 
 However, implementation in business to business (B2B) interactions, is not always clear for middleware. For example, identifying which business **implements or hosted** the middleware, **managing security**, and **protecting data** from outside influence can complicate B2B. So **EAI is not used for B2B interactions**.
 
@@ -72,7 +72,7 @@ In web service, service providers and requester are communicated with each other
 
 Like method call in OOP, the purpose of SOAP message is to solicit an operation from remote web service, and is in an XML-formatted document. For example SOAP message like this:
 
-![soap.png](https://raw.githubusercontent.com/aboelkassem/Software-and-Service-Oriented-Architecture/main/Images/soap.png "SOAP")
+![soap.png](https://raw.githubusercontent.com/mkassm/Software-and-Service-Oriented-Architecture/main/Images/soap.png "SOAP")
 
 - A **header** is used to also provide contextual information like information about the client or routing information.
 - The **body** contains the information that the service provider needs to determine which service to provide and the service’s input.
@@ -81,7 +81,7 @@ Like method call in OOP, the purpose of SOAP message is to solicit an operation 
 
 - Document Style
 - RPC Style
-  ![soap-1.png](https://raw.githubusercontent.com/aboelkassem/Software-and-Service-Oriented-Architecture/main/Images/soap-1.png "SOAP")
+  ![soap-1.png](https://raw.githubusercontent.com/mkassm/Software-and-Service-Oriented-Architecture/main/Images/soap-1.png "SOAP")
 
 SOAP messages must be sent over transport protocol, like **HTTP** or other protocols like **SMTP** which is used for email. A SOAP message can be send using HTTP Post.
 
@@ -89,20 +89,20 @@ Messaging is **synchronous** if the service request **waits** for a response bef
 
 Messaging is **asynchronous** if interactions allow the code to **keep executing**. This means that when a message returns from the service provider, the code can process it.
 
-![soap-2.png](https://raw.githubusercontent.com/aboelkassem/Software-and-Service-Oriented-Architecture/main/Images/soap-2.png "SOAP")
+![soap-2.png](https://raw.githubusercontent.com/mkassm/Software-and-Service-Oriented-Architecture/main/Images/soap-2.png "SOAP")
 
 **Messaging Patterns**
 
 Four basic messaging patterns exist for SOAP. Since SOAP messages are stateless, these interactions are implemented by relating messages another way, like storing the interaction state on the client and/or the server, or by using extensions to web services like WS-Coordination.
 
 - Request-Response: this pattern is when the requester first sends a message then receives a replay from the service provider, this is a Synchronous, which can be implemented over HTTP
-  ![soap-3.png](https://raw.githubusercontent.com/aboelkassem/Software-and-Service-Oriented-Architecture/main/Images/soap-3.png "Request-Response")
+  ![soap-3.png](https://raw.githubusercontent.com/mkassm/Software-and-Service-Oriented-Architecture/main/Images/soap-3.png "Request-Response")
 - Solicit-Response: the service provider makes a request to the requester, this is often a confirmation
-  ![soap](https://raw.githubusercontent.com/aboelkassem/Software-and-Service-Oriented-Architecture/main/Images/soap-4.png "Solicit-Response")
+  ![soap](https://raw.githubusercontent.com/mkassm/Software-and-Service-Oriented-Architecture/main/Images/soap-4.png "Solicit-Response")
 - One-Way: The requester sends a request to the service provider but not expect a response. Like a notification that the requester is up and running (online).
-  ![soap](https://raw.githubusercontent.com/aboelkassem/Software-and-Service-Oriented-Architecture/main/Images/soap-5.png "One-Way")
+  ![soap](https://raw.githubusercontent.com/mkassm/Software-and-Service-Oriented-Architecture/main/Images/soap-5.png "One-Way")
 - Notification: The service provider sends a notification to the requester without expecting a response. Event-based systems.
-  ![soap](https://raw.githubusercontent.com/aboelkassem/Software-and-Service-Oriented-Architecture/main/Images/soap-6.png "Notification")
+  ![soap](https://raw.githubusercontent.com/mkassm/Software-and-Service-Oriented-Architecture/main/Images/soap-6.png "Notification")
 
 Some of the disadvantages include the fact that XML encoding and decoding adds overhead and does not easily accommodate some data types. These disadvantages have resulted in SOAP being superseded in many applications by methods that use HTTP more directly, such as RESTful web services.
 
@@ -132,7 +132,7 @@ The categories used to bind **interfaces** to concrete implementations are:
 
 **For example:**
 
-![wsdl.png](https://raw.githubusercontent.com/aboelkassem/Software-and-Service-Oriented-Architecture/main/Images/wsdl.png "wsdl")
+![wsdl.png](https://raw.githubusercontent.com/mkassm/Software-and-Service-Oriented-Architecture/main/Images/wsdl.png "wsdl")
 
 WSDL provides a **robust**, **modular**, and **extensible** service description language. WSDL description enables reuse because WSDL descriptions are broken into very fine descriptions which allow for the reuse of parts of WSDL specifications in different ways. WSDL documents can also import other WSDL documents, gaining them access to data types in the imported WSDL description or to interfaces.
 
@@ -148,7 +148,7 @@ UDDI is not tied to a specific registry, it is a standard for discovery and publ
 
 **How it works?**
 
-![uddi-1.png](https://raw.githubusercontent.com/aboelkassem/Software-and-Service-Oriented-Architecture/main/Images/uddi-1.png "UDDI")
+![uddi-1.png](https://raw.githubusercontent.com/mkassm/Software-and-Service-Oriented-Architecture/main/Images/uddi-1.png "UDDI")
 
 - First service providers **publish** themselves to UDD registry, Then service requester can **search** the registry by searching elements in WSDL description or other descriptions.
 - After search, requester can **bind** to it using WSDL descriptions to determine messaging pattern, then **invoke** these services
@@ -159,7 +159,7 @@ Publishing registers information about the service with a **UDDI registry**, whi
 
 The information that UDDI standard is contained three categories, White pages, Yellow pages, Green Pages
 
-![uddi-2.png](https://raw.githubusercontent.com/aboelkassem/Software-and-Service-Oriented-Architecture/main/Images/uddi-2.png "UDDI")
+![uddi-2.png](https://raw.githubusercontent.com/mkassm/Software-and-Service-Oriented-Architecture/main/Images/uddi-2.png "UDDI")
 
 - White pages, where information such as the business name, a short description, contact information, and unique business identification numbers is stored.
 - Yellow pages, which contain information about the service or industry that the business is in, including hierarchical information about the business. For example, exchange rates are a subset of currency services.
@@ -171,7 +171,7 @@ The information that UDDI standard is contained three categories, White pages, Y
 - businessService ⇒ yellow pages
 - bindingTemplate and tModel ⇒ green pages
 
-![uddi-3.png](https://raw.githubusercontent.com/aboelkassem/Software-and-Service-Oriented-Architecture/main/Images/uddi-3.png "UDDI")
+![uddi-3.png](https://raw.githubusercontent.com/mkassm/Software-and-Service-Oriented-Architecture/main/Images/uddi-3.png "UDDI")
 
 Service providers **publish**, including adding, deleting, and modifying entries to a registry through **SOAP** messages. Operations could be `save_business`, `save_service`, `save_binding`, `save_tModel`, or delete commands for these same elements. UDDI also specifies web services for **discovery**. These are accessed by **SOAP** messages. Commands to search for services include `find_business`, `find_service`, `find_binding`, and `find_tModel`. Information can be requested with commands such as `get_businessDetail`, `get_serviceDetail`, etc.
 
@@ -185,9 +185,9 @@ Services can be combined, this call **composition**, like composing objects in O
 
 Instead composing services involves invoking services, like the following UML sequence diagram and Activity diagram showing that the composite service uses other services.
 
-![BPEL](https://raw.githubusercontent.com/aboelkassem/Software-and-Service-Oriented-Architecture/main/Images/bpel-1.png "BPEL")
+![BPEL](https://raw.githubusercontent.com/mkassm/Software-and-Service-Oriented-Architecture/main/Images/bpel-1.png "BPEL")
 
-![bpel-2.png](https://raw.githubusercontent.com/aboelkassem/Software-and-Service-Oriented-Architecture/main/Images/bpel-2.png "BPEL")
+![bpel-2.png](https://raw.githubusercontent.com/mkassm/Software-and-Service-Oriented-Architecture/main/Images/bpel-2.png "BPEL")
 
 Web services can easily be composed because they are accessed in similar ways. Services invoked with SOAP messages, described by WSDL, cataloged by UDDI. The goal of the standard of composing services is to not work with low-level programmatic details but at higher-level.
 
@@ -195,7 +195,7 @@ BPEL (Business Process Execution Language) is a standard high-level composition 
 
 **For example of both internal and external services.** you are a car manufacturer and you have a remote warehouse.
 
-![bpel-3.png](https://raw.githubusercontent.com/aboelkassem/Software-and-Service-Oriented-Architecture/main/Images/bpel-3.png "BPEL")
+![bpel-3.png](https://raw.githubusercontent.com/mkassm/Software-and-Service-Oriented-Architecture/main/Images/bpel-3.png "BPEL")
 
 BPEL supports basic operations like “if-then-else” decisions, or other logic from various program languages and wrappers. In addition to composition, web services are also associated with **coordination**. Coordination is when a process coordinates the activities of two or more services. Composition is distinguished from coordination because it exposes the collection of actions as another service.
 
@@ -209,7 +209,7 @@ REST (REpresentational State Transfer) architectural style is used in distribute
 
 The client sends a request and the server responds, but in REST, the communication is **resource-based**. Resources can be any pieces of information that are self-contained. This can include **documents**, **images**, **object** representations, etc.
 
-![rest-1.png](https://raw.githubusercontent.com/aboelkassem/Software-and-Service-Oriented-Architecture/main/Images/rest-1.png "RESTful")
+![rest-1.png](https://raw.githubusercontent.com/mkassm/Software-and-Service-Oriented-Architecture/main/Images/rest-1.png "RESTful")
 
 **REST constraints**
 
@@ -239,9 +239,9 @@ The client sends a request and the server responds, but in REST, the communicati
 
 This is an example of a request to add coffee to an online shopping cart in the form or **XML** data, uses **PUT** method and **URI**. Response in **JSON** object. Headers include section called **cache-control** which determines if the information should be cached on the client's side
 
-![REST](https://raw.githubusercontent.com/aboelkassem/Software-and-Service-Oriented-Architecture/main/Images/rest-2.png "REST Example of a request and response")
+![REST](https://raw.githubusercontent.com/mkassm/Software-and-Service-Oriented-Architecture/main/Images/rest-2.png "REST Example of a request and response")
 
-![REST](https://raw.githubusercontent.com/aboelkassem/Software-and-Service-Oriented-Architecture/main/Images/rest-3.png "REST Example of a request and response")
+![REST](https://raw.githubusercontent.com/mkassm/Software-and-Service-Oriented-Architecture/main/Images/rest-3.png "REST Example of a request and response")
 
 ### Designing a REST Service
 
@@ -260,7 +260,7 @@ So we will explore **best practices to follow to create a well-designed RESTful 
 
 For example to create a server for university system with students and teachers, you can have a few URIs like this:
 
-![rest-4.png](https://raw.githubusercontent.com/aboelkassem/Software-and-Service-Oriented-Architecture/main/Images/rest-4.png "REST Standards")
+![rest-4.png](https://raw.githubusercontent.com/mkassm/Software-and-Service-Oriented-Architecture/main/Images/rest-4.png "REST Standards")
 
 and don't use URIs based on verbs like `/GetAllTeachers` because it's not resource based.
 
@@ -286,7 +286,7 @@ Headers are used to specify a lot of different properties. Two headers that are 
 - **Content-Type**: define the format of the message. (Input)
 - **Accept**: defines a list of acceptable formats that can come as response. (Output)
 
-![rest-5.png](https://raw.githubusercontent.com/aboelkassem/Software-and-Service-Oriented-Architecture/main/Images/rest-5.png "REST Reuqest and Resonse")
+![rest-5.png](https://raw.githubusercontent.com/mkassm/Software-and-Service-Oriented-Architecture/main/Images/rest-5.png "REST Reuqest and Resonse")
 
 **Provide users with filtering and paging for collections**
 
@@ -315,11 +315,11 @@ Create a basic REST service where you can store, retrieve, and delete informatio
 
 First thing to thing about is the services that I should provide, so it will be ways to retrieve information about students, courses and info about which courses students are taking. These will be our `GET` APIs
 
-![rest-6.png](https://raw.githubusercontent.com/aboelkassem/Software-and-Service-Oriented-Architecture/main/Images/rest-6.png "RESTful")
+![rest-6.png](https://raw.githubusercontent.com/mkassm/Software-and-Service-Oriented-Architecture/main/Images/rest-6.png "RESTful")
 
 Also should able to create, update, and delete the resource
 
-![rest-7.png](https://raw.githubusercontent.com/aboelkassem/Software-and-Service-Oriented-Architecture/main/Images/rest-7.png "REST Standards")
+![rest-7.png](https://raw.githubusercontent.com/mkassm/Software-and-Service-Oriented-Architecture/main/Images/rest-7.png "REST Standards")
 
 Next, create a resource class for a student, like following
 
@@ -356,7 +356,7 @@ public class Student
 
 Next, create java file that handles the HTTP request that we planned, this can be done through many pre-build Java libraries that provide the client library to communicate with RESTful service. Java libraries like `Restlet`, `Spring`, `Jersy`, `RESTEasy` , like the following using Jersy to create post method to create a student
 
-![rest-8.png](https://raw.githubusercontent.com/aboelkassem/Software-and-Service-Oriented-Architecture/main/Images/rest-8.png "REST Example in Java")
+![rest-8.png](https://raw.githubusercontent.com/mkassm/Software-and-Service-Oriented-Architecture/main/Images/rest-8.png "REST Example in Java")
 
 Once all the API methods have been written and finished, all you need to do is deploy it by using Apache or any other web server software. Now you should able to access your API by using the following URL ⇒ `http://your-ip-address/studentcourseapi/`
 
@@ -364,13 +364,13 @@ Now, you can test your REST service by creating your own client application that
 
 You can use **CURL tool**, which is a tool to transfer data from or to a server. Like the following curl command
 
-![rest-11.png](https://raw.githubusercontent.com/aboelkassem/Software-and-Service-Oriented-Architecture/main/Images/rest-11.png "API Testing using CURL Tool")
+![rest-11.png](https://raw.githubusercontent.com/mkassm/Software-and-Service-Oriented-Architecture/main/Images/rest-11.png "API Testing using CURL Tool")
 
 which sends an HTTP request to the server and invokes the POST API created with the JSON object containing a single student named James Dean in the department of computing science. Which also look like this.
 
-![request](https://raw.githubusercontent.com/aboelkassem/Software-and-Service-Oriented-Architecture/main/Images/rest-9.png "request")
+![request](https://raw.githubusercontent.com/mkassm/Software-and-Service-Oriented-Architecture/main/Images/rest-9.png "request")
 
-![response](https://raw.githubusercontent.com/aboelkassem/Software-and-Service-Oriented-Architecture/main/Images/rest-10.png "response")
+![response](https://raw.githubusercontent.com/mkassm/Software-and-Service-Oriented-Architecture/main/Images/rest-10.png "response")
 
 ### Introduction to Microservices
 
@@ -386,7 +386,7 @@ Each microservice **doesn't obey a full layered architectural style** because mi
 
 **For example the following Online library application which compose the following microservices.**
 
-![microservices-1.png](https://raw.githubusercontent.com/aboelkassem/Software-and-Service-Oriented-Architecture/main/Images/microservices-1.png "Microservices")
+![microservices-1.png](https://raw.githubusercontent.com/mkassm/Software-and-Service-Oriented-Architecture/main/Images/microservices-1.png "Microservices")
 
 Each microservice has a well-defined interface or API that informs other microservices how they can be used and communicated with. Communication is done through standards and protocols such as HTTP and XML, JSON. REST interfaces are used to keep communication between microservices stateless. It is desirable for each request-response to be independent of any other request-response.
 
@@ -452,7 +452,7 @@ We can breakup this application into the following microservices:
 
 Assume all communication between microservices is HTTP and REST based.
 
-![microservices-2.png](https://raw.githubusercontent.com/aboelkassem/Software-and-Service-Oriented-Architecture/main/Images/microservices-2.png "Microservices")
+![microservices-2.png](https://raw.githubusercontent.com/mkassm/Software-and-Service-Oriented-Architecture/main/Images/microservices-2.png "Microservices")
 
 - When a user visits the website for this application, the user interface microservice prompts the user to enter their location. Once the address is entered, the user interface microservice communicates with the restaurant catalog microservice to determine nearby restaurants. This information is communicated back to the user interface microservice, and displayed to the user.
 - When a user chooses to view more details about a particular restaurant, the user interface microservice communicates with the restaurant review microservice to access the review of the restaurant. This is then displayed to the user, and it provides an option to write a review, or to place a reservation for a particular time.
@@ -461,4 +461,4 @@ Assume all communication between microservices is HTTP and REST based.
 
 <hr>
 
-[Edit this page in Github](https://github.com/aboelkassem/Software-and-Service-Oriented-Architecture/blob/main/README.md)
+[Edit this page in Github](https://github.com/mkassm/Software-and-Service-Oriented-Architecture/blob/main/README.md)

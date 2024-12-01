@@ -2,8 +2,8 @@
 templateKey: article-page
 title: Asynchronous Programming in .NET
 slug: asynchronous-programming-in-dotnet
-author: aboelkassem
-authorLink: https://www.aboelkassem.tech
+author: Mohamed Kassem
+authorLink: https://www.kassm.me
 date: 2021-07-08T08:09:45.979Z
 cover: /img/asychronous.png
 metaTitle: Asynchronous Programming in .NET
@@ -129,7 +129,7 @@ private async Task<string> LoginAsync()
 ```csharp
 using (var client = new HttpClient())
 {
-	var httpMessage = await client.GetAsync("https://blog.aboelkassem.tech/rss/").ConfigureAwait(false);
+	var httpMessage = await client.GetAsync("https://blog.kassm.me/rss/").ConfigureAwait(false);
 
 	var content = await httpMessage.Content.ReadAsStringAsync().ConfigureAwait(false);
 

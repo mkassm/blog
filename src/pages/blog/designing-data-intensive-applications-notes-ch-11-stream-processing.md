@@ -2,8 +2,8 @@
 templateKey: article-page
 title: "Designing Data Intensive Applications Notes: Ch.11 Stream Processing"
 slug: designing-data-intensive-applications-notes-ch11
-author: aboelkassem
-authorLink: https://www.aboelkassem.tech
+author: Mohamed Kassem
+authorLink: https://www.kassm.me
 date: 2023-11-04T07:44:10.102Z
 cover: /img/designing-data-intensive-apps.avif
 metaTitle: Chapter 11 Stream Processing.
@@ -48,11 +48,11 @@ In streaming, the input is an event which immutable object containing the detail
 A database is sufficient to connect producers and consumers. However, continuous polling is expensive, so its better for consumers to be notified when new events appear, the behavior that usually requires specialized tools such as messaging systems.
 
 <p align="center" width="100%">
-  <img src="https://raw.githubusercontent.com/aboelkassem/designing-data-intensive-applications-notes/main/Chapters/Chapter%2011%20-%20Stream%20Processing/images/event.png" width="700" hight="500"/>
+  <img src="https://raw.githubusercontent.com/mkassm/designing-data-intensive-applications-notes/main/Chapters/Chapter%2011%20-%20Stream%20Processing/images/event.png" width="700" hight="500"/>
 </p>
 
 <p align="center" width="100%">
-  <img src="https://raw.githubusercontent.com/aboelkassem/designing-data-intensive-applications-notes/main/Chapters/Chapter%2011%20-%20Stream%20Processing/images/transmission.png" width="700" hight="500"/>
+  <img src="https://raw.githubusercontent.com/mkassm/designing-data-intensive-applications-notes/main/Chapters/Chapter%2011%20-%20Stream%20Processing/images/transmission.png" width="700" hight="500"/>
 </p>
 
 ## Messaging System
@@ -60,7 +60,7 @@ A database is sufficient to connect producers and consumers. However, continuous
 A common approach for notifying consumers about new events is to use **Messaging systems**: allows multiple producers nodes to send messages to the same topic and allows multiple consumer nodes to receive messages in a topic.
 
 <p align="center" width="100%">
-  <img src="https://raw.githubusercontent.com/aboelkassem/designing-data-intensive-applications-notes/main/Chapters/Chapter%2011%20-%20Stream%20Processing/images/pub-sub-modal.png" width="700" hight="500"/>
+  <img src="https://raw.githubusercontent.com/mkassm/designing-data-intensive-applications-notes/main/Chapters/Chapter%2011%20-%20Stream%20Processing/images/pub-sub-modal.png" width="700" hight="500"/>
 </p>
 
 Within this publish/subscribe model, it might be helpful to ask the following two questions:
@@ -73,7 +73,7 @@ One option for a messaging system is **direct network communication**, such as U
 Another more **widely** used option is communication via a ***message broker* or *message queue***, which acts as a server that both producers and consumers connect to, it automatically deletes a message after delivery, it supports some way of subscribing to a subset of **topics**, and **it notifies clients when data changes**. Consumers are generally **asynchronous**: when a producer sends a message, it normally only waits for the broker to confirm that it has buffered the message and does not wait for the message to be processed by consumers
 
 <p align="center" width="100%">
-  <img src="https://raw.githubusercontent.com/aboelkassem/designing-data-intensive-applications-notes/main/Chapters/Chapter%2011%20-%20Stream%20Processing/images/broker.png" width="700" hight="500"/>
+  <img src="https://raw.githubusercontent.com/mkassm/designing-data-intensive-applications-notes/main/Chapters/Chapter%2011%20-%20Stream%20Processing/images/broker.png" width="700" hight="500"/>
 </p>
 
 This is the traditional view of message brokers, which is encapsulated in **standards** like JMS and AMQP and **implemented** in software like RabbitMQ, ActiveMQ, HornetQ, Qpid, TIBCO Enterprise Message Service, IBM MQ, Azure Service Bus, and Google Cloud Pub/Sub.
@@ -81,7 +81,7 @@ This is the traditional view of message brokers, which is encapsulated in **stan
 Message Broker can decide to distribute the event load among consumers (**Load balancing**), or deliver all messages to all consumers (**Fan-out**), or a combination of both.
 
 <p align="center" width="100%">
-  <img src="https://raw.githubusercontent.com/aboelkassem/designing-data-intensive-applications-notes/main/Chapters/Chapter%2011%20-%20Stream%20Processing/images/message-broker-modals.png" width="700" hight="500"/>
+  <img src="https://raw.githubusercontent.com/mkassm/designing-data-intensive-applications-notes/main/Chapters/Chapter%2011%20-%20Stream%20Processing/images/message-broker-modals.png" width="700" hight="500"/>
 </p>
 
 **Acknowledgments and redelivery**
@@ -91,17 +91,17 @@ Message brokers use **acknowledgments**: a client must explicitly tell the broke
 In load balancing approach, The following example, consumer 2 crashes while processing m3, so it is redelivered to consumer 1 at a later time.
 
 <p align="center" width="100%">
-  <img src="https://raw.githubusercontent.com/aboelkassem/designing-data-intensive-applications-notes/main/Chapters/Chapter%2011%20-%20Stream%20Processing/images/message-broker-acknowledgment.png" width="700" hight="500"/>
+  <img src="https://raw.githubusercontent.com/mkassm/designing-data-intensive-applications-notes/main/Chapters/Chapter%2011%20-%20Stream%20Processing/images/message-broker-acknowledgment.png" width="700" hight="500"/>
 </p>
 
 But this leads to inconsistency with the order that were sent by producer 1. Message broker tries to preserve the order of messages and use a separate queue per consumer to solve this issue. 
 
 <p align="center" width="100%">
-  <img src="https://raw.githubusercontent.com/aboelkassem/designing-data-intensive-applications-notes/main/Chapters/Chapter%2011%20-%20Stream%20Processing/images/messagning-systems.png" width="700" hight="500"/>
+  <img src="https://raw.githubusercontent.com/mkassm/designing-data-intensive-applications-notes/main/Chapters/Chapter%2011%20-%20Stream%20Processing/images/messagning-systems.png" width="700" hight="500"/>
 </p>
 
 <p align="center" width="100%">
-  <img src="https://raw.githubusercontent.com/aboelkassem/designing-data-intensive-applications-notes/main/Chapters/Chapter%2011%20-%20Stream%20Processing/images/broker-vs-database.png" width="700" hight="500"/>
+  <img src="https://raw.githubusercontent.com/mkassm/designing-data-intensive-applications-notes/main/Chapters/Chapter%2011%20-%20Stream%20Processing/images/broker-vs-database.png" width="700" hight="500"/>
 </p>
 
 ## Partitioned Logs (Kafka)
@@ -111,7 +111,7 @@ But this leads to inconsistency with the order that were sent by producer 1. Mes
 For scaling out, the log is partitioned on different machines, making each partition is independently for other partitions. A topic is defined to group some partitions. Each consumer has a **read offset** per partition and be grouped also.
 
 <p align="center" width="100%">
-  <img src="https://raw.githubusercontent.com/aboelkassem/designing-data-intensive-applications-notes/main/Chapters/Chapter%2011%20-%20Stream%20Processing/images/partitioned-logs.png" width="700" hight="500"/>
+  <img src="https://raw.githubusercontent.com/mkassm/designing-data-intensive-applications-notes/main/Chapters/Chapter%2011%20-%20Stream%20Processing/images/partitioned-logs.png" width="700" hight="500"/>
 </p>
 
 Apache Kafka, Amazon Kinesis Streams, and Twitter’s DistributedLog are log-based message brokers that work like this. Google Cloud Pub/Sub is architecturally similar but exposes a JMS-style API rather than a log abstraction
@@ -119,17 +119,17 @@ Apache Kafka, Amazon Kinesis Streams, and Twitter’s DistributedLog are log-bas
 ## Partitioned Log Broker vs Message Queue/Passing Broker
 
 <p align="center" width="100%">
-  <img src="https://raw.githubusercontent.com/aboelkassem/designing-data-intensive-applications-notes/main/Chapters/Chapter%2011%20-%20Stream%20Processing/images/partitioned-logs-vs-message-queue-1.png" width="700" hight="500"/>
+  <img src="https://raw.githubusercontent.com/mkassm/designing-data-intensive-applications-notes/main/Chapters/Chapter%2011%20-%20Stream%20Processing/images/partitioned-logs-vs-message-queue-1.png" width="700" hight="500"/>
 </p>
 
 
 <p align="center" width="100%">
-  <img src="https://raw.githubusercontent.com/aboelkassem/designing-data-intensive-applications-notes/main/Chapters/Chapter%2011%20-%20Stream%20Processing/images/partitioned-logs-vs-message-queue-2.png" width="700" hight="500"/>
+  <img src="https://raw.githubusercontent.com/mkassm/designing-data-intensive-applications-notes/main/Chapters/Chapter%2011%20-%20Stream%20Processing/images/partitioned-logs-vs-message-queue-2.png" width="700" hight="500"/>
 </p>
 
 
 <p align="center" width="100%">
-  <img src="https://raw.githubusercontent.com/aboelkassem/designing-data-intensive-applications-notes/main/Chapters/Chapter%2011%20-%20Stream%20Processing/images/partitioned-logs-vs-message-queue-3.png" width="700" hight="500"/>
+  <img src="https://raw.githubusercontent.com/mkassm/designing-data-intensive-applications-notes/main/Chapters/Chapter%2011%20-%20Stream%20Processing/images/partitioned-logs-vs-message-queue-3.png" width="700" hight="500"/>
 </p>
 
 ## Databases and Streams
@@ -149,7 +149,7 @@ The problems with dual writes:
     In the database, X is first set to A and then to B, while at the search index the writes arrive in the opposite order.
     
     <p align="center" width="100%">
-      <img src="https://raw.githubusercontent.com/aboelkassem/designing-data-intensive-applications-notes/main/Chapters/Chapter%2011%20-%20Stream%20Processing/images/derived-system-race-condition.png" width="700" hight="500"/>
+      <img src="https://raw.githubusercontent.com/mkassm/designing-data-intensive-applications-notes/main/Chapters/Chapter%2011%20-%20Stream%20Processing/images/derived-system-race-condition.png" width="700" hight="500"/>
     </p>
     
 - There is no Atomic Commit
@@ -163,7 +163,7 @@ The process of observing all data changes written to a database and extracting t
 The following diagram shows, Taking data in the order it was written to one database, and applying the changes to other systems in the same order.
 
 <p align="center" width="100%">
-  <img src="https://raw.githubusercontent.com/aboelkassem/designing-data-intensive-applications-notes/main/Chapters/Chapter%2011%20-%20Stream%20Processing/images/change-data-change-cdc.png" width="700" hight="500"/>
+  <img src="https://raw.githubusercontent.com/mkassm/designing-data-intensive-applications-notes/main/Chapters/Chapter%2011%20-%20Stream%20Processing/images/change-data-change-cdc.png" width="700" hight="500"/>
 </p>
 
 A log-based message broker is well suited for transporting the change events from the source database, since it preserves the ordering of messages.
@@ -233,25 +233,25 @@ Many open source distributed stream processing frameworks are designed with **an
 - **Tumbling window**: Fixed length, for example, if you have a 1-minute tumbling window, all the events with timestamps between 10:03:00 and 10:03:59 are grouped into one window.
     
     <p align="center" width="100%">
-      <img src="https://raw.githubusercontent.com/aboelkassem/designing-data-intensive-applications-notes/main/Chapters/Chapter%2011%20-%20Stream%20Processing/images/tumbling-window.png" width="700" hight="500"/>
+      <img src="https://raw.githubusercontent.com/mkassm/designing-data-intensive-applications-notes/main/Chapters/Chapter%2011%20-%20Stream%20Processing/images/tumbling-window.png" width="700" hight="500"/>
     </p>
     
 - **Hopping window:** also has a fixed length, but allows windows to overlap in order to provide **some smoothing**. For example, a 5-minute window with a hop size of 1 minute would contain the events between 10:03:00 and 10:07:59, then the next window would cover events between 10:04:00 and 10:08:59, and so on.
 
     <p align="center" width="100%">
-      <img src="https://raw.githubusercontent.com/aboelkassem/designing-data-intensive-applications-notes/main/Chapters/Chapter%2011%20-%20Stream%20Processing/images/hopping-window.png" width="700" hight="500"/>
+      <img src="https://raw.githubusercontent.com/mkassm/designing-data-intensive-applications-notes/main/Chapters/Chapter%2011%20-%20Stream%20Processing/images/hopping-window.png" width="700" hight="500"/>
     </p>
 
 - **Sliding window:** Fixed length but by event occurred, make a new window
 
     <p align="center" width="100%">
-      <img src="https://raw.githubusercontent.com/aboelkassem/designing-data-intensive-applications-notes/main/Chapters/Chapter%2011%20-%20Stream%20Processing/images/sliding-window.png" width="700" hight="500"/>
+      <img src="https://raw.githubusercontent.com/mkassm/designing-data-intensive-applications-notes/main/Chapters/Chapter%2011%20-%20Stream%20Processing/images/sliding-window.png" width="700" hight="500"/>
     </p>
     
 - **Session window**: defined by grouping together all events for the same user that occur closely together in time, and the window ends when the user has been inactive for some time
 
     <p align="center" width="100%">
-      <img src="https://raw.githubusercontent.com/aboelkassem/designing-data-intensive-applications-notes/main/Chapters/Chapter%2011%20-%20Stream%20Processing/images/session-window.png" width="700" hight="500"/>
+      <img src="https://raw.githubusercontent.com/mkassm/designing-data-intensive-applications-notes/main/Chapters/Chapter%2011%20-%20Stream%20Processing/images/session-window.png" width="700" hight="500"/>
     </p>
     
 When to use each of window type?

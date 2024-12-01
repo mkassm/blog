@@ -2,8 +2,8 @@
 templateKey: article-page
 title: "Designing Data Intensive Applications Notes: Ch.7 Transactions"
 slug: designing-data-intensive-applications-notes-ch7
-author: aboelkassem
-authorLink: https://www.aboelkassem.tech
+author: Mohamed Kassem
+authorLink: https://www.kassm.me
 date: 2023-11-04T07:29:19.011Z
 cover: /img/designing-data-intensive-apps.avif
 metaTitle: Chapter.7 Transactions.
@@ -50,13 +50,13 @@ In this article, we will walkthrough the second chapter of this book `Chapter.7 
 
 To solve these issues we will use Transactions.
 <p align="center" width="100%">
-  <img src="https://raw.githubusercontent.com/aboelkassem/designing-data-intensive-applications-notes/main/Chapters/Chapter%207%20-%20Transactions/images/transactions-intro-1.png" width="700" hight="500"/>
+  <img src="https://raw.githubusercontent.com/mkassm/designing-data-intensive-applications-notes/main/Chapters/Chapter%207%20-%20Transactions/images/transactions-intro-1.png" width="700" hight="500"/>
 </p>
 
 A transaction is a way for an application to group several reads and writes together into a logical unit. Conceptually, all the reads and writes in a transaction are executed as one operation: either the entire transaction succeeds (commit) or it fails (abort, rollback)
 
 <p align="center" width="100%">
-  <img src="https://raw.githubusercontent.com/aboelkassem/designing-data-intensive-applications-notes/main/Chapters/Chapter%207%20-%20Transactions/images/transactions-intro-2.png" width="700" hight="500"/>
+  <img src="https://raw.githubusercontent.com/mkassm/designing-data-intensive-applications-notes/main/Chapters/Chapter%207%20-%20Transactions/images/transactions-intro-2.png" width="700" hight="500"/>
 </p>
 
 By using transactions, the application is free to ignore certain potential error scenarios and concurrency issues, because the database takes care of them instead (we call these **safety guarantees (which treat them as synchronized operations)**).
@@ -87,7 +87,7 @@ Refers to something that cannot be broken down into smaller parts, so when a cli
 The following diagram illustrates that Atomicity ensures that if an error occurs any prior writes from that transaction are undone, to avoid an **inconsistent state**.
 
 <p align="center" width="100%">
-  <img src="https://raw.githubusercontent.com/aboelkassem/designing-data-intensive-applications-notes/main/Chapters/Chapter%207%20-%20Transactions/images/atomicity-example.png" width="700" hight="500"/>
+  <img src="https://raw.githubusercontent.com/mkassm/designing-data-intensive-applications-notes/main/Chapters/Chapter%207%20-%20Transactions/images/atomicity-example.png" width="700" hight="500"/>
 </p>
 
 ### Consistency
@@ -106,13 +106,13 @@ Insert only valid data and that the database is being in a "good-state", which i
 The following example showing a **race condition problem** that they are reading the same data at the same time.
 
 <p align="center" width="100%">
-  <img src="https://raw.githubusercontent.com/aboelkassem/designing-data-intensive-applications-notes/main/Chapters/Chapter%207%20-%20Transactions/images/isolation-example-1.png" width="700" hight="500"/>
+  <img src="https://raw.githubusercontent.com/mkassm/designing-data-intensive-applications-notes/main/Chapters/Chapter%207%20-%20Transactions/images/isolation-example-1.png" width="700" hight="500"/>
 </p>
 
 Another example shows violating isolation: one transaction reads another transaction’s uncommitted writes (a “dirty read”).
 
 <p align="center" width="100%">
-  <img src="https://raw.githubusercontent.com/aboelkassem/designing-data-intensive-applications-notes/main/Chapters/Chapter%207%20-%20Transactions/images/isolation-example-2.png" width="700" hight="500"/>
+  <img src="https://raw.githubusercontent.com/mkassm/designing-data-intensive-applications-notes/main/Chapters/Chapter%207%20-%20Transactions/images/isolation-example-2.png" width="700" hight="500"/>
 </p>
 
 To Fix this: we use Isolation
@@ -126,7 +126,7 @@ To Fix this: we use Isolation
 ## BASE
 
 <p align="center" width="100%">
-  <img src="https://raw.githubusercontent.com/aboelkassem/designing-data-intensive-applications-notes/main/Chapters/Chapter%207%20-%20Transactions/images/acid-vs-base.png" width="700" hight="500"/>
+  <img src="https://raw.githubusercontent.com/mkassm/designing-data-intensive-applications-notes/main/Chapters/Chapter%207%20-%20Transactions/images/acid-vs-base.png" width="700" hight="500"/>
 </p>
 
 good reference: https://neo4j.com/blog/acid-vs-base-consistency-models-explained/
@@ -172,7 +172,7 @@ Imagine a transaction has written some data to the database, but the transaction
 The following example prevents dirty reads
 
 <p align="center" width="100%">
-  <img src="https://raw.githubusercontent.com/aboelkassem/designing-data-intensive-applications-notes/main/Chapters/Chapter%207%20-%20Transactions/images/read-committed-example.png" width="700" hight="500"/>
+  <img src="https://raw.githubusercontent.com/mkassm/designing-data-intensive-applications-notes/main/Chapters/Chapter%207%20-%20Transactions/images/read-committed-example.png" width="700" hight="500"/>
 </p>
 
 **No dirty writes**
@@ -182,13 +182,13 @@ The following example prevents dirty reads
 The following example shows dirty writes
 
 <p align="center" width="100%">
-  <img src="https://raw.githubusercontent.com/aboelkassem/designing-data-intensive-applications-notes/main/Chapters/Chapter%207%20-%20Transactions/images/dirty-writes-example-1.png" width="700" hight="500"/>
+  <img src="https://raw.githubusercontent.com/mkassm/designing-data-intensive-applications-notes/main/Chapters/Chapter%207%20-%20Transactions/images/dirty-writes-example-1.png" width="700" hight="500"/>
 </p>
 
 The following example shows it still doesn’t prevent race conditions which that the second transaction happened after first one has committed (which means that there are no dirty writes) but still incorrect behavior. in “Preventing Lost Updates” we will discuss how to make such counter increments safe.
 
 <p align="center" width="100%">
-  <img src="https://raw.githubusercontent.com/aboelkassem/designing-data-intensive-applications-notes/main/Chapters/Chapter%207%20-%20Transactions/images/dirty-writes-example-2.png" width="700" hight="500"/>
+  <img src="https://raw.githubusercontent.com/mkassm/designing-data-intensive-applications-notes/main/Chapters/Chapter%207%20-%20Transactions/images/dirty-writes-example-2.png" width="700" hight="500"/>
 </p>
 
 **How to implement it?**
@@ -209,7 +209,7 @@ Read committed isolation doesn't protect against **read skew**, where a transact
 The following example explain **Read skew (non repeatable read)** problem which shows that Alice do transfer transaction between her two accounts. but when she see the two lists at the same time, she seen inconsistent state (one still with 500$ and the other account with 400$ so the total is $900 in her accounts—it seems that $100 has vanished into thin air)
 
 <p align="center" width="100%">
-  <img src="https://raw.githubusercontent.com/aboelkassem/designing-data-intensive-applications-notes/main/Chapters/Chapter%207%20-%20Transactions/images/snapshot-isolation-example-1.png" width="700" hight="500"/>
+  <img src="https://raw.githubusercontent.com/mkassm/designing-data-intensive-applications-notes/main/Chapters/Chapter%207%20-%20Transactions/images/snapshot-isolation-example-1.png" width="700" hight="500"/>
 </p>
 
 Other examples for Read skew (non repeatable read) problem:
@@ -229,7 +229,7 @@ By using write locks and reads do not require any locks.  From a performance poi
 Implemented by **Multi-version concurrency control (MVCC)** meaning that each object in the database has multi version, because various in-progress transactions may need to see the state of the database at different points in time. When another transaction need to read it will return the data of with version number at this timestamp.
 
 <p align="center" width="100%">
-  <img src="https://raw.githubusercontent.com/aboelkassem/designing-data-intensive-applications-notes/main/Chapters/Chapter%207%20-%20Transactions/images/snapshot-isolation-example-2.png" width="700" hight="500"/>
+  <img src="https://raw.githubusercontent.com/mkassm/designing-data-intensive-applications-notes/main/Chapters/Chapter%207%20-%20Transactions/images/snapshot-isolation-example-2.png" width="700" hight="500"/>
 </p>
 
 In the above diagram there are two transactions initiated by previous transactions 5 and 3. In any writes the database keep multiple versions of the object according to the transactions. When transaction 12 try again to read the value it will find there two version (one caused by previous transaction 5 and one caused by transaction 13 which happened after me, so it will take any transaction happened before me) 
@@ -258,7 +258,7 @@ There are variety of solutions that has been developed for solving the lost upda
 - **Explicit locking**: if the database’s built-in atomic operations don’t provide the necessary functionality, is for the **application to explicitly lock** objects that are going to be updated. Then the application can perform a read-modify-write cycle, and if any other transaction tries to concurrently read the same object, it is forced to wait until the first read-modify-write cycle has completed.
     
     <p align="center" width="100%">
-      <img src="https://raw.githubusercontent.com/aboelkassem/designing-data-intensive-applications-notes/main/Chapters/Chapter%207%20-%20Transactions/images/explict-lock.png" width="700" hight="500"/>
+      <img src="https://raw.githubusercontent.com/mkassm/designing-data-intensive-applications-notes/main/Chapters/Chapter%207%20-%20Transactions/images/explict-lock.png" width="700" hight="500"/>
     </p>
     
 - **Automatically deleting lost updates**: where the database allows the transaction to execute in parallel, and detects a lost update if happened, abort the transaction and force it to retry. An advantage to this is that the database performs the check efficiently in conjunction with snapshot isolation, and the detection happens automatically and is thus less error-prone.
@@ -271,7 +271,7 @@ There are variety of solutions that has been developed for solving the lost upda
 The following example show another race condition problem (write skew) when concurrent writes happened
 
 <p align="center" width="100%">
-  <img src="https://raw.githubusercontent.com/aboelkassem/designing-data-intensive-applications-notes/main/Chapters/Chapter%207%20-%20Transactions/images/write-skew-example.png" width="700" hight="500"/>
+  <img src="https://raw.githubusercontent.com/mkassm/designing-data-intensive-applications-notes/main/Chapters/Chapter%207%20-%20Transactions/images/write-skew-example.png" width="700" hight="500"/>
 </p>
 
 In each transaction, your application first checks that two or more doctors are currently on call; if yes, it assumes it’s safe for one doctor to go off call. Since the database is using **snapshot isolation**, both checks return 2, so both transactions proceed to the next stage. Alice updates her own record to take herself off call, and Bob updates his own record likewise. Both transactions commit, and now no doctor is on call.
@@ -285,7 +285,7 @@ This can be fixed only through
 - or by explicitly lock the rows that the transaction  depends on using `FOR UPDATE`.
     
     <p align="center" width="100%">
-      <img src="https://raw.githubusercontent.com/aboelkassem/designing-data-intensive-applications-notes/main/Chapters/Chapter%207%20-%20Transactions/images/write-skew-example-lock.png" width="700" hight="500"/>
+      <img src="https://raw.githubusercontent.com/mkassm/designing-data-intensive-applications-notes/main/Chapters/Chapter%207%20-%20Transactions/images/write-skew-example-lock.png" width="700" hight="500"/>
     </p>
     
 
@@ -312,7 +312,7 @@ The easiest is **actual serial execution**, which to actually execute **only one
 To enhance the performance of serial executions, the application must submit the entire transaction code ahead of time as a *stored procedure*, which makes the performance reasonable, especially for databases with general-purpose programming languages. Partitioning can still be used with serial executions, especially when most transactions only uses one partition.
 
 <p align="center" width="100%">
-  <img src="https://raw.githubusercontent.com/aboelkassem/designing-data-intensive-applications-notes/main/Chapters/Chapter%207%20-%20Transactions/images/actual-serial-execution.png" width="700" hight="500"/>
+  <img src="https://raw.githubusercontent.com/mkassm/designing-data-intensive-applications-notes/main/Chapters/Chapter%207%20-%20Transactions/images/actual-serial-execution.png" width="700" hight="500"/>
 </p>
 
 **Pros and cons of stored procedures**
@@ -346,13 +346,13 @@ So writers block both other writers and readers, and vice versa. 2PL is used by 
 Two modes of locks are provided, *shared lock* for **readers**, and *exclusive lock* for **writes**. Deadlocks might result from multiple transaction holding locks, then the database automatically detects **deadlocks** and aborts one of the transactions.
 
 <p align="center" width="100%">
-  <img src="https://raw.githubusercontent.com/aboelkassem/designing-data-intensive-applications-notes/main/Chapters/Chapter%207%20-%20Transactions/images/2pl-1.png" width="700" hight="500"/>
+  <img src="https://raw.githubusercontent.com/mkassm/designing-data-intensive-applications-notes/main/Chapters/Chapter%207%20-%20Transactions/images/2pl-1.png" width="700" hight="500"/>
 </p>
 
 The big downside of two-phase locking is the **performance**, which is much worse compared to weak isolation, also it can have unstable latencies, and can be very slow at high percentiles due to the overhead of acquiring and releasing all those lock.
 
 <p align="center" width="100%">
-  <img src="https://raw.githubusercontent.com/aboelkassem/designing-data-intensive-applications-notes/main/Chapters/Chapter%207%20-%20Transactions/images/2pl-2.png" width="700" hight="500"/>
+  <img src="https://raw.githubusercontent.com/mkassm/designing-data-intensive-applications-notes/main/Chapters/Chapter%207%20-%20Transactions/images/2pl-2.png" width="700" hight="500"/>
 </p>
 
 ### Serializable Snapshot Isolation (SSI)

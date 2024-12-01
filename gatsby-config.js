@@ -139,7 +139,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-disqus`,
       options: {
-        shortname: "aboelkassem", // DISQUS_SHORTNAME
+        shortname: "Mohamed Kassem", // DISQUS_SHORTNAME
       },
     },
     {
@@ -176,7 +176,7 @@ module.exports = {
         // Any additional optional fields
         sampleRate: 5,
         siteSpeedSampleRate: 10,
-        cookieDomain: "https://blog.aboelkassem.tech",
+        cookieDomain: "https://blog.kassm.me",
       },
     },
     {

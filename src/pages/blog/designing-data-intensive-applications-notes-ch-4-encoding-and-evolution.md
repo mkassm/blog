@@ -2,8 +2,8 @@
 templateKey: article-page
 title: "Designing Data Intensive Applications Notes: Ch.4 Encoding and Evolution"
 slug: designing-data-intensive-applications-notes-ch4
-author: aboelkassem
-authorLink: https://www.aboelkassem.tech
+author: Mohamed Kassem
+authorLink: https://www.kassm.me
 date: 2023-11-02T13:48:29.436Z
 cover: /img/designing-data-intensive-apps.avif
 metaTitle: Chapter.4 Encoding and Evolution.
@@ -116,7 +116,7 @@ Designed for efficient storage and retrieval of documents in MongoDB (a NoSQL da
 Doesn’t support backward and forward compatibility.
 
 <p align="center" width="100%">
-  <img src="https://raw.githubusercontent.com/aboelkassem/designing-data-intensive-applications-notes/main/Chapters/Chapter%204%20-%20Encoding%20and%20Evolution/images/message-pack.png" width="700" hight="500"/>
+  <img src="https://raw.githubusercontent.com/mkassm/designing-data-intensive-applications-notes/main/Chapters/Chapter%204%20-%20Encoding%20and%20Evolution/images/message-pack.png" width="700" hight="500"/>
 </p>
 
 ### Thrift and Protocol Buffer
@@ -140,7 +140,7 @@ Thrift has two different encoding format **BinaryProtocol** and **CompactProtoco
 **BinaryProtocol** 
 
 <p align="center" width="100%">
-  <img src="https://raw.githubusercontent.com/aboelkassem/designing-data-intensive-applications-notes/main/Chapters/Chapter%204%20-%20Encoding%20and%20Evolution/images/thrift-protocol.png" width="700" hight="500"/>
+  <img src="https://raw.githubusercontent.com/mkassm/designing-data-intensive-applications-notes/main/Chapters/Chapter%204%20-%20Encoding%20and%20Evolution/images/thrift-protocol.png" width="700" hight="500"/>
 </p>
 
 The difference between this format and above format (Message Pack) is that there are no field names (userName, favoriteNumber, interests). Instead, the encoded data contains **field tags**, which are numbers (1, 2, and 3). Those are the numbers that appear in the schema definition. Field tags are like **aliases** for fields.
@@ -150,13 +150,13 @@ The difference between this format and above format (Message Pack) is that there
 Like BinaryProtocol but it just packs the same information into only 34 bytes by **merging** the field type and tag number into a single byte. Rather than using a full eight bytes for the number 1337.
 
 <p align="center" width="100%">
-  <img src="https://raw.githubusercontent.com/aboelkassem/designing-data-intensive-applications-notes/main/Chapters/Chapter%204%20-%20Encoding%20and%20Evolution/images/thrift-compact-protocol.png" width="700" hight="500"/>
+  <img src="https://raw.githubusercontent.com/mkassm/designing-data-intensive-applications-notes/main/Chapters/Chapter%204%20-%20Encoding%20and%20Evolution/images/thrift-compact-protocol.png" width="700" hight="500"/>
 </p>
 
 **ProtocolBuffers**
 
 <p align="center" width="100%">
-  <img src="https://raw.githubusercontent.com/aboelkassem/designing-data-intensive-applications-notes/main/Chapters/Chapter%204%20-%20Encoding%20and%20Evolution/images/protocol-buffers.png" width="700" hight="500"/>
+  <img src="https://raw.githubusercontent.com/mkassm/designing-data-intensive-applications-notes/main/Chapters/Chapter%204%20-%20Encoding%20and%20Evolution/images/protocol-buffers.png" width="700" hight="500"/>
 </p>
 
 **How Thrift and Protocol Buffers handle schema changes while keeping backward and forward compatibility ?**
@@ -187,7 +187,7 @@ The binary encoding is depends on the order that they appear in the schema and u
 
 
 <p align="center" width="100%">
-  <img src="https://raw.githubusercontent.com/aboelkassem/designing-data-intensive-applications-notes/main/Chapters/Chapter%204%20-%20Encoding%20and%20Evolution/images/avro.png" width="700" hight="500"/>
+  <img src="https://raw.githubusercontent.com/mkassm/designing-data-intensive-applications-notes/main/Chapters/Chapter%204%20-%20Encoding%20and%20Evolution/images/avro.png" width="700" hight="500"/>
 </p>
 
 **How Avro handle schema changes while keeping backward and forward compatibility?**
@@ -195,7 +195,7 @@ The binary encoding is depends on the order that they appear in the schema and u
 As we discussed above about reader schema and writer schema. Avro just resolves the differences between writer’s schema and the reader’s schema.
 
 <p align="center" width="100%">
-  <img src="https://raw.githubusercontent.com/aboelkassem/designing-data-intensive-applications-notes/main/Chapters/Chapter%204%20-%20Encoding%20and%20Evolution/images/avro-schema-comparsion.png" width="600" hight="500"/>
+  <img src="https://raw.githubusercontent.com/mkassm/designing-data-intensive-applications-notes/main/Chapters/Chapter%204%20-%20Encoding%20and%20Evolution/images/avro-schema-comparsion.png" width="600" hight="500"/>
 </p>
 
 forward compatibility means that you can have a **new version** of the schema as **writer** and an **old version** of the schema as **reader**. Conversely, backward compatibility means that you can have a **new version of the schema as reader** and an **old version as writer**.
@@ -211,7 +211,7 @@ When doing rolling upgrade for your database, database may be written by a newer
 The following example shows when an older version of the application updates data previously written by a newer version of the application, data may be lost if you’re not careful.
 
 <p align="center" width="100%">
-  <img src="https://raw.githubusercontent.com/aboelkassem/designing-data-intensive-applications-notes/main/Chapters/Chapter%204%20-%20Encoding%20and%20Evolution/images/database-compatibility.png" width="600" hight="500"/>
+  <img src="https://raw.githubusercontent.com/mkassm/designing-data-intensive-applications-notes/main/Chapters/Chapter%204%20-%20Encoding%20and%20Evolution/images/database-compatibility.png" width="600" hight="500"/>
 </p>
 
 ### Dataflow through Services (REST and RPC)

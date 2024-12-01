@@ -2,11 +2,11 @@
 templateKey: article-page
 title: What is Object Oriented Design and Analysis? - Part 2
 slug: what-is-object-oriented-design-and-analysis-part-2
-author: aboelkassem
-authorLink: https://www.aboelkassem.tech
+author: Mohamed Kassem
+authorLink: https://www.kassm.me
 date: 2020-12-17T11:20:46.056Z
 cover: /img/6661.jpg
-metaTitle: Object Oriented Design and Analysis | Aboelkassem Blog
+metaTitle: Object Oriented Design and Analysis | Mohamed Kassem Blog
 metaDescription: OO Analysis and Design is a structured method for analyzing and
   designing a system by applying object-oriented concepts.
 tags:
@@ -16,7 +16,7 @@ tags:
   - object-oriented-modeling
 ---
 
-In this article, we will continue explaining what we had discussed in [part 1 of Object-oriented design](https://blog.aboelkassem.tech/blog/what-is-object-oriented-design-and-analysis-part-1) , so if you don't read it, I recommend reading it because it's a fully completed toutorial.
+In this article, we will continue explaining what we had discussed in [part 1 of Object-oriented design](https://blog.kassm.me/blog/what-is-object-oriented-design-and-analysis-part-1) , so if you don't read it, I recommend reading it because it's a fully completed toutorial.
 
 In the previous part, we discuss what is object-oriented design and why we need it, in addition to the history of the evolution of programming languages, land the four main design principles (abstraction, encapsulation, decomposition, and generalization).
 
@@ -107,7 +107,7 @@ Since it's unclear what controlling means until to read inside the method itself
 
 To make it **loosely coupled and high cohesion** follow new design which split it to two classes each one has one purpose, and not hiding any information we don't need to break encapsulation to look inside the method
 
-![couped-ex.png](https://raw.githubusercontent.com/aboelkassem/Design-Patterns/main/OOD/images/couped-ex.png "example of loosely coupled")
+![couped-ex.png](https://raw.githubusercontent.com/mkassm/Design-Patterns/main/OOD/images/couped-ex.png "example of loosely coupled")
 
 It is important to balance between **low coupling and high cohesion** in system design. Both are necessary for a good design.
 
@@ -171,7 +171,7 @@ Just check what our class is concerned about and separate them out, for example,
 
 So after applied separation of concerns
 
-![seperation-of-concerns.png](https://raw.githubusercontent.com/aboelkassem/Design-Patterns/main/OOD/images/seperation-of-concerns.png "seperation of concerns")
+![seperation-of-concerns.png](https://raw.githubusercontent.com/mkassm/Design-Patterns/main/OOD/images/seperation-of-concerns.png "seperation of concerns")
 
 ```csharp
 public interface ICamera
@@ -274,11 +274,11 @@ Example for bad inheritance in java, In Stack data structure, the Java Stack cla
 
 For SmartPhone Example
 
-![smartphone-ex1.png](https://raw.githubusercontent.com/aboelkassem/Design-Patterns/main/OOD/images/smartphone-ex1.png "smart phone example")
+![smartphone-ex1.png](https://raw.githubusercontent.com/mkassm/Design-Patterns/main/OOD/images/smartphone-ex1.png "smart phone example")
 
 which are not make sense for SmartPhone to inherit from the phone and then add camera methods to it. So in this case we should use decomposition to extract out the camera responsibilities and put it into their own class like this:
 
-![smart phone example](https://raw.githubusercontent.com/aboelkassem/Design-Patterns/main/OOD/images/smartphone-ex2.png "smart phone example")
+![smart phone example](https://raw.githubusercontent.com/mkassm/Design-Patterns/main/OOD/images/smartphone-ex2.png "smart phone example")
 
 Inheritance could be a difficult design principle to apply, but still a very powerful technique.
 
@@ -288,7 +288,7 @@ Sequence diagrams are used to show your team how **objects** in your program **i
 
 **For example** a person wants to order a burger at local fast food restaurant,
 
-![UMLSequence-ex1.png](https://raw.githubusercontent.com/aboelkassem/Design-Patterns/main/OOD/images/UMLSequence-ex1.png "UML Sequence diagram example")
+![UMLSequence-ex1.png](https://raw.githubusercontent.com/mkassm/Design-Patterns/main/OOD/images/UMLSequence-ex1.png "UML Sequence diagram example")
 
 **Components of Sequence Diagram**
 
@@ -302,11 +302,11 @@ Sequence diagrams are typically framed within a large box which show that this i
 
 **For example** in changing the channel of TV by using remote control.
 
-![UMLSequence-ex2.png](https://raw.githubusercontent.com/aboelkassem/Design-Patterns/main/OOD/images/UMLSequence-ex2.png "UML Sequence diagram example 2")
+![UMLSequence-ex2.png](https://raw.githubusercontent.com/mkassm/Design-Patterns/main/OOD/images/UMLSequence-ex2.png "UML Sequence diagram example 2")
 
 When sequence diagrams get more complicated, you can also show **Loops** and **Alternative** processes in a sequence diagram, for the above example when the Viewer is unsure what channel to go to. and would like to surf the channels until finding a channel they like
 
-![UMLSequence-ex3.png](https://raw.githubusercontent.com/aboelkassem/Design-Patterns/main/OOD/images/UMLSequence-ex3.png "UML Sequence diagram example 3")
+![UMLSequence-ex3.png](https://raw.githubusercontent.com/mkassm/Design-Patterns/main/OOD/images/UMLSequence-ex3.png "UML Sequence diagram example 3")
 
 ### UML State Diagram
 
@@ -336,7 +336,7 @@ UML State Diagram components
 
 **Example** of Vending machine
 
-![UMLState-ex.png](https://raw.githubusercontent.com/aboelkassem/Design-Patterns/main/OOD/images/UMLState-ex.png "UML State Diagram")
+![UMLState-ex.png](https://raw.githubusercontent.com/mkassm/Design-Patterns/main/OOD/images/UMLState-ex.png "UML State Diagram")
 
 ### Model Checking
 
@@ -362,4 +362,4 @@ Model checking helps ensure not only that software is well designed, but also th
 
 <hr>
 
-[Edit this page in Github](https://github.com/aboelkassem/Design-Patterns/blob/main/OOD/README.md)
+[Edit this page in Github](https://github.com/mkassm/Design-Patterns/blob/main/OOD/README.md)

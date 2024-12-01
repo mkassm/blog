@@ -3,8 +3,8 @@ templateKey: article-page
 title: "Designing Data Intensive Applications Notes: Ch.1 Reliable, Scalable,
   and Maintainable Applications"
 slug: designing-data-intensive-applications-notes-ch1
-author: aboelkassem
-authorLink: https://www.aboelkassem.tech
+author: Mohamed Kassem
+authorLink: https://www.kassm.me
 date: 2023-10-30T19:15:12.553Z
 cover: /img/designing-data-intensive-apps.avif
 metaTitle: Chapter.1 Reliable, Scalable, and Maintainable Applications.
@@ -55,7 +55,7 @@ Many new tools for data storage and processing have emerged in recent years. The
 If you have an application-managed caching layer (using Memcached or similar), or a full-text search server (such as Elasticsearch or Solr) separate from your main database, it is normally the application code’s responsibility to keep those caches and indexes in sync with the main database.
 
 <p align="center" width="100%">
-  <img src="https://raw.githubusercontent.com/aboelkassem/designing-data-intensive-applications-notes/main/Chapters/Chapter%201%20-%20Reliable%2C%20Scalable%2C%20and%20Maintainable%20Applications/images/data-system.png" width="700" hight="500"/>
+  <img src="https://raw.githubusercontent.com/mkassm/designing-data-intensive-applications-notes/main/Chapters/Chapter%201%20-%20Reliable%2C%20Scalable%2C%20and%20Maintainable%20Applications/images/data-system.png" width="700" hight="500"/>
 </p>
 
 ## Reliability
@@ -120,13 +120,13 @@ WHERE follows.follower_id = current_user
 ```
 
 <p align="center" width="100%">
-  <img src="https://raw.githubusercontent.com/aboelkassem/designing-data-intensive-applications-notes/main/Chapters/Chapter%201%20-%20Reliable%2C%20Scalable%2C%20and%20Maintainable%20Applications/images/twitter-approach-1.png" width="700" hight="500"/>
+  <img src="https://raw.githubusercontent.com/mkassm/designing-data-intensive-applications-notes/main/Chapters/Chapter%201%20-%20Reliable%2C%20Scalable%2C%20and%20Maintainable%20Applications/images/twitter-approach-1.png" width="700" hight="500"/>
 </p>
 
 **Approach 2** was maintaining a cache for each user’s home timeline. When a user posts a tweet, look up all the people who follow that user, and insert the new tweet into each of their home timeline caches.
 
 <p align="center" width="100%">
-  <img src="https://raw.githubusercontent.com/aboelkassem/designing-data-intensive-applications-notes/main/Chapters/Chapter%201%20-%20Reliable%2C%20Scalable%2C%20and%20Maintainable%20Applications/images/twitter-approach-2.png" width="700" hight="500"/>
+  <img src="https://raw.githubusercontent.com/mkassm/designing-data-intensive-applications-notes/main/Chapters/Chapter%201%20-%20Reliable%2C%20Scalable%2C%20and%20Maintainable%20Applications/images/twitter-approach-2.png" width="700" hight="500"/>
 </p>
 
 First version of Twitter used approach 1, but the systems struggled to keep up with the load of home timeline queries, so the company switched to approach 2. This works better because the average rate of published tweets is almost two orders of magnitude lower than the rate of home timeline reads.
@@ -142,7 +142,7 @@ Throughput is the most important metric in batch processing systems, while *resp
 The following image Illustrating mean and percentiles: response times for a sample of 100 requests to a service.
 
 <p align="center" width="100%">
-  <img src="https://raw.githubusercontent.com/aboelkassem/designing-data-intensive-applications-notes/main/Chapters/Chapter%201%20-%20Reliable%2C%20Scalable%2C%20and%20Maintainable%20Applications/images/distributed-load.png" width="700" hight="500"/>
+  <img src="https://raw.githubusercontent.com/mkassm/designing-data-intensive-applications-notes/main/Chapters/Chapter%201%20-%20Reliable%2C%20Scalable%2C%20and%20Maintainable%20Applications/images/distributed-load.png" width="700" hight="500"/>
 </p>
 
 Most requests are reasonably fast, but there are occasional outliers that take much longer. Perhaps the slow requests are intrinsically more expensive, e.g., because they process more data, loss of network packets, TCP retransmission or a garbage collection pause.
@@ -154,7 +154,7 @@ It's important to measure response times on client side against realistic traffi
 In distributed systems, effect of tail latency amplification can happen (When several backend calls are needed to serve a request, it takes just a single slow backend request to slow down the entire end-user request and you must wait until all calls ended)
 
 <p align="center" width="100%">
-  <img src="https://raw.githubusercontent.com/aboelkassem/designing-data-intensive-applications-notes/main/Chapters/Chapter%201%20-%20Reliable%2C%20Scalable%2C%20and%20Maintainable%20Applications/images/response-time-percentile.png" width="700" hight="500"/>
+  <img src="https://raw.githubusercontent.com/mkassm/designing-data-intensive-applications-notes/main/Chapters/Chapter%201%20-%20Reliable%2C%20Scalable%2C%20and%20Maintainable%20Applications/images/response-time-percentile.png" width="700" hight="500"/>
 </p>
 
 ### Approaches for Coping with Load

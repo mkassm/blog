@@ -9,11 +9,11 @@ const SubscribedPage = () => (
       htmlAttributes={{
         lang: `en`,
       }}
-      title='Subscribed | Aboelkassem Blog'
+      title='Subscribed | Mohamed Kassem Blog'
       meta={[
         {
           name: `description`,
-          content: `You're now subscribed to the aboelkassem Blog NewsLetter!`,
+          content: `You're now subscribed to the Mohamed Kassem Blog NewsLetter!`,
         },
         {
           name: `viewport`,

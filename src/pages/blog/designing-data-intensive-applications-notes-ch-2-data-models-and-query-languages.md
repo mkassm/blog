@@ -3,8 +3,8 @@ templateKey: article-page
 title: "Designing Data Intensive Applications Notes: Ch.2 Data Models and Query
   Languages"
 slug: designing-data-intensive-applications-notes-ch2
-author: aboelkassem
-authorLink: https://www.aboelkassem.tech
+author: Mohamed Kassem
+authorLink: https://www.kassm.me
 date: 2023-11-02T11:27:28.581Z
 cover: /img/designing-data-intensive-apps.avif
 metaTitle: Chapter.2 Data Models and Query Languages.
@@ -46,7 +46,7 @@ The goal of the relational model was to hide that implementation detail behind a
 In the 2010s, NoSQL is the latest attempt to overthrow the relational model’s dominance. NoSQL name refer to 2009 twitter hashtag for new open source, non relational database meaning “**Not Only SQL**”. 
 
 <p align="center" width="100%">
-  <img src="https://raw.githubusercontent.com/aboelkassem/designing-data-intensive-applications-notes/main/Chapters/Chapter%202%20-%20Data%20Models%20and%20Query%20Languages/images/history-of-data-modal.jpeg" width="700" hight="500"/>
+  <img src="https://raw.githubusercontent.com/mkassm/designing-data-intensive-applications-notes/main/Chapters/Chapter%202%20-%20Data%20Models%20and%20Query%20Languages/images/history-of-data-modal.jpeg" width="700" hight="500"/>
 </p>
 
 NoSQL databases have been adopted quickly and easily because:
@@ -63,7 +63,7 @@ Many applications today is done in object-oriented programming languages. An tra
 The following image illustrate an example of resume (a LinkedIn profile) expressed in a relational schema.
 
 <p align="center" width="100%">
-  <img src="https://raw.githubusercontent.com/aboelkassem/designing-data-intensive-applications-notes/main/Chapters/Chapter%202%20-%20Data%20Models%20and%20Query%20Languages/images/example-of-data-relational-modal.png" width="700" hight="500"/>
+  <img src="https://raw.githubusercontent.com/mkassm/designing-data-intensive-applications-notes/main/Chapters/Chapter%202%20-%20Data%20Models%20and%20Query%20Languages/images/example-of-data-relational-modal.png" width="700" hight="500"/>
 </p>
 
 Relational databases deal with the **one-to-many** relationship in one of three ways:
@@ -77,7 +77,7 @@ JSON representation has better locality than the multi-table schema (Instead of 
 Document-oriented databases on the other hand supports **one-to-many** relationship natively, and provides better *locality* for the data object, thanks to the self-contained nature of JSON.
 
 <p align="center" width="100%">
-  <img src="https://raw.githubusercontent.com/aboelkassem/designing-data-intensive-applications-notes/main/Chapters/Chapter%202%20-%20Data%20Models%20and%20Query%20Languages/images/document-modal-tree.png" width="700" hight="500"/>
+  <img src="https://raw.githubusercontent.com/mkassm/designing-data-intensive-applications-notes/main/Chapters/Chapter%202%20-%20Data%20Models%20and%20Query%20Languages/images/document-modal-tree.png" width="700" hight="500"/>
 </p>
 
 ### Many-to-One and Many-to-Many Relationships
@@ -274,7 +274,7 @@ There are many well-known algorithms which can operate on graphs (like shortest 
 Facebook maintains a single graph with many different types of vertices and edges: vertices represent people, locations, events, checkins, and comments made by users; edges indicate which people are friends with each other, which checkin happened in which location, who commented on which post, who attended which event, and so on.
 
 <p align="center" width="100%">
-  <img src="https://raw.githubusercontent.com/aboelkassem/designing-data-intensive-applications-notes/main/Chapters/Chapter%202%20-%20Data%20Models%20and%20Query%20Languages/images/graph-example.png" width="700" hight="500"/>
+  <img src="https://raw.githubusercontent.com/mkassm/designing-data-intensive-applications-notes/main/Chapters/Chapter%202%20-%20Data%20Models%20and%20Query%20Languages/images/graph-example.png" width="700" hight="500"/>
 </p>
 
 There are two kinds of graph models:  ***property graph*** model (implemented by **Neo4j**, Titan, and InfiniteGraph), and the ***triple-store*** model (implemented by Datomic, AllegroGraph, and others). Also there some good *declarative* query languages such as Cypher for efficient querying or SPARQL or Datalog.

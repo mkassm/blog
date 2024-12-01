@@ -2,8 +2,8 @@
 templateKey: article-page
 title: "Designing Data Intensive Applications Notes: Ch.12 The Future of Data Systems"
 slug: designing-data-intensive-applications-notes-ch12
-author: aboelkassem
-authorLink: https://www.aboelkassem.tech
+author: Mohamed Kassem
+authorLink: https://www.kassm.me
 date: 2023-11-04T07:48:01.313Z
 cover: /img/designing-data-intensive-apps.avif
 metaTitle: Chapter.12 The Future of Data Systems.
@@ -108,7 +108,7 @@ Not only is the dataflow approach faster, but it is also more robust to the fail
 The following diagram shows an example of updating a search index when write and read.
 
 <p align="center" width="100%">
-  <img src="https://raw.githubusercontent.com/aboelkassem/designing-data-intensive-applications-notes/main/Chapters/Chapter%2012%20-%20The%20Future%20of%20Data%20Systems/images/update-search-index-example.png" width="700" hight="500"/>
+  <img src="https://raw.githubusercontent.com/mkassm/designing-data-intensive-applications-notes/main/Chapters/Chapter%2012%20-%20The%20Future%20of%20Data%20Systems/images/update-search-index-example.png" width="700" hight="500"/>
 </p>
 
 HTTP-based feed subscription protocols like RSS are really just a basic form of polling.

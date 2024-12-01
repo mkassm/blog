@@ -2,11 +2,11 @@
 templateKey: article-page
 title: What is Object Oriented Design and Analysis? - Part 1
 slug: what-is-object-oriented-design-and-analysis-part-1
-author: aboelkassem
-authorLink: https://www.aboelkassem.tech
+author: Mohamed Kassem
+authorLink: https://www.kassm.me
 date: 2020-12-16T10:11:05.490Z
 cover: /img/19362653.jpg
-metaTitle: Object Oriented Design and Analysis | Aboelkassem Blog
+metaTitle: Object Oriented Design and Analysis | Mohamed Kassem Blog
 metaDescription: Object-oriented design is the process of planning a system of
   interacting objects for the purpose of solving a software problem. It is one
   approach to software design
@@ -71,13 +71,13 @@ you can think of developing software as a **process that takes a problem and pro
 
 it's an iterative process, taking a set of requirements ⇒ working and tested implementation ⇒ building a complete solution
 
-![agile-process.png](https://raw.githubusercontent.com/aboelkassem/Design-Patterns/main/OOD/images/agile-process.png "Agile process to build software")
+![agile-process.png](https://raw.githubusercontent.com/mkassm/Design-Patterns/main/OOD/images/agile-process.png "Agile process to build software")
 
 Why projects fail? it's related to issues in requirements and design
 
 so it's important to take your time in gathering/understanding the requirements and create a design
 
-![misunderstanding-requirments.png](https://raw.githubusercontent.com/aboelkassem/Design-Patterns/main/OOD/images/misunderstanding-requirments.png "Bad and misunderstanding requirements")
+![misunderstanding-requirments.png](https://raw.githubusercontent.com/mkassm/Design-Patterns/main/OOD/images/misunderstanding-requirments.png "Bad and misunderstanding requirements")
 
 We get **requirements** by asking **questions** about issues that the clients may not **consider** besides **identifying specific needs.**
 
@@ -104,12 +104,12 @@ for university course search website task
 
 **Conceptual mockups** ⇒ components like search page and course, search page has the responsibility of searching for relevant courses.
 
-![example1-CM.png](https://raw.githubusercontent.com/aboelkassem/Design-Patterns/main/OOD/images/example1-CM.png "example 1")
+![example1-CM.png](https://raw.githubusercontent.com/mkassm/Design-Patterns/main/OOD/images/example1-CM.png "example 1")
 
 **Technical design ⇒** takes each component by technical details by answering the following question....how does the search page fulfill its responsibility of searching?
 
 - does the page need to talk to an external system ? or the university already has a course database component to connect the Search Page Component with Course Database Component
-  ![example1-TD.png](https://raw.githubusercontent.com/aboelkassem/Design-Patterns/main/OOD/images/example1-TD.png "example 1")
+  ![example1-TD.png](https://raw.githubusercontent.com/mkassm/Design-Patterns/main/OOD/images/example1-TD.png "example 1")
 
 **if the design satisfying requirements?** some software design decisions will involve tradeoffs in different quality attributes such as **performance**, **convenience**, and **security.** so it's important to consider how quality attributes can compete in a proposed solution under different situations. Then, taking this into account and weighing it against the requirements of the product, a suitable compromise can be determined.
 
@@ -137,15 +137,15 @@ so you have to strike a **balance** during design. You should ask how much perfo
 when identifying **components, connections, and responsibilities** from some requirements when forming the conceptual design. CRC cards help you to **organize your components into classes**, identifying the **responsibilities**, and determine how they will **collaborate with each other.** Its **records and organize and refine** the components into your software.
 
 - CRC Structure
-  ![crc_card.png](https://raw.githubusercontent.com/aboelkassem/Design-Patterns/main/OOD/images/crc_card.png "crc card")
+  ![crc_card.png](https://raw.githubusercontent.com/mkassm/Design-Patterns/main/OOD/images/crc_card.png "crc card")
 
   **Collaborators** are other classes that the class **interacts** with to fulfill its responsibilities. So in the collaborator's section, you list other components that your current component connects with.
 
 **Example on ATM bank machine.**
 
-![crc_customer.png](https://raw.githubusercontent.com/aboelkassem/Design-Patterns/main/OOD/images/crc_customer.png "crc customer")
+![crc_customer.png](https://raw.githubusercontent.com/mkassm/Design-Patterns/main/OOD/images/crc_customer.png "crc customer")
 
-![crc_bank.png](https://raw.githubusercontent.com/aboelkassem/Design-Patterns/main/OOD/images/crc_bank.png "crc bank")
+![crc_bank.png](https://raw.githubusercontent.com/mkassm/Design-Patterns/main/OOD/images/crc_bank.png "crc bank")
 
 **CRC** helps you to organize your ideas and extract the needed objects and it's relationships. and can be used for prototyping and simulation.
 
@@ -195,13 +195,13 @@ Also Object-oriented programming is a powerful tool but is not only in your tool
 
 Here is some **history of programming languages** and paradigms and the issues they met.
 
-![COBOL-Fortran.png](https://raw.githubusercontent.com/aboelkassem/Design-Patterns/main/OOD/images/COBOL-Fortran.png "cobol and fortran languages")
+![COBOL-Fortran.png](https://raw.githubusercontent.com/mkassm/Design-Patterns/main/OOD/images/COBOL-Fortran.png "cobol and fortran languages")
 
-![C.png](https://raw.githubusercontent.com/aboelkassem/Design-Patterns/main/OOD/images/C.png "c programming")
+![C.png](https://raw.githubusercontent.com/mkassm/Design-Patterns/main/OOD/images/C.png "c programming")
 
-![Pascal.png](https://raw.githubusercontent.com/aboelkassem/Design-Patterns/main/OOD/images/Pascal.png "pascal language")
+![Pascal.png](https://raw.githubusercontent.com/mkassm/Design-Patterns/main/OOD/images/Pascal.png "pascal language")
 
-![c%2B%2B_java_c%23.png](https://raw.githubusercontent.com/aboelkassem/Design-Patterns/main/OOD/images/c%2B%2B_java_c%23.png "c# and java")
+![c%2B%2B_java_c%23.png](https://raw.githubusercontent.com/mkassm/Design-Patterns/main/OOD/images/c%2B%2B_java_c%23.png "c# and java")
 
 ## Four Design Principles
 
@@ -238,7 +238,7 @@ In abstraction anything other than a concept's essential **attributes and behavi
 
 Thinking of how we abstract **Food** object in CRC and Class diagram
 
-![association-ex.png](https://raw.githubusercontent.com/aboelkassem/Design-Patterns/main/OOD/images/association-ex.png "association example")
+![association-ex.png](https://raw.githubusercontent.com/mkassm/Design-Patterns/main/OOD/images/association-ex.png "association example")
 
 Class diagram contains
 
@@ -296,7 +296,7 @@ There are two different kinds of methods typically used to preserve data integri
 - **Getter Methods** are methods that retrieve data, and their names typically begin with getting and end with the name of the attribute whose value you will be returning.
 - **Setter Methods** change data, and their name typically begin with set and end with the name of the variable you wish to set. Also Setters are used to **set private attribute** in a safe way.
 
-![encap-ex.png](https://raw.githubusercontent.com/aboelkassem/Design-Patterns/main/OOD/images/encap-ex.png "encapsulation")
+![encap-ex.png](https://raw.githubusercontent.com/mkassm/Design-Patterns/main/OOD/images/encap-ex.png "encapsulation")
 
 ```csharp
 public class Student
@@ -355,7 +355,7 @@ There are three types of **relationships** found in decomposition that define th
 
 The following fig shows a class diagram with two objects that have association relationship
 
-![association-ex.png](https://raw.githubusercontent.com/aboelkassem/Design-Patterns/main/OOD/images/association-ex.png "association")
+![association-ex.png](https://raw.githubusercontent.com/mkassm/Design-Patterns/main/OOD/images/association-ex.png "association")
 
 <b>0..\*</b> ⇒ means a Person object is associated with **zero or more** airline objects and the same with Airline object is associated with **zero or more** person objects.
 
@@ -380,7 +380,7 @@ The "has-a" relationship from a whole to the parts is considered **weak "has-a"*
 
 for example relationship between airliner and its crew, so without the crew an airliner would not be able to fly, However, the airliner does not cease if there is no crew on board, same for the crew they are part of airliner but the crew become destroyed if they are not on board their airliner. the entities have a relationship but can exist outside of it. like relationship between course section and student, pet stores and pets, bookshelf and books.
 
-![aggreg-ex.png](https://raw.githubusercontent.com/aboelkassem/Design-Patterns/main/OOD/images/aggreg-ex.png "aggregation example")
+![aggreg-ex.png](https://raw.githubusercontent.com/mkassm/Design-Patterns/main/OOD/images/aggreg-ex.png "aggregation example")
 
 ```csharp
 public class Aireliner
@@ -413,7 +413,7 @@ public class CrewMember
 
 The following diagram shows a class diagram of the composition relationship, describes the House object **has one or more** room objects.
 
-![composition-ex.png](https://raw.githubusercontent.com/aboelkassem/Design-Patterns/main/OOD/images/composition-ex.png "composition example")
+![composition-ex.png](https://raw.githubusercontent.com/mkassm/Design-Patterns/main/OOD/images/composition-ex.png "composition example")
 
 ```csharp
 public class Human
@@ -437,9 +437,9 @@ Generalization helps reduce redundancy when solving problems.
 
 When model behaviors using **methods** to eliminates the need to have identical code written throughout a program. like generalize repetitious code that we would need to write by making a separate method and calling it for examples
 
-![generlize-exp-1.png](https://raw.githubusercontent.com/aboelkassem/Design-Patterns/main/OOD/images/generlize-exp-1.png "generlization example 1")
+![generlize-exp-1.png](https://raw.githubusercontent.com/mkassm/Design-Patterns/main/OOD/images/generlize-exp-1.png "generlization example 1")
 
-![generlize-exp-2.png](https://raw.githubusercontent.com/aboelkassem/Design-Patterns/main/OOD/images/generlize-exp-2.png "generlization example 2")
+![generlize-exp-2.png](https://raw.githubusercontent.com/mkassm/Design-Patterns/main/OOD/images/generlize-exp-2.png "generlization example 2")
 
 **Generalization** is used when design algorithms, which are meant to be used to perform the same action on different sets of data, we generalize the actions into its own methods and simply pass the data through arguments.
 
@@ -451,9 +451,9 @@ When model behaviors using **methods** to eliminates the need to have identical 
 
 The following figures show how diagram inheritance in UML diagram and example
 
-![generalization-ex1.png](https://raw.githubusercontent.com/aboelkassem/Design-Patterns/main/OOD/images/generalization-ex1.png "generlization example 1")
+![generalization-ex1.png](https://raw.githubusercontent.com/mkassm/Design-Patterns/main/OOD/images/generalization-ex1.png "generlization example 1")
 
-![generalization-ex2.png](https://raw.githubusercontent.com/aboelkassem/Design-Patterns/main/OOD/images/generalization-ex2.png "generlization example 2")
+![generalization-ex2.png](https://raw.githubusercontent.com/mkassm/Design-Patterns/main/OOD/images/generalization-ex2.png "generlization example 2")
 
 ```csharp
 public abstract class Animal
@@ -490,7 +490,7 @@ public class Dog: Animal
 
 Super class can have many sub classes, subclass can have only inherit from one superclass.
 
-![multi-inher-ex.png](https://raw.githubusercontent.com/aboelkassem/Design-Patterns/main/OOD/images/multi-inher-ex.png "multi inheritance")
+![multi-inher-ex.png](https://raw.githubusercontent.com/mkassm/Design-Patterns/main/OOD/images/multi-inher-ex.png "multi inheritance")
 
 ```csharp
 public class Dog: Animal
@@ -520,9 +520,9 @@ Interface is like a contract to be fulfilled by implementing classes, used to on
 - C# and java does not support multi-inheritance classes because this cause **Data Ambiguity** meaning when a subclass inherits from two or more with have the attributes with the same name or methods signature, how do we distinguish between them?
 - So Class can implement as many interfaces as we want
 
-![interface-ex1.png](https://raw.githubusercontent.com/aboelkassem/Design-Patterns/main/OOD/images/interface-ex1.png "interface-ex1")
+![interface-ex1.png](https://raw.githubusercontent.com/mkassm/Design-Patterns/main/OOD/images/interface-ex1.png "interface-ex1")
 
-![interface-ex2.png](https://raw.githubusercontent.com/aboelkassem/Design-Patterns/main/OOD/images/interface-ex2.png "interface-ex2.png")
+![interface-ex2.png](https://raw.githubusercontent.com/mkassm/Design-Patterns/main/OOD/images/interface-ex2.png "interface-ex2.png")
 
 ```csharp
 interface IAnimal
@@ -554,8 +554,8 @@ class Cat : IAnimal
 - Classes can implement one or more interfaces at the time, which allows them to have multiple types.
 - Interfaces enable you to describe behaviors without the need to implement them, which allows you to reuse these abstractions.
 
-![class-vs-interface.png](https://raw.githubusercontent.com/aboelkassem/Design-Patterns/main/OOD/images/class-vs-interface.png "class-vs-interface")
+![class-vs-interface.png](https://raw.githubusercontent.com/mkassm/Design-Patterns/main/OOD/images/class-vs-interface.png "class-vs-interface")
 
 <hr>
 
-[Edit this page in Github](https://github.com/aboelkassem/Design-Patterns/blob/main/OOD/README.md)
+[Edit this page in Github](https://github.com/mkassm/Design-Patterns/blob/main/OOD/README.md)
