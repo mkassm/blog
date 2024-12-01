@@ -25,7 +25,7 @@ A truly complete & feature rich Gatsby Blog Starter. Powered by Gatsby and Netli
 Create your own project with Gatsby CLI:
 
 ```shell
-gatsby new <my-blog-name> https://github.com/aboelkassem/blog.git
+gatsby new <my-blog-name> https://github.com/mkassem/blog.git
 ```
 
 ## Environment Variables
@@ -112,6 +112,6 @@ const config = {
 };
 ```
 
-<a href="https://app.netlify.com/start/deploy?repository=https://github.com/aboelkassem/blog" target="_blank">
+<a href="https://app.netlify.com/start/deploy?repository=https://github.com/mkassem/blog" target="_blank">
   <img src="https://www.netlify.com/img/global/badges/netlify-dark.svg"/>
 </a>
