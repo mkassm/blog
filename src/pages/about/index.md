@@ -10,7 +10,7 @@ metaDescription: Mohamed Kassem blog is my personal blog. Topics include coding,
   movies, graphics, books, science or anything under the sun and beyond.
 ---
 Hi there <!--StartFragment-->👋🏻<!--EndFragment-->! \
-My name is **[Mohamed Kassem](https://www.kassm.me)**, a passionate software engineer specializing in building enterprice systems. Welcome to my personal blog, where I share tech notes and articles, primarily focusing on .Net Technology, databases, backend engineering, distributed systems, software design principles and various software-related topics.
+My name is **[Mohamed Kassem](https://www.mohamedkassem.xyz)**, a passionate software engineer specializing in building enterprice systems. Welcome to my personal blog, where I share tech notes and articles, primarily focusing on .Net Technology, databases, backend engineering, distributed systems, software design principles and various software-related topics.
 
 This blog serves as a platform where I share my experiences and insights. It's a place where I document challenges I've faced and showcase how I overcame them, with the hope of assisting others on similar journeys. You can also expect occasional rants about things that bother me, as well as posts about science, technology, programming, and graphics.
 

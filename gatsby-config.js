@@ -176,7 +176,7 @@ module.exports = {
         // Any additional optional fields
         sampleRate: 5,
         siteSpeedSampleRate: 10,
-        cookieDomain: "https://blog.kassm.me",
+        cookieDomain: "https://blog.mohamedkassem.xyz",
       },
     },
     {

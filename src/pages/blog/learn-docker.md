@@ -3,7 +3,7 @@ templateKey: article-page
 title: Introduction to Docker and Containerization
 slug: introduction-to-docker
 author: Mohamed Kassem
-authorLink: https://www.kassm.me
+authorLink: https://www.mohamedkassem.xyz
 date: 2021-01-01T09:14:05.830Z
 cover: /img/introduction-to-docker-2017-1-638.jpg
 metaTitle: Learn Docker | Aboelkassem blog

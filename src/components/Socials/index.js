@@ -6,7 +6,7 @@ const Socials = (props) => {
   return (
     <div className="db dtc-ns black-70 tc tr-ns v-mid">
       <a
-        href={`https://blog.kassm.me${siteRss}`}
+        href={`https://blog.mohamedkassem.xyz${siteRss}`}
         className="link hover-orange dib mr3 black-70"
         title="Mohamed Kassem Blog RSS Feed"
         target="_blank"

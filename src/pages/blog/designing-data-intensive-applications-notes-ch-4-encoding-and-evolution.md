@@ -3,7 +3,7 @@ templateKey: article-page
 title: "Designing Data Intensive Applications Notes: Ch.4 Encoding and Evolution"
 slug: designing-data-intensive-applications-notes-ch4
 author: Mohamed Kassem
-authorLink: https://www.kassm.me
+authorLink: https://www.mohamedkassem.xyz
 date: 2023-11-02T13:48:29.436Z
 cover: /img/designing-data-intensive-apps.avif
 metaTitle: Chapter.4 Encoding and Evolution.

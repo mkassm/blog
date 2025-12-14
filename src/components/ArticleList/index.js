@@ -46,7 +46,7 @@ const ArticleList = (props) => {
               <small className="f6 lh-copy gray mv0">
                 By{" "}
                 <span className="ttu">
-                  <a href="https://www.kassm.me" target="_blank">
+                  <a href="https://www.mohamedkassem.xyz" target="_blank">
                     {get(post, ["frontmatter", "author"], "")}
                   </a>
                 </span>

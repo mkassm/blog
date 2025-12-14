@@ -3,7 +3,7 @@ templateKey: article-page
 title: "Designing Data Intensive Applications Notes: Ch.11 Stream Processing"
 slug: designing-data-intensive-applications-notes-ch11
 author: Mohamed Kassem
-authorLink: https://www.kassm.me
+authorLink: https://www.mohamedkassem.xyz
 date: 2023-11-04T07:44:10.102Z
 cover: /img/designing-data-intensive-apps.avif
 metaTitle: Chapter 11 Stream Processing.

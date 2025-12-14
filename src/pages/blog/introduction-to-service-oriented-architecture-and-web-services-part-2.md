@@ -3,7 +3,7 @@ templateKey: article-page
 title: Introduction to Service-Oriented Architecture and Web Services - Part 2
 slug: introduction-to-service-oriented-architecture-and-web-services-part-2
 author: Mohamed Kassem
-authorLink: https://www.kassm.me
+authorLink: https://www.mohamedkassem.xyz
 date: 2021-03-24T10:27:46.928Z
 cover: /img/web-services.jpg
 metaTitle: SOA and Web Services | Mohamed Kassem Blog
@@ -21,7 +21,7 @@ tags:
   - REST
 ---
 
-In [the previous article](https://blog.kassm.me/blog/introduction-to-service-oriented-architecture-and-web-services-part-1), we discussed what is web services and service-oriented architecture, Also, we learn about web architecture and standards. Today, we will dive deep into web services and learn how it work, in addition to RESTful service.
+In [the previous article](https://blog.mohamedkassem.xyz/blog/introduction-to-service-oriented-architecture-and-web-services-part-1), we discussed what is web services and service-oriented architecture, Also, we learn about web architecture and standards. Today, we will dive deep into web services and learn how it work, in addition to RESTful service.
 
 ## Table of Content
 

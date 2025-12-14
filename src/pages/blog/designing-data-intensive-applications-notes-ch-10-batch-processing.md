@@ -3,7 +3,7 @@ templateKey: article-page
 title: "Designing Data Intensive Applications Notes: Ch.10 Batch Processing"
 slug: designing-data-intensive-applications-notes-ch10
 author: Mohamed Kassem
-authorLink: https://www.kassm.me
+authorLink: https://www.mohamedkassem.xyz
 date: 2023-11-04T07:41:26.096Z
 cover: /img/designing-data-intensive-apps.avif
 metaTitle: Chapter 10 Batch Processing

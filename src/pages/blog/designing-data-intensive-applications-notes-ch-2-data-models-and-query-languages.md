@@ -4,7 +4,7 @@ title: "Designing Data Intensive Applications Notes: Ch.2 Data Models and Query
   Languages"
 slug: designing-data-intensive-applications-notes-ch2
 author: Mohamed Kassem
-authorLink: https://www.kassm.me
+authorLink: https://www.mohamedkassem.xyz
 date: 2023-11-02T11:27:28.581Z
 cover: /img/designing-data-intensive-apps.avif
 metaTitle: Chapter.2 Data Models and Query Languages.

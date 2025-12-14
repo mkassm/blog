@@ -3,7 +3,7 @@ templateKey: article-page
 title: "Designing Data Intensive Applications Notes: Ch.9 Consistency and Consensus"
 slug: designing-data-intensive-applications-notes-ch9
 author: Mohamed Kassem
-authorLink: https://www.kassm.me
+authorLink: https://www.mohamedkassem.xyz
 date: 2023-11-04T07:36:26.965Z
 cover: /img/designing-data-intensive-apps.avif
 metaTitle: Chapter 9 Consistency and Consensus

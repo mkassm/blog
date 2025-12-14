@@ -4,7 +4,7 @@ title: "Designing Data Intensive Applications Notes: Ch.8 The Trouble with
   Distributed Systems"
 slug: designing-data-intensive-applications-notes-ch8
 author: Mohamed Kassem
-authorLink: https://www.kassm.me
+authorLink: https://www.mohamedkassem.xyz
 date: 2023-11-04T07:34:06.494Z
 cover: /img/designing-data-intensive-apps.avif
 metaTitle: Chapter 8 The Trouble with Distributed Systems

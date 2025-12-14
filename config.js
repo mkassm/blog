@@ -2,7 +2,7 @@ const config = {
   siteTitle: `Mohamed Kassem Blog`, // Site title.
   siteTitleAlt: `Mohamed Kassem blog`, // Alternative site title for SEO.
   siteLogo: `/icons/icon-512x512.png`, // Logo used for SEO and manifest.
-  siteUrl: `https://blog.kassm.me`, // Domain of your website without
+  siteUrl: `https://blog.mohamedkassem.xyz`, // Domain of your website without
   // pathPrefix.
   pathPrefix: "", // Prefixes all links. For cases when deployed to
   // example.github.io/gatsby-starter-business/.

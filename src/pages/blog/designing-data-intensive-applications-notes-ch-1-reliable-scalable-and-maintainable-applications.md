@@ -4,7 +4,7 @@ title: "Designing Data Intensive Applications Notes: Ch.1 Reliable, Scalable,
   and Maintainable Applications"
 slug: designing-data-intensive-applications-notes-ch1
 author: Mohamed Kassem
-authorLink: https://www.kassm.me
+authorLink: https://www.mohamedkassem.xyz
 date: 2023-10-30T19:15:12.553Z
 cover: /img/designing-data-intensive-apps.avif
 metaTitle: Chapter.1 Reliable, Scalable, and Maintainable Applications.

@@ -3,7 +3,7 @@ templateKey: article-page
 title: What is Software Architecture and What is the common architectures? - Part 2
 slug: what-is-software-architecture-and-what-is-the-common-architectures-part-2
 author: Mohamed Kassem
-authorLink: https://www.kassm.me
+authorLink: https://www.mohamedkassem.xyz
 date: 2021-02-24T08:57:10.742Z
 cover: /img/software-architecture-2.jpg
 metaTitle: Software Architecture | Mohamed Kassem Blog
@@ -19,7 +19,7 @@ tags:
   - software-engineering
 ---
 
-In[ the previous article,](https://blog.kassm.me/blog/what-is-software-architecture-and-what-is-the-common-architectures-part-1) we had discussed what is architecture, common UML diagrams, and some architectures. Today, we will continue explaining the architectures and their qualities for building any software.
+In[ the previous article,](https://blog.mohamedkassem.xyz/blog/what-is-software-architecture-and-what-is-the-common-architectures-part-1) we had discussed what is architecture, common UML diagrams, and some architectures. Today, we will continue explaining the architectures and their qualities for building any software.
 
 ## Table of Content
 
