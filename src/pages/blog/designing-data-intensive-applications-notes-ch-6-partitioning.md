@@ -3,7 +3,7 @@ templateKey: article-page
 title: "Designing Data Intensive Applications Notes: Ch.6 Partitioning"
 slug: designing-data-intensive-applications-notes-ch6
 author: Mohamed Kassem
-authorLink: https://www.kassm.me
+authorLink: https://www.mohamedkassem.xyz
 date: 2023-11-04T07:20:47.413Z
 cover: /img/designing-data-intensive-apps.avif
 metaTitle: Chapter.6 Partitioning.

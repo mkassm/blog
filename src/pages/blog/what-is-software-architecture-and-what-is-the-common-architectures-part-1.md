@@ -3,7 +3,7 @@ templateKey: article-page
 title: What is Software Architecture and What is the common architectures? - Part 1
 slug: what-is-software-architecture-and-what-is-the-common-architectures-part-1
 author: Mohamed Kassem
-authorLink: https://www.kassm.me
+authorLink: https://www.mohamedkassem.xyz
 date: 2021-02-03T16:12:18.438Z
 cover: /img/software-architecture.jpg
 metaTitle: Software Architecture | Mohamed Kassem Blog

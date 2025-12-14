@@ -3,7 +3,7 @@ templateKey: article-page
 title: "Designing Data Intensive Applications Notes: Ch.3 Storage and Retrieval"
 slug: designing-data-intensive-applications-notes-ch3
 author: Mohamed Kassem
-authorLink: https://www.kassm.me
+authorLink: https://www.mohamedkassem.xyz
 date: 2023-11-02T12:43:23.692Z
 cover: /img/designing-data-intensive-apps.avif
 metaTitle: Chapter.3 Storage and Retrieval.

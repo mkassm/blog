@@ -3,7 +3,7 @@ templateKey: article-page
 title: "Designing Data Intensive Applications Notes: Ch.12 The Future of Data Systems"
 slug: designing-data-intensive-applications-notes-ch12
 author: Mohamed Kassem
-authorLink: https://www.kassm.me
+authorLink: https://www.mohamedkassem.xyz
 date: 2023-11-04T07:48:01.313Z
 cover: /img/designing-data-intensive-apps.avif
 metaTitle: Chapter.12 The Future of Data Systems.

@@ -3,7 +3,7 @@ templateKey: article-page
 title: "Designing Data Intensive Applications Notes: Ch.5 Replication"
 slug: designing-data-intensive-applications-notes-ch5
 author: Mohamed Kassem
-authorLink: https://www.kassm.me
+authorLink: https://www.mohamedkassem.xyz
 date: 2023-11-02T13:58:33.106Z
 cover: /img/designing-data-intensive-apps.avif
 metaTitle: Chapter.5 Replication.

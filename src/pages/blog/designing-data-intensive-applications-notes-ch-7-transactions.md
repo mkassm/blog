@@ -3,7 +3,7 @@ templateKey: article-page
 title: "Designing Data Intensive Applications Notes: Ch.7 Transactions"
 slug: designing-data-intensive-applications-notes-ch7
 author: Mohamed Kassem
-authorLink: https://www.kassm.me
+authorLink: https://www.mohamedkassem.xyz
 date: 2023-11-04T07:29:19.011Z
 cover: /img/designing-data-intensive-apps.avif
 metaTitle: Chapter.7 Transactions.

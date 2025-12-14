@@ -3,7 +3,7 @@ templateKey: article-page
 title: What is New in C# 9
 slug: what-is-new-in-csharp-9
 author: Mohamed Kassem
-authorLink: https://www.kassm.me
+authorLink: https://www.mohamedkassem.xyz
 date: 2021-07-07T19:45:58.941Z
 cover: /img/csharp-9.jpg
 metaTitle: What is New in C# 9

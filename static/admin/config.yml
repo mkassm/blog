@@ -8,9 +8,9 @@ backend:
     - author
     - guest
 
-site_url: https://blog.kassm.me
-display_url: https://blog.kassm.me
-logo_url: https://blog.kassm.me/icons/icon-512x512.png
+site_url: https://blog.mohamedkassem.xyz
+display_url: https://blog.mohamedkassem.xyz
+logo_url: https://blog.mohamedkassem.xyz/icons/icon-512x512.png
 publish_mode: editorial_workflow
 media_folder: static/img
 public_folder: /img
@@ -40,7 +40,7 @@ collections:
           label: "Author Link",
           name: "authorLink",
           widget: "string",
-          default: "https://www.kassm.me",
+          default: "https://www.mohamedkassem.xyz",
         }
       - { label: "Publish Date", name: "date", widget: "datetime" }
       - { label: "Cover", name: "cover", widget: "image" }

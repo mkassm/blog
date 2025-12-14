@@ -3,7 +3,7 @@ templateKey: article-page
 title: Awesome Remote Working's Platforms
 slug: awesome-remote-working
 author: Mohamed Kassem
-authorLink: https://www.kassm.me
+authorLink: https://www.mohamedkassem.xyz
 date: 2020-11-01T09:01:39.935Z
 cover: /img/remote-meeting-man-working-from-home-during-coronavirus-covid-19-quarantine-remote-office-concept-min.jpg
 metaTitle: Awesome Remote Working | Mohamed Kassem Blog
